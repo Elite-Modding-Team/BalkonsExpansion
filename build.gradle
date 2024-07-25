@@ -105,7 +105,25 @@ dependencies {
         implementation 'zone.rong:mixinbooter:9.1'
     }
 
+    // Balkon's WeaponMod Legacy
     implementation rfg.deobf('curse.maven:balkons-weaponmod-legacy-1033985:5489330')
+    // Galacticraft Legacy
+    implementation rfg.deobf('curse.maven:galacticraft-legacy-564236:4671122')
+    // IC2 Classic
+    implementation rfg.deobf('curse.maven:ic2-classic-242942:5554368')
+    // Mo' Creatures Extended
+    implementation rfg.deobf('curse.maven:mo-creatures-extended-867351:5393397')
+    // Project Red
+    compileOnly 'curse.maven:codechickenlib-242818:2779848'
+    compileOnly 'curse.maven:mrtjpcore-229002:2735197'
+    compileOnly 'curse.maven:forgemultipartcbe-258426:2755790'
+    compileOnly 'curse.maven:projectredbase-228702:2745545'
+    compileOnly 'curse.maven:projectredworld-229049:2745551'
+    // Railcraft
+    implementation rfg.deobf('curse.maven:railcraft-51195:3853491')
+    // Thaumcraft
+    compileOnly 'curse.maven:baubles-227083:2518667'
+    compileOnly 'curse.maven:thaumcraft-223628:2629023'
 
     if (project.use_mixins.toBoolean()) {
         // Change your mixin refmap name here:
