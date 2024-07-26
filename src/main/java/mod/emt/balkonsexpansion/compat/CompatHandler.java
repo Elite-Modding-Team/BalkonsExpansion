@@ -7,10 +7,9 @@ import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.fml.relauncher.FMLLaunchHandler;
 
 @EventBusSubscriber(modid = BalkonsExpansion.MOD_ID)
-@GameRegistry.ObjectHolder(BalkonsExpansion.MOD_ID)
 public class CompatHandler {
     public static void preInit() {
     }
@@ -23,7 +22,11 @@ public class CompatHandler {
 
     @SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> event) {
-        if (Loader.isModLoaded("galacticraftcore") && (Loader.isModLoaded("galacticraftplanets")))
+        if (Loader.isModLoaded("galacticraftcore") && (Loader.isModLoaded("galacticraftplanets"))) {
             GalacticraftRegistration.registerItems(event);
+            if (FMLLaunchHandler.side().isClient()) {
+                GalacticraftRegistration.registerRenderersItem();
+            }
+        }
     }
 }

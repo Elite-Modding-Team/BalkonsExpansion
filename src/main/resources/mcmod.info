@@ -5,6 +5,8 @@
     "description": "An expansion for Balkon's WeaponMod: Legacy that supports more materials from other mods",
     "version": "${version}",
     "mcversion": "${mcversion}",
-    "authorList": ["IcarussOne"]
+    "authorList": [
+      "IcarussOne"
+    ]
   }
 ]
