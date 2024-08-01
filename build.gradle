@@ -106,7 +106,7 @@ dependencies {
     }
 
     // Balkon's WeaponMod Legacy
-    implementation rfg.deobf('curse.maven:balkons-weaponmod-legacy-1033985:5489330')
+    implementation rfg.deobf('curse.maven:balkons-weaponmod-legacy-1033985:5587414')
     // Galacticraft Legacy
     implementation rfg.deobf('curse.maven:galacticraft-legacy-564236:4671122')
     // IC2 Classic

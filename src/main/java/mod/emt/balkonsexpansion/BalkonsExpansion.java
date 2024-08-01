@@ -15,7 +15,7 @@ public class BalkonsExpansion {
     public static final String NAME = "Balkon's Expansion";
     public static final String VERSION = Tags.VERSION;
     public static final String ACCEPTED_VERSIONS = "[1.12.2]";
-    public static final String DEPENDENCIES = "required-after:weaponmod@[1.21.3,);after:galacticraftcore;after:galacticraftplanets;after:ic2;after:mocreatures@[12.4.3,);after:railcraft;"
+    public static final String DEPENDENCIES = "required-after:weaponmod@[1.22.0,);after:galacticraftcore;after:galacticraftplanets;after:ic2;after:mocreatures@[12.4.3,);after:railcraft;"
             + "after:projectred-exploration;after:thaumcraft@[1.12.2-6.1.BETA26,);";
     public static final Logger LOGGER = LogManager.getLogger(NAME);
 

@@ -20,8 +20,8 @@ public class GalacticraftRegistration {
     public static void registerItems(RegistryEvent.Register<Item> event) {
         IForgeRegistry<Item> registry = event.getRegistry();
 
-        registry.register(halberdDesh = WMItemBuilder.createStandardHalberd("halberd.desh", MarsItems.TOOLDESH));
-        registry.register(spearDesh = WMItemBuilder.createStandardSpear("spear.desh", MarsItems.TOOLDESH));
+        registry.register(halberdDesh = WMItemBuilder.createStandardHalberd(BalkonsExpansion.MOD_ID, "halberd.desh", MarsItems.TOOLDESH));
+        registry.register(spearDesh = WMItemBuilder.createStandardSpear(BalkonsExpansion.MOD_ID, "spear.desh", MarsItems.TOOLDESH));
     }
 
     @SideOnly(Side.CLIENT)
