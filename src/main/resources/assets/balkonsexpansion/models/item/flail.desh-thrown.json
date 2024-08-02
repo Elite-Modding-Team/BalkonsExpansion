@@ -1,0 +1,6 @@
+{
+  "parent": "balkonsexpansion:item/flail.desh",
+  "textures": {
+    "layer0": "balkonsexpansion:galacticraft/items/flail-thrown.desh"
+  }
+}
