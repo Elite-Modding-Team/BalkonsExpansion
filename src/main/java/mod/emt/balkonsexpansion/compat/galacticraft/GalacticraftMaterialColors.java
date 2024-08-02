@@ -14,7 +14,7 @@ public class GalacticraftMaterialColors {
     public static final int MATERIAL_HEAVY_DUTY = GCItems.TOOL_STEEL.ordinal();
     public static final int MATERIAL_TITANIUM = AsteroidsItems.TOOL_TITANIUM.ordinal();
 
-    public static void init() {
+    public static void registerMaterialColors() {
         MaterialRegistry.registerCustomProjectileMaterial(new ICustomProjectileMaterials() {
             @Override
             public int[] getAllMaterialIDs() {

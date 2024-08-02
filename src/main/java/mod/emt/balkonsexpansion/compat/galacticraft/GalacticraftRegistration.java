@@ -7,10 +7,14 @@ import ckathode.weaponmod.item.ItemMusket;
 import micdoodle8.mods.galacticraft.core.GCItems;
 import micdoodle8.mods.galacticraft.planets.asteroids.items.AsteroidsItems;
 import micdoodle8.mods.galacticraft.planets.mars.items.MarsItems;
+import mod.emt.balkonsexpansion.BERecipes;
 import mod.emt.balkonsexpansion.BERegistry;
 import mod.emt.balkonsexpansion.BalkonsExpansion;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.crafting.IRecipe;
 import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import net.minecraftforge.registries.IForgeRegistry;
@@ -76,6 +80,16 @@ public class GalacticraftRegistration {
         registry.register(katanaTitanium = WMItemBuilder.createStandardKatana(BalkonsExpansion.MOD_ID, "katana.titanium", AsteroidsItems.TOOL_TITANIUM));
         registry.register(boomerangTitanium = WMItemBuilder.createStandardBoomerang(BalkonsExpansion.MOD_ID, "boomerang.titanium", AsteroidsItems.TOOL_TITANIUM));
         registry.register(bayonetTitanium = WMItemBuilder.createStandardMusketWithBayonet(BalkonsExpansion.MOD_ID, "musketbayonet.titanium", AsteroidsItems.TOOL_TITANIUM, knifeTitanium));
+    }
+
+    @SubscribeEvent
+    public static void registerRecipes(RegistryEvent.Register<IRecipe> event) {
+        IForgeRegistry<IRecipe> registry = event.getRegistry();
+
+        // Metadata sucks.
+        registry.register(BERecipes.registerBattleaxeRecipe(new ItemStack(MarsItems.marsItemBasic, 1, 2), new ItemStack(MarsItems.marsItemBasic, 1, 1), battleaxeDesh, "battleaxe.desh"));
+        registry.register(BERecipes.registerBattleaxeRecipe("compressedSteel", "stickWood", battleaxeHeavyDuty, "battleaxe.heavy_duty"));
+        registry.register(BERecipes.registerBattleaxeRecipe(new ItemStack(AsteroidsItems.basicItem, 1, 6), "ingotIron", battleaxeTitanium, "battleaxe.titanium"));
     }
 
     @SideOnly(Side.CLIENT)

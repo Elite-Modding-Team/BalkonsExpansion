@@ -4,6 +4,7 @@ import mod.emt.balkonsexpansion.BalkonsExpansion;
 import mod.emt.balkonsexpansion.compat.galacticraft.GalacticraftMaterialColors;
 import mod.emt.balkonsexpansion.compat.galacticraft.GalacticraftRegistration;
 import net.minecraft.item.Item;
+import net.minecraft.item.crafting.IRecipe;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
@@ -25,10 +26,16 @@ public class CompatHandler {
     public static void registerItems(RegistryEvent.Register<Item> event) {
         if (Loader.isModLoaded("galacticraftcore") && (Loader.isModLoaded("galacticraftplanets"))) {
             GalacticraftRegistration.registerItems(event);
-            GalacticraftMaterialColors.init();
+            GalacticraftMaterialColors.registerMaterialColors();
             if (FMLLaunchHandler.side().isClient()) {
                 GalacticraftRegistration.registerRenderersItem();
             }
         }
+    }
+
+    @SubscribeEvent
+    public static void registerRecipes(RegistryEvent.Register<IRecipe> event) {
+        if (Loader.isModLoaded("galacticraftcore") && (Loader.isModLoaded("galacticraftplanets")))
+            GalacticraftRegistration.registerRecipes(event);
     }
 }
