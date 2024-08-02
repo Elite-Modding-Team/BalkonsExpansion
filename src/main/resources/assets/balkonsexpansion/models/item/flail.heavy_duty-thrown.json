@@ -1,0 +1,6 @@
+{
+  "parent": "balkonsexpansion:item/flail.heavy_duty",
+  "textures": {
+    "layer0": "weaponmod:items/flail-thrown"
+  }
+}

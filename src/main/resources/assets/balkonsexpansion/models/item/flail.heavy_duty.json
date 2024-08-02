@@ -1,0 +1,14 @@
+{
+  "parent": "weaponmod:item/handheld_rod",
+  "textures": {
+    "layer0": "balkonsexpansion:galacticraft/items/flail.heavy_duty"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "weaponmod:thrown": 1
+      },
+      "model": "balkonsexpansion:item/flail.heavy_duty-thrown"
+    }
+  ]
+}

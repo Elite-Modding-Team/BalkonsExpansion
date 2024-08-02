@@ -1,0 +1,14 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "balkonsexpansion:galacticraft/items/battleaxe.heavy_duty"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "weaponmod:block": 1
+      },
+      "model": "balkonsexpansion:item/battleaxe.heavy_duty.block"
+    }
+  ]
+}

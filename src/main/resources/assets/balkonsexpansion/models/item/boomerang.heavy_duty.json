@@ -1,0 +1,14 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "balkonsexpansion:galacticraft/items/boomerang.heavy_duty"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "weaponmod:ready-to-throw": 1
+      },
+      "model": "balkonsexpansion:item/boomerang.heavy_duty_ready"
+    }
+  ]
+}

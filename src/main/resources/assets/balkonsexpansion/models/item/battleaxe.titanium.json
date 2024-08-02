@@ -1,0 +1,14 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "balkonsexpansion:galacticraft/items/battleaxe.titanium"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "weaponmod:block": 1
+      },
+      "model": "balkonsexpansion:item/battleaxe.titanium.block"
+    }
+  ]
+}
