@@ -1,0 +1,6 @@
+{
+  "parent": "balkonsexpansion:item/flail.thaumium",
+  "textures": {
+    "layer0": "weaponmod:items/flail-thrown"
+  }
+}

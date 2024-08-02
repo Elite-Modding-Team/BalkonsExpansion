@@ -1,0 +1,14 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "balkonsexpansion:thaumcraft/items/boomerang.thaumium"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "weaponmod:ready-to-throw": 1
+      },
+      "model": "balkonsexpansion:item/boomerang.thaumium"
+    }
+  ]
+}
