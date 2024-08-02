@@ -7,7 +7,7 @@ import net.minecraftforge.oredict.ShapedOreRecipe;
 
 // Used to make registering recipes for weapons *way* less painful.
 public class BERecipes {
-    public static IRecipe registerBattleaxeRecipe(Object material, Object stick, Item result, String name) {
-        return new ShapedOreRecipe(null, result, "XXX", "X#X", " # ", 'X', material, '#', stick).setRegistryName(BalkonsExpansion.MOD_ID, name);
+    public static IRecipe registerBattleaxeRecipe(Object material, Object stick, Item result) {
+        return new ShapedOreRecipe(null, result, "XXX", "X#X", " # ", 'X', material, '#', stick).setRegistryName(BalkonsExpansion.MOD_ID, result.getRegistryName().toString().substring(17));
     }
 }

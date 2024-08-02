@@ -87,9 +87,9 @@ public class GalacticraftRegistration {
         IForgeRegistry<IRecipe> registry = event.getRegistry();
 
         // Metadata sucks.
-        registry.register(BERecipes.registerBattleaxeRecipe(new ItemStack(MarsItems.marsItemBasic, 1, 2), new ItemStack(MarsItems.marsItemBasic, 1, 1), battleaxeDesh, "battleaxe.desh"));
-        registry.register(BERecipes.registerBattleaxeRecipe("compressedSteel", "stickWood", battleaxeHeavyDuty, "battleaxe.heavy_duty"));
-        registry.register(BERecipes.registerBattleaxeRecipe(new ItemStack(AsteroidsItems.basicItem, 1, 6), "ingotIron", battleaxeTitanium, "battleaxe.titanium"));
+        registry.register(BERecipes.registerBattleaxeRecipe(new ItemStack(MarsItems.marsItemBasic, 1, 2), new ItemStack(MarsItems.marsItemBasic, 1, 1), battleaxeDesh));
+        registry.register(BERecipes.registerBattleaxeRecipe("compressedSteel", "stickWood", battleaxeHeavyDuty));
+        registry.register(BERecipes.registerBattleaxeRecipe(new ItemStack(AsteroidsItems.basicItem, 1, 6), "ingotIron", battleaxeTitanium));
     }
 
     @SideOnly(Side.CLIENT)
