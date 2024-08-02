@@ -1,6 +1,7 @@
 package mod.emt.balkonsexpansion.compat;
 
 import mod.emt.balkonsexpansion.BalkonsExpansion;
+import mod.emt.balkonsexpansion.compat.galacticraft.GalacticraftMaterialColors;
 import mod.emt.balkonsexpansion.compat.galacticraft.GalacticraftRegistration;
 import net.minecraft.item.Item;
 import net.minecraftforge.event.RegistryEvent;
@@ -24,6 +25,7 @@ public class CompatHandler {
     public static void registerItems(RegistryEvent.Register<Item> event) {
         if (Loader.isModLoaded("galacticraftcore") && (Loader.isModLoaded("galacticraftplanets"))) {
             GalacticraftRegistration.registerItems(event);
+            GalacticraftMaterialColors.init();
             if (FMLLaunchHandler.side().isClient()) {
                 GalacticraftRegistration.registerRenderersItem();
             }
