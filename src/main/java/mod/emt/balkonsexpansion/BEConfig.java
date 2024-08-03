@@ -17,7 +17,7 @@ public class BEConfig {
     @Config.Comment("Industrial Craft 2 Classic")
     public static IC2ClassicSettings ic2_classic_settings = new IC2ClassicSettings();
 
-    @Config.Comment("Project Red - Exploration")
+    @Config.Comment("Project Red Exploration")
     public static ProjectRedSettings project_red_settings = new ProjectRedSettings();
 
     @Config.Comment("Railcraft")
@@ -37,8 +37,8 @@ public class BEConfig {
         @Config.RequiresMcRestart
         public boolean IC2_CLASSIC_INTEGRATION = true;
 
-        @Config.Name("Project Red - Exploration Integration")
-        @Config.Comment("Enables Project Red - Exploration integration [default: true]")
+        @Config.Name("Project Red Exploration Integration")
+        @Config.Comment("Enables Project Red Exploration integration [default: true]")
         @Config.RequiresMcRestart
         public boolean PROJECT_RED_INTEGRATION = true;
 
