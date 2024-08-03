@@ -26,3 +26,23 @@ item.spear.titanium.name=Titanium Spear
 item.warhammer.desh.name=Desh Warhammer
 item.warhammer.heavy_duty.name=Heavy Duty Warhammer
 item.warhammer.titanium.name=Titanium Warhammer
+
+# Thaumcraft
+item.battleaxe.thaumium.name=Thaumium Battleaxe
+item.battleaxe.void.name=Void Battleaxe
+item.boomerang.thaumium.name=Thaumium Boomerang
+item.boomerang.void.name=Void Boomerang
+item.flail.thaumium.name=Thaumium Flail
+item.flail.void.name=Void Flail
+item.halberd.thaumium.name=Thaumium Halberd
+item.halberd.void.name=Void Halberd
+item.katana.thaumium.name=Thaumium Katana
+item.katana.void.name=Void Katana
+item.knife.thaumium.name=Thaumium Knife
+item.knife.void.name=Void Knife
+item.musketbayonet.thaumium.name=Musket with Thaumium Bayonet
+item.musketbayonet.void.name=Musket with Void Bayonet
+item.spear.thaumium.name=Thaumium Spear
+item.spear.void.name=Void Spear
+item.warhammer.thaumium.name=Thaumium Warhammer
+item.warhammer.void.name=Void Warhammer

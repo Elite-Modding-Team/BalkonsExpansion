@@ -25,11 +25,12 @@ public class GalacticraftMaterialColors {
             public int getMaterialID(ItemStack itemStack) {
                 if (itemStack != null && itemStack.getItem() instanceof IItemWeapon) {
                     IItemWeapon weapon = ((IItemWeapon) itemStack.getItem());
-                    
+
                     if (weapon.getMeleeComponent() != null) {
                         if (weapon.getMeleeComponent().weaponMaterial == MarsItems.TOOLDESH) return MATERIAL_DESH;
                         if (weapon.getMeleeComponent().weaponMaterial == GCItems.TOOL_STEEL) return MATERIAL_HEAVY_DUTY;
-                        if (weapon.getMeleeComponent().weaponMaterial == AsteroidsItems.TOOL_TITANIUM) return MATERIAL_TITANIUM;
+                        if (weapon.getMeleeComponent().weaponMaterial == AsteroidsItems.TOOL_TITANIUM)
+                            return MATERIAL_TITANIUM;
                     }
                 }
 
@@ -43,7 +44,7 @@ public class GalacticraftMaterialColors {
                 if (i == MATERIAL_DESH) return new float[]{0.286F, 0.286F, 0.286F};
                 if (i == MATERIAL_HEAVY_DUTY) return new float[]{0.369F, 0.412F, 0.412F};
                 if (i == MATERIAL_TITANIUM) return new float[]{0.224F, 0.259F, 0.369F};
-                
+
                 return null;
             }
         });

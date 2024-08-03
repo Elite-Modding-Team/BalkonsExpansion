@@ -4,6 +4,8 @@ import mod.emt.balkonsexpansion.BEConfig;
 import mod.emt.balkonsexpansion.BalkonsExpansion;
 import mod.emt.balkonsexpansion.compat.galacticraft.GalacticraftMaterialColors;
 import mod.emt.balkonsexpansion.compat.galacticraft.GalacticraftRegistration;
+import mod.emt.balkonsexpansion.compat.thaumcraft.ThaumcraftMaterialColors;
+import mod.emt.balkonsexpansion.compat.thaumcraft.ThaumcraftRegistration;
 import net.minecraft.item.Item;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraftforge.event.RegistryEvent;
@@ -25,6 +27,7 @@ public class CompatHandler {
 
     @SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> event) {
+        // Galacticraft Legacy
         if (Loader.isModLoaded("galacticraftcore") && (Loader.isModLoaded("galacticraftplanets") && BEConfig.general_settings.GALACTICRAFT_INTEGRATION)) {
             GalacticraftRegistration.registerItems(event);
             GalacticraftMaterialColors.registerMaterialColors();
@@ -32,11 +35,24 @@ public class CompatHandler {
                 GalacticraftRegistration.registerRenderersItem();
             }
         }
+
+        // Thaumcraft
+        if (Loader.isModLoaded("thaumcraft") && BEConfig.general_settings.THAUMCRAFT_INTEGRATION) {
+            ThaumcraftRegistration.registerItems(event);
+            ThaumcraftMaterialColors.registerMaterialColors();
+            if (FMLLaunchHandler.side().isClient()) {
+                ThaumcraftRegistration.registerRenderersItem();
+            }
+        }
     }
 
     @SubscribeEvent
     public static void registerRecipes(RegistryEvent.Register<IRecipe> event) {
+        // Galacticraft Legacy
         if (Loader.isModLoaded("galacticraftcore") && (Loader.isModLoaded("galacticraftplanets") && BEConfig.general_settings.GALACTICRAFT_INTEGRATION))
             GalacticraftRegistration.registerRecipes(event);
+        // Thaumcraft
+        if (Loader.isModLoaded("thaumcraft") && BEConfig.general_settings.THAUMCRAFT_INTEGRATION)
+            ThaumcraftRegistration.registerRecipes(event);
     }
 }
