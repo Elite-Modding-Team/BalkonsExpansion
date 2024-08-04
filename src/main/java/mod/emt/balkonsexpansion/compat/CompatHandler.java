@@ -4,6 +4,8 @@ import mod.emt.balkonsexpansion.BEConfig;
 import mod.emt.balkonsexpansion.BalkonsExpansion;
 import mod.emt.balkonsexpansion.compat.galacticraft.GalacticraftMaterialColors;
 import mod.emt.balkonsexpansion.compat.galacticraft.GalacticraftRegistration;
+import mod.emt.balkonsexpansion.compat.railcraft.RailcraftMaterialColors;
+import mod.emt.balkonsexpansion.compat.railcraft.RailcraftRegistration;
 import mod.emt.balkonsexpansion.compat.thaumcraft.ThaumcraftMaterialColors;
 import mod.emt.balkonsexpansion.compat.thaumcraft.ThaumcraftRegistration;
 import net.minecraft.item.Item;
@@ -36,6 +38,15 @@ public class CompatHandler {
             }
         }
 
+        // Railcraft
+        if (Loader.isModLoaded("railcraft") && BEConfig.general_settings.RAILCRAFT_INTEGRATION) {
+            RailcraftRegistration.registerItems(event);
+            RailcraftMaterialColors.registerMaterialColors();
+            if (FMLLaunchHandler.side().isClient()) {
+                RailcraftRegistration.registerRenderersItem();
+            }
+        }
+
         // Thaumcraft
         if (Loader.isModLoaded("thaumcraft") && BEConfig.general_settings.THAUMCRAFT_INTEGRATION) {
             ThaumcraftRegistration.registerItems(event);
@@ -51,6 +62,9 @@ public class CompatHandler {
         // Galacticraft Legacy
         if (Loader.isModLoaded("galacticraftcore") && (Loader.isModLoaded("galacticraftplanets") && BEConfig.general_settings.GALACTICRAFT_INTEGRATION))
             GalacticraftRegistration.registerRecipes(event);
+        // Railcraft
+        if (Loader.isModLoaded("railcraft") && BEConfig.general_settings.RAILCRAFT_INTEGRATION)
+            RailcraftRegistration.registerRecipes(event);
         // Thaumcraft
         if (Loader.isModLoaded("thaumcraft") && BEConfig.general_settings.THAUMCRAFT_INTEGRATION)
             ThaumcraftRegistration.registerRecipes(event);

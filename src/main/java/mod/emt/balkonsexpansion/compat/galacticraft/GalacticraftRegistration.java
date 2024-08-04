@@ -1,7 +1,6 @@
 package mod.emt.balkonsexpansion.compat.galacticraft;
 
 import ckathode.weaponmod.WMItemBuilder;
-import ckathode.weaponmod.WeaponModConfig;
 import ckathode.weaponmod.item.ItemFlail;
 import ckathode.weaponmod.item.ItemMelee;
 import ckathode.weaponmod.item.ItemMusket;
@@ -97,8 +96,8 @@ public class GalacticraftRegistration {
         // Metadata sucks.
         if (BEConfig.galacticraft_settings.GC_DESH_MATERIAL) {
             registry.register(BERecipes.registerBattleaxeRecipe(new ItemStack(MarsItems.marsItemBasic, 1, 2), new ItemStack(MarsItems.marsItemBasic, 1, 1), battleaxeDesh));
-            registry.register(BERecipes.registerBayonetRecipe(knifeDesh, bayonetDesh));
             registry.register(BERecipes.registerBoomerangRecipe(new ItemStack(MarsItems.marsItemBasic, 1, 2), "ingotIron", boomerangDesh));
+            registry.register(BERecipes.registerBayonetRecipe(knifeDesh, bayonetDesh));
             registry.register(BERecipes.registerFlailRecipe(new ItemStack(MarsItems.marsItemBasic, 1, 2), new ItemStack(MarsItems.marsItemBasic, 1, 1), "string", flailDesh));
             registry.register(BERecipes.registerHalberdRecipe(new ItemStack(MarsItems.marsItemBasic, 1, 2), new ItemStack(MarsItems.marsItemBasic, 1, 1), halberdDesh));
             registry.register(BERecipes.registerKatanaRecipe(new ItemStack(MarsItems.marsItemBasic, 1, 2), new ItemStack(MarsItems.marsItemBasic, 1, 1), katanaDesh));
@@ -110,8 +109,8 @@ public class GalacticraftRegistration {
 
         if (BEConfig.galacticraft_settings.GC_HEAVY_DUTY_MATERIAL) {
             registry.register(BERecipes.registerBattleaxeRecipe("compressedSteel", "stickWood", battleaxeHeavyDuty));
-            registry.register(BERecipes.registerBayonetRecipe(knifeHeavyDuty, bayonetHeavyDuty));
             registry.register(BERecipes.registerBoomerangRecipe("compressedSteel", "plankWood", boomerangHeavyDuty));
+            registry.register(BERecipes.registerBayonetRecipe(knifeHeavyDuty, bayonetHeavyDuty));
             registry.register(BERecipes.registerFlailRecipe("compressedSteel", "stickWood", "string", flailHeavyDuty));
             registry.register(BERecipes.registerHalberdRecipe("compressedSteel", "stickWood", halberdHeavyDuty));
             registry.register(BERecipes.registerKatanaRecipe("compressedSteel", "stickWood", katanaHeavyDuty));
@@ -123,8 +122,8 @@ public class GalacticraftRegistration {
 
         if (BEConfig.galacticraft_settings.GC_TITANIUM_MATERIAL) {
             registry.register(BERecipes.registerBattleaxeRecipe(new ItemStack(AsteroidsItems.basicItem, 1, 6), "ingotIron", battleaxeTitanium));
-            registry.register(BERecipes.registerBayonetRecipe(knifeTitanium, bayonetTitanium));
             registry.register(BERecipes.registerBoomerangRecipe(new ItemStack(AsteroidsItems.basicItem, 1, 6), "ingotIron", boomerangTitanium));
+            registry.register(BERecipes.registerBayonetRecipe(knifeTitanium, bayonetTitanium));
             registry.register(BERecipes.registerFlailRecipe(new ItemStack(AsteroidsItems.basicItem, 1, 6), "ingotIron", "string", flailTitanium));
             registry.register(BERecipes.registerHalberdRecipe(new ItemStack(AsteroidsItems.basicItem, 1, 6), "ingotIron", halberdTitanium));
             registry.register(BERecipes.registerKatanaRecipe(new ItemStack(AsteroidsItems.basicItem, 1, 6), "ingotIron", katanaTitanium));

@@ -62,8 +62,8 @@ public class ThaumcraftRegistration {
 
         if (BEConfig.thaumcraft_settings.TC_THAUMIUM_MATERIAL) {
             registry.register(BERecipes.registerBattleaxeRecipe("ingotThaumium", "stickWood", battleaxeThaumium));
-            registry.register(BERecipes.registerBayonetRecipe(knifeThaumium, bayonetThaumium));
             registry.register(BERecipes.registerBoomerangRecipe("ingotThaumium", "plankWood", boomerangThaumium));
+            registry.register(BERecipes.registerBayonetRecipe(knifeThaumium, bayonetThaumium));
             registry.register(BERecipes.registerFlailRecipe("ingotThaumium", "stickWood", "string", flailThaumium));
             registry.register(BERecipes.registerHalberdRecipe("ingotThaumium", "stickWood", halberdThaumium));
             registry.register(BERecipes.registerKatanaRecipe("ingotThaumium", "stickWood", katanaThaumium));
