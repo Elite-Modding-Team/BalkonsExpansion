@@ -4,6 +4,8 @@ import mod.emt.balkonsexpansion.BEConfig;
 import mod.emt.balkonsexpansion.BalkonsExpansion;
 import mod.emt.balkonsexpansion.compat.galacticraft.GalacticraftMaterialColors;
 import mod.emt.balkonsexpansion.compat.galacticraft.GalacticraftRegistration;
+import mod.emt.balkonsexpansion.compat.ic2classic.IC2ClassicMaterialColors;
+import mod.emt.balkonsexpansion.compat.ic2classic.IC2ClassicRegistration;
 import mod.emt.balkonsexpansion.compat.railcraft.RailcraftMaterialColors;
 import mod.emt.balkonsexpansion.compat.railcraft.RailcraftRegistration;
 import mod.emt.balkonsexpansion.compat.thaumcraft.ThaumcraftMaterialColors;
@@ -38,6 +40,15 @@ public class CompatHandler {
             }
         }
 
+        // Industrial Craft 2 Classic
+        if (Loader.isModLoaded("ic2-classic-spmod") && BEConfig.general_settings.IC2_CLASSIC_INTEGRATION) {
+            IC2ClassicRegistration.registerItems(event);
+            IC2ClassicMaterialColors.registerMaterialColors();
+            if (FMLLaunchHandler.side().isClient()) {
+                IC2ClassicRegistration.registerRenderersItem();
+            }
+        }
+
         // Railcraft
         if (Loader.isModLoaded("railcraft") && BEConfig.general_settings.RAILCRAFT_INTEGRATION) {
             RailcraftRegistration.registerItems(event);
@@ -62,6 +73,9 @@ public class CompatHandler {
         // Galacticraft Legacy
         if (Loader.isModLoaded("galacticraftcore") && (Loader.isModLoaded("galacticraftplanets") && BEConfig.general_settings.GALACTICRAFT_INTEGRATION))
             GalacticraftRegistration.registerRecipes(event);
+        // Industrial Craft 2 Classic
+        if (Loader.isModLoaded("ic2-classic-spmod") && BEConfig.general_settings.IC2_CLASSIC_INTEGRATION)
+            IC2ClassicRegistration.registerRecipes(event);
         // Railcraft
         if (Loader.isModLoaded("railcraft") && BEConfig.general_settings.RAILCRAFT_INTEGRATION)
             RailcraftRegistration.registerRecipes(event);

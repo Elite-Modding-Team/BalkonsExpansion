@@ -34,7 +34,7 @@ public class RailcraftRegistration {
     public static void registerItems(RegistryEvent.Register<Item> event) {
         IForgeRegistry<Item> registry = event.getRegistry();
 
-        if (BEConfig.thaumcraft_settings.TC_THAUMIUM_MATERIAL) {
+        if (BEConfig.railcraft_settings.RC_STEEL_MATERIAL) {
             registry.register(spearSteel = WMItemBuilder.createStandardSpear(BalkonsExpansion.MOD_ID, "spear.steel.rc", ItemMaterials.STEEL_TOOL));
             registry.register(halberdSteel = WMItemBuilder.createStandardHalberd(BalkonsExpansion.MOD_ID, "halberd.steel.rc", ItemMaterials.STEEL_TOOL));
             registry.register(battleaxeSteel = WMItemBuilder.createStandardBattleaxe(BalkonsExpansion.MOD_ID, "battleaxe.steel.rc", ItemMaterials.STEEL_TOOL));
