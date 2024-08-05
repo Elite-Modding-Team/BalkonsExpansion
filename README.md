@@ -13,3 +13,26 @@
 **Translators:**
 
 - None yet! :)
+
+___
+
+#### **Supported Mods:**
+
+- **Galacticraft**
+	- **Desh**
+	- **Heavy Duty**
+	- **Titanium**
+	
+- **IC2 Classic**
+	- **Bronze**
+	
+- **Project Red Exploration**
+	- **Peridot**
+	- **Ruby**
+	- **Sapphire**
+	
+- **Railcraft**
+	- **Steel**
+	
+- **Thaumcraft**
+	- **Thaumium**
