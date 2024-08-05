@@ -1,0 +1,6 @@
+{
+  "parent": "balkonsexpansion:item/flail.sapphire.pr",
+  "textures": {
+    "layer0": "weaponmod:items/flail-thrown"
+  }
+}

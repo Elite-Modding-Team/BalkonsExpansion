@@ -6,6 +6,8 @@ import mod.emt.balkonsexpansion.compat.galacticraft.GalacticraftMaterialColors;
 import mod.emt.balkonsexpansion.compat.galacticraft.GalacticraftRegistration;
 import mod.emt.balkonsexpansion.compat.ic2classic.IC2ClassicMaterialColors;
 import mod.emt.balkonsexpansion.compat.ic2classic.IC2ClassicRegistration;
+import mod.emt.balkonsexpansion.compat.projectred.ProjectRedMaterialColors;
+import mod.emt.balkonsexpansion.compat.projectred.ProjectRedRegistration;
 import mod.emt.balkonsexpansion.compat.railcraft.RailcraftMaterialColors;
 import mod.emt.balkonsexpansion.compat.railcraft.RailcraftRegistration;
 import mod.emt.balkonsexpansion.compat.thaumcraft.ThaumcraftMaterialColors;
@@ -49,6 +51,15 @@ public class CompatHandler {
             }
         }
 
+        // Project Red
+        if (Loader.isModLoaded("projectred-exploration") && BEConfig.general_settings.PROJECT_RED_INTEGRATION) {
+            ProjectRedRegistration.registerItems(event);
+            ProjectRedMaterialColors.registerMaterialColors();
+            if (FMLLaunchHandler.side().isClient()) {
+                ProjectRedRegistration.registerRenderersItem();
+            }
+        }
+
         // Railcraft
         if (Loader.isModLoaded("railcraft") && BEConfig.general_settings.RAILCRAFT_INTEGRATION) {
             RailcraftRegistration.registerItems(event);
@@ -76,6 +87,9 @@ public class CompatHandler {
         // Industrial Craft 2 Classic
         if (Loader.isModLoaded("ic2-classic-spmod") && BEConfig.general_settings.IC2_CLASSIC_INTEGRATION)
             IC2ClassicRegistration.registerRecipes(event);
+        // Project Red
+        if (Loader.isModLoaded("projectred-exploration") && BEConfig.general_settings.PROJECT_RED_INTEGRATION)
+            ProjectRedRegistration.registerRecipes(event);
         // Railcraft
         if (Loader.isModLoaded("railcraft") && BEConfig.general_settings.RAILCRAFT_INTEGRATION)
             RailcraftRegistration.registerRecipes(event);

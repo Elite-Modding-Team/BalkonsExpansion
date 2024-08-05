@@ -1,0 +1,14 @@
+{
+  "parent": "weaponmod:item/handheld_rod",
+  "textures": {
+    "layer0": "balkonsexpansion:projectred/items/flail.sapphire"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "weaponmod:thrown": 1
+      },
+      "model": "balkonsexpansion:item/flail.sapphire.pr-thrown"
+    }
+  ]
+}

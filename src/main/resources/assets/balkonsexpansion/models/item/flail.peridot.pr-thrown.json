@@ -1,0 +1,6 @@
+{
+  "parent": "balkonsexpansion:item/flail.peridot.pr",
+  "textures": {
+    "layer0": "weaponmod:items/flail-thrown"
+  }
+}
