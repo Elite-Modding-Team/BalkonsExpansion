@@ -1,6 +1,6 @@
 ---
 name: Suggestion
-about: Make a suggestion for what other mods for the mod to support or what could be improved within the mod
+about: Make a suggestion for what other mods to support or what could be improved within this mod
 title: ''
 labels: enhancement
 assignees: ''
