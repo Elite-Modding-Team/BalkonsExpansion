@@ -15,7 +15,7 @@
 - None yet! :)
 ___
 ### **Supported Mods:** ###
-- **Galacticraft:**
+- **Galacticraft Legacy:**
 	- Desh
 	- Heavy Duty
 	- Titanium
