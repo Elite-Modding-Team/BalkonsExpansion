@@ -8,8 +8,11 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 @Config(modid = BalkonsExpansion.MOD_ID, name = BalkonsExpansion.NAME)
 public class BEConfig {
-    @Config.Comment("General")
+    @Config.Comment("!General")
     public static GeneralSettings general_settings = new GeneralSettings();
+
+    @Config.Comment("!Mod Integration")
+    public static ModIntegrationSettings mod_integration_settings = new ModIntegrationSettings();
 
     @Config.Comment("Galacticraft Legacy")
     public static GalacticraftSettings galacticraft_settings = new GalacticraftSettings();
@@ -27,27 +30,39 @@ public class BEConfig {
     public static ThaumcraftSettings thaumcraft_settings = new ThaumcraftSettings();
 
     public static class GeneralSettings {
-        @Config.Name("Galacticraft Legacy Integration")
+        @Config.Name("Melee Blocking Sounds")
+        @Config.Comment("Enables extra blocking sounds for battleaxes and katanas [default: true]")
+        @Config.RequiresMcRestart
+        public boolean MELEE_BLOCKING_SOUNDS = true;
+
+        @Config.Name("No Ranged Blocking")
+        @Config.Comment("Disables blocking when reloading ranged weapons or preparing boomerangs because this is mainly unintentional behavior [default: true]")
+        @Config.RequiresMcRestart
+        public boolean NO_RANGED_BLOCKING = true;
+    }
+
+    public static class ModIntegrationSettings {
+        @Config.Name("Galacticraft Legacy")
         @Config.Comment("Enables Galacticraft Legacy integration [default: true]")
         @Config.RequiresMcRestart
         public boolean GALACTICRAFT_INTEGRATION = true;
 
-        @Config.Name("Industrial Craft 2 Classic Integration")
+        @Config.Name("Industrial Craft 2 Classic")
         @Config.Comment("Enables Industrial Craft 2 Classic integration [default: true]")
         @Config.RequiresMcRestart
         public boolean IC2_CLASSIC_INTEGRATION = true;
 
-        @Config.Name("Project Red Exploration Integration")
+        @Config.Name("Project Red Exploration")
         @Config.Comment("Enables Project Red Exploration integration [default: true]")
         @Config.RequiresMcRestart
         public boolean PROJECT_RED_INTEGRATION = true;
 
-        @Config.Name("Railcraft Integration")
+        @Config.Name("Railcraft")
         @Config.Comment("Enables Railcraft integration [default: true]")
         @Config.RequiresMcRestart
         public boolean RAILCRAFT_INTEGRATION = true;
 
-        @Config.Name("Thaumcraft Integration")
+        @Config.Name("Thaumcraft")
         @Config.Comment("Enables Thaumcraft integration [default: true]")
         @Config.RequiresMcRestart
         public boolean THAUMCRAFT_INTEGRATION = true;

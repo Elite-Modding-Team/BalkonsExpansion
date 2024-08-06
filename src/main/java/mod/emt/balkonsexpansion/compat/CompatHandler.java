@@ -34,7 +34,7 @@ public class CompatHandler {
     @SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> event) {
         // Galacticraft Legacy
-        if (Loader.isModLoaded("galacticraftcore") && (Loader.isModLoaded("galacticraftplanets") && BEConfig.general_settings.GALACTICRAFT_INTEGRATION)) {
+        if (Loader.isModLoaded("galacticraftcore") && (Loader.isModLoaded("galacticraftplanets") && BEConfig.mod_integration_settings.GALACTICRAFT_INTEGRATION)) {
             GalacticraftRegistration.registerItems(event);
             GalacticraftMaterialColors.registerMaterialColors();
             if (FMLLaunchHandler.side().isClient()) {
@@ -43,7 +43,7 @@ public class CompatHandler {
         }
 
         // Industrial Craft 2 Classic
-        if (Loader.isModLoaded("ic2-classic-spmod") && BEConfig.general_settings.IC2_CLASSIC_INTEGRATION) {
+        if (Loader.isModLoaded("ic2-classic-spmod") && BEConfig.mod_integration_settings.IC2_CLASSIC_INTEGRATION) {
             IC2ClassicRegistration.registerItems(event);
             IC2ClassicMaterialColors.registerMaterialColors();
             if (FMLLaunchHandler.side().isClient()) {
@@ -52,7 +52,7 @@ public class CompatHandler {
         }
 
         // Project Red
-        if (Loader.isModLoaded("projectred-exploration") && BEConfig.general_settings.PROJECT_RED_INTEGRATION) {
+        if (Loader.isModLoaded("projectred-exploration") && BEConfig.mod_integration_settings.PROJECT_RED_INTEGRATION) {
             ProjectRedRegistration.registerItems(event);
             ProjectRedMaterialColors.registerMaterialColors();
             if (FMLLaunchHandler.side().isClient()) {
@@ -61,7 +61,7 @@ public class CompatHandler {
         }
 
         // Railcraft
-        if (Loader.isModLoaded("railcraft") && BEConfig.general_settings.RAILCRAFT_INTEGRATION) {
+        if (Loader.isModLoaded("railcraft") && BEConfig.mod_integration_settings.RAILCRAFT_INTEGRATION) {
             RailcraftRegistration.registerItems(event);
             RailcraftMaterialColors.registerMaterialColors();
             if (FMLLaunchHandler.side().isClient()) {
@@ -70,7 +70,7 @@ public class CompatHandler {
         }
 
         // Thaumcraft
-        if (Loader.isModLoaded("thaumcraft") && BEConfig.general_settings.THAUMCRAFT_INTEGRATION) {
+        if (Loader.isModLoaded("thaumcraft") && BEConfig.mod_integration_settings.THAUMCRAFT_INTEGRATION) {
             ThaumcraftRegistration.registerItems(event);
             ThaumcraftMaterialColors.registerMaterialColors();
             if (FMLLaunchHandler.side().isClient()) {
@@ -82,19 +82,19 @@ public class CompatHandler {
     @SubscribeEvent
     public static void registerRecipes(RegistryEvent.Register<IRecipe> event) {
         // Galacticraft Legacy
-        if (Loader.isModLoaded("galacticraftcore") && (Loader.isModLoaded("galacticraftplanets") && BEConfig.general_settings.GALACTICRAFT_INTEGRATION))
+        if (Loader.isModLoaded("galacticraftcore") && (Loader.isModLoaded("galacticraftplanets") && BEConfig.mod_integration_settings.GALACTICRAFT_INTEGRATION))
             GalacticraftRegistration.registerRecipes(event);
         // Industrial Craft 2 Classic
-        if (Loader.isModLoaded("ic2-classic-spmod") && BEConfig.general_settings.IC2_CLASSIC_INTEGRATION)
+        if (Loader.isModLoaded("ic2-classic-spmod") && BEConfig.mod_integration_settings.IC2_CLASSIC_INTEGRATION)
             IC2ClassicRegistration.registerRecipes(event);
         // Project Red
-        if (Loader.isModLoaded("projectred-exploration") && BEConfig.general_settings.PROJECT_RED_INTEGRATION)
+        if (Loader.isModLoaded("projectred-exploration") && BEConfig.mod_integration_settings.PROJECT_RED_INTEGRATION)
             ProjectRedRegistration.registerRecipes(event);
         // Railcraft
-        if (Loader.isModLoaded("railcraft") && BEConfig.general_settings.RAILCRAFT_INTEGRATION)
+        if (Loader.isModLoaded("railcraft") && BEConfig.mod_integration_settings.RAILCRAFT_INTEGRATION)
             RailcraftRegistration.registerRecipes(event);
         // Thaumcraft
-        if (Loader.isModLoaded("thaumcraft") && BEConfig.general_settings.THAUMCRAFT_INTEGRATION)
+        if (Loader.isModLoaded("thaumcraft") && BEConfig.mod_integration_settings.THAUMCRAFT_INTEGRATION)
             ThaumcraftRegistration.registerRecipes(event);
     }
 }
