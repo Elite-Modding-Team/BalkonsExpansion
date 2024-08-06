@@ -32,9 +32,9 @@ public class BEEvents {
                 Item item = stack.getItem();
                 MeleeComponent meleeComp = ((IItemWeapon) stack.getItem()).getMeleeComponent();
 
-                // Additional block sound for battleaxes and katanas.
+                // Additional blocking sound for battleaxes and katanas.
                 if (item instanceof ItemMelee && !(meleeComp instanceof MeleeCompBoomerang) && BEConfig.general_settings.MELEE_BLOCKING_SOUNDS) {
-                    player.getEntityWorld().playSound(null, player.getPosition(), SoundEvents.ENTITY_ZOMBIE_ATTACK_IRON_DOOR, SoundCategory.PLAYERS, 0.6F, 0.8F + player.getEntityWorld().rand.nextFloat() * 0.4F);
+                    player.getEntityWorld().playSound(null, player.getPosition(), SoundEvents.ENTITY_ZOMBIE_ATTACK_IRON_DOOR, SoundCategory.PLAYERS, 0.6F, 3.0F + player.getEntityWorld().rand.nextFloat() * 0.4F);
                 }
             }
         }
