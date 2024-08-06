@@ -6,6 +6,7 @@ import ckathode.weaponmod.item.ItemMelee;
 import ckathode.weaponmod.item.ItemMusket;
 import ic2.core.util.helpers.ToolHelper;
 import mod.emt.balkonsexpansion.BEConfig;
+import mod.emt.balkonsexpansion.BEItemBuilder;
 import mod.emt.balkonsexpansion.BERecipes;
 import mod.emt.balkonsexpansion.BERegistry;
 import mod.emt.balkonsexpansion.BalkonsExpansion;
@@ -35,7 +36,7 @@ public class IC2ClassicRegistration {
         if (BEConfig.ic2_classic_settings.IC2C_BRONZE_MATERIAL) {
             registry.register(spearBronze = WMItemBuilder.createStandardSpear(BalkonsExpansion.MOD_ID, "spear.bronze.ic2c", ToolHelper.bronzeToolMaterial));
             registry.register(halberdBronze = WMItemBuilder.createStandardHalberd(BalkonsExpansion.MOD_ID, "halberd.bronze.ic2c", ToolHelper.bronzeToolMaterial));
-            registry.register(battleaxeBronze = WMItemBuilder.createStandardBattleaxe(BalkonsExpansion.MOD_ID, "battleaxe.bronze.ic2c", ToolHelper.bronzeToolMaterial));
+            registry.register(battleaxeBronze = BEItemBuilder.createCustomBattleaxe("battleaxe.bronze.ic2c", ToolHelper.bronzeToolMaterial, 0.2F, 1.0F));
             registry.register(knifeBronze = WMItemBuilder.createStandardKnife(BalkonsExpansion.MOD_ID, "knife.bronze.ic2c", ItemMaterials.STEEL_TOOL));
             registry.register(warhammerBronze = WMItemBuilder.createStandardWarhammer(BalkonsExpansion.MOD_ID, "warhammer.bronze.ic2c", ToolHelper.bronzeToolMaterial));
             registry.register(flailBronze = WMItemBuilder.createStandardFlail(BalkonsExpansion.MOD_ID, "flail.bronze.ic2c", ToolHelper.bronzeToolMaterial));

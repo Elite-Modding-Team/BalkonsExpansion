@@ -5,6 +5,7 @@ import ckathode.weaponmod.item.ItemFlail;
 import ckathode.weaponmod.item.ItemMelee;
 import ckathode.weaponmod.item.ItemMusket;
 import mod.emt.balkonsexpansion.BEConfig;
+import mod.emt.balkonsexpansion.BEItemBuilder;
 import mod.emt.balkonsexpansion.BERecipes;
 import mod.emt.balkonsexpansion.BERegistry;
 import mod.emt.balkonsexpansion.BalkonsExpansion;
@@ -37,7 +38,7 @@ public class RailcraftRegistration {
         if (BEConfig.railcraft_settings.RC_STEEL_MATERIAL) {
             registry.register(spearSteel = WMItemBuilder.createStandardSpear(BalkonsExpansion.MOD_ID, "spear.steel.rc", ItemMaterials.STEEL_TOOL));
             registry.register(halberdSteel = WMItemBuilder.createStandardHalberd(BalkonsExpansion.MOD_ID, "halberd.steel.rc", ItemMaterials.STEEL_TOOL));
-            registry.register(battleaxeSteel = WMItemBuilder.createStandardBattleaxe(BalkonsExpansion.MOD_ID, "battleaxe.steel.rc", ItemMaterials.STEEL_TOOL));
+            registry.register(battleaxeSteel = BEItemBuilder.createCustomBattleaxe("battleaxe.steel.rc", ItemMaterials.STEEL_TOOL, 0.2F, 1.0F));
             registry.register(knifeSteel = WMItemBuilder.createStandardKnife(BalkonsExpansion.MOD_ID, "knife.steel.rc", ItemMaterials.STEEL_TOOL));
             registry.register(warhammerSteel = WMItemBuilder.createStandardWarhammer(BalkonsExpansion.MOD_ID, "warhammer.steel.rc", ItemMaterials.STEEL_TOOL));
             registry.register(flailSteel = WMItemBuilder.createStandardFlail(BalkonsExpansion.MOD_ID, "flail.steel.rc", ItemMaterials.STEEL_TOOL));
