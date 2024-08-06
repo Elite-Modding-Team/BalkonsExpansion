@@ -12,7 +12,7 @@ import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemStack;
 
-// Allows us to set custom attribute amount for our battleaxes.
+// Allows us to set custom attribute amounts for our battleaxes.
 public class MeleeCompBattleaxeCustom extends MeleeCompBattleaxe {
     private float knockbackAmount;
     private float ignoreArmorAmount;
@@ -38,12 +38,12 @@ public class MeleeCompBattleaxeCustom extends MeleeCompBattleaxe {
     public void addItemAttributeModifiers(Multimap<String, AttributeModifier> multimap) {
         float dmg = getEntityDamage();
 
-        if (dmg > 0.0f || meleeSpecs.damageMult > 0.0f) {
+        if (dmg > 0.0F || meleeSpecs.damageMult > 0.0F) {
             multimap.put(SharedMonsterAttributes.ATTACK_DAMAGE.getName(), new AttributeModifier(IItemWeapon.ATTACK_DAMAGE_MODIFIER, "Weapon attack damage modifier", dmg, 0));
             multimap.put(SharedMonsterAttributes.ATTACK_SPEED.getName(), new AttributeModifier(IItemWeapon.ATTACK_SPEED_MODIFIER, "Weapon attack speed modifier", -meleeSpecs.attackDelay, 0));
         }
 
-        if (knockbackAmount != 0.0f) {
+        if (knockbackAmount != 0.0F) {
             multimap.put(WeaponModAttributes.WEAPON_KNOCKBACK.getName(),
                     new AttributeModifier(IItemWeapon.KNOCKBACK_MODIFIER, "Weapon knockback modifier", this.knockbackAmount, 0));
         }
@@ -56,7 +56,7 @@ public class MeleeCompBattleaxeCustom extends MeleeCompBattleaxe {
             }
         }
 
-        if (getIgnoreArmorAmount(weaponMaterial) != 0.0f) {
+        if (getIgnoreArmorAmount(weaponMaterial) != 0.0F) {
             multimap.put(WeaponModAttributes.IGNORE_ARMOUR_DAMAGE.getName(),
                     new AttributeModifier(IItemWeapon.IGNORE_ARMOUR_MODIFIER, "Weapon ignore armour modifier", getIgnoreArmorAmount(weaponMaterial), 0));
         }
