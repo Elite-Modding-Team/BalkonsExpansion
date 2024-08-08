@@ -5,33 +5,30 @@ import com.google.common.collect.Multimap;
 import ckathode.weaponmod.WeaponModAttributes;
 import ckathode.weaponmod.item.IExtendedReachItem;
 import ckathode.weaponmod.item.IItemWeapon;
-import ckathode.weaponmod.item.MeleeCompBattleaxe;
+import ckathode.weaponmod.item.MeleeCompHalberd;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemStack;
+import net.minecraft.world.World;
 
-// Allows us to set custom attribute amounts for our battleaxes.
-public class MeleeCompBattleaxeCustom extends MeleeCompBattleaxe {
+// Allows us to set custom attribute amounts for our halberds.
+public class MeleeCompHalberdCustom extends MeleeCompHalberd implements IExtendedReachItem {
     private float knockbackAmount;
-    private float ignoreArmorAmount;
+    private float reachAmount;
 
-    public MeleeCompBattleaxeCustom(ToolMaterial material, float knockbackAmount, float ignoreArmorAmount) {
+    public MeleeCompHalberdCustom(ToolMaterial material, float knockbackAmount, float reachAmount) {
         super(material);
         this.knockbackAmount = knockbackAmount;
-        this.ignoreArmorAmount = ignoreArmorAmount;
+        this.reachAmount = reachAmount;
     }
 
     @Override
     public float getKnockBack(ItemStack itemstack, EntityLivingBase entityliving, EntityLivingBase attacker) {
         // Must include (+ 0.4F), otherwise it'll calculate wrong.
-        return knockbackAmount + 0.4F;
-    }
-
-    @Override
-    public float getIgnoreArmorAmount(ToolMaterial material) {
-        return ignoreArmorAmount;
+    	float kb = knockbackAmount + 0.4F;
+        return getHalberdState(itemstack) ? (kb / 2.0f) : kb;
     }
 
     @Override
@@ -55,10 +52,11 @@ public class MeleeCompBattleaxeCustom extends MeleeCompBattleaxe {
             } catch (NullPointerException ignored) {
             }
         }
+    }
 
-        if (getIgnoreArmorAmount(weaponMaterial) != 0.0F) {
-            multimap.put(WeaponModAttributes.IGNORE_ARMOUR_DAMAGE.getName(),
-                    new AttributeModifier(IItemWeapon.IGNORE_ARMOUR_MODIFIER, "Weapon ignore armour modifier", getIgnoreArmorAmount(weaponMaterial), 0));
-        }
+    @Override
+    public float getExtendedReach(World world, EntityLivingBase living, ItemStack itemstack) {
+        // Must include (+ 3.0F), otherwise it'll calculate wrong.
+        return reachAmount + 3.0F;
     }
 }

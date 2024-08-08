@@ -1,6 +1,5 @@
 package mod.emt.balkonsexpansion.compat.galacticraft;
 
-import ckathode.weaponmod.WMItemBuilder;
 import ckathode.weaponmod.item.ItemFlail;
 import ckathode.weaponmod.item.ItemMelee;
 import ckathode.weaponmod.item.ItemMusket;
@@ -11,7 +10,6 @@ import mod.emt.balkonsexpansion.BEConfig;
 import mod.emt.balkonsexpansion.BEItemBuilder;
 import mod.emt.balkonsexpansion.BERecipes;
 import mod.emt.balkonsexpansion.BERegistry;
-import mod.emt.balkonsexpansion.BalkonsExpansion;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipe;
@@ -54,39 +52,39 @@ public class GalacticraftRegistration {
         IForgeRegistry<Item> registry = event.getRegistry();
 
         if (BEConfig.galacticraft_settings.GC_HEAVY_DUTY_MATERIAL) {
-            registry.register(spearHeavyDuty = WMItemBuilder.createStandardSpear(BalkonsExpansion.MOD_ID, "spear.heavy_duty", GCItems.TOOL_STEEL));
-            registry.register(halberdHeavyDuty = WMItemBuilder.createStandardHalberd(BalkonsExpansion.MOD_ID, "halberd.heavy_duty", GCItems.TOOL_STEEL));
+            registry.register(spearHeavyDuty = BEItemBuilder.createCustomSpear("spear.heavy_duty", GCItems.TOOL_STEEL));
+            registry.register(halberdHeavyDuty = BEItemBuilder.createCustomHalberd("halberd.heavy_duty", GCItems.TOOL_STEEL));
             registry.register(battleaxeHeavyDuty = BEItemBuilder.createCustomBattleaxe("battleaxe.heavy_duty", GCItems.TOOL_STEEL, 0.2F, 1.0F));
-            registry.register(knifeHeavyDuty = WMItemBuilder.createStandardKnife(BalkonsExpansion.MOD_ID, "knife.heavy_duty", GCItems.TOOL_STEEL));
-            registry.register(warhammerHeavyDuty = WMItemBuilder.createStandardWarhammer(BalkonsExpansion.MOD_ID, "warhammer.heavy_duty", GCItems.TOOL_STEEL));
-            registry.register(flailHeavyDuty = WMItemBuilder.createStandardFlail(BalkonsExpansion.MOD_ID, "flail.heavy_duty", GCItems.TOOL_STEEL));
-            registry.register(katanaHeavyDuty = WMItemBuilder.createStandardKatana(BalkonsExpansion.MOD_ID, "katana.heavy_duty", GCItems.TOOL_STEEL));
-            registry.register(boomerangHeavyDuty = WMItemBuilder.createStandardBoomerang(BalkonsExpansion.MOD_ID, "boomerang.heavy_duty", GCItems.TOOL_STEEL));
-            registry.register(bayonetHeavyDuty = WMItemBuilder.createStandardMusketWithBayonet(BalkonsExpansion.MOD_ID, "musketbayonet.heavy_duty", GCItems.TOOL_STEEL, knifeHeavyDuty));
+            registry.register(knifeHeavyDuty = BEItemBuilder.createCustomKnife("knife.heavy_duty", GCItems.TOOL_STEEL));
+            registry.register(warhammerHeavyDuty = BEItemBuilder.createCustomWarhammer("warhammer.heavy_duty", GCItems.TOOL_STEEL));
+            registry.register(flailHeavyDuty = BEItemBuilder.createCustomFlail("flail.heavy_duty", GCItems.TOOL_STEEL));
+            registry.register(katanaHeavyDuty = BEItemBuilder.createCustomKatana("katana.heavy_duty", GCItems.TOOL_STEEL));
+            registry.register(boomerangHeavyDuty = BEItemBuilder.createCustomBoomerang("boomerang.heavy_duty", GCItems.TOOL_STEEL));
+            registry.register(bayonetHeavyDuty = BEItemBuilder.createCustomMusketBayonet("musketbayonet.heavy_duty", GCItems.TOOL_STEEL, knifeHeavyDuty));
         }
 
         if (BEConfig.galacticraft_settings.GC_DESH_MATERIAL) {
-            registry.register(spearDesh = WMItemBuilder.createStandardSpear(BalkonsExpansion.MOD_ID, "spear.desh", MarsItems.TOOLDESH));
-            registry.register(halberdDesh = WMItemBuilder.createStandardHalberd(BalkonsExpansion.MOD_ID, "halberd.desh", MarsItems.TOOLDESH));
+            registry.register(spearDesh = BEItemBuilder.createCustomSpear("spear.desh", MarsItems.TOOLDESH));
+            registry.register(halberdDesh = BEItemBuilder.createCustomHalberd("halberd.desh", MarsItems.TOOLDESH));
             registry.register(battleaxeDesh = BEItemBuilder.createCustomBattleaxe("battleaxe.desh", MarsItems.TOOLDESH, 0.3F, 1.0F));
-            registry.register(knifeDesh = WMItemBuilder.createStandardKnife(BalkonsExpansion.MOD_ID, "knife.desh", MarsItems.TOOLDESH));
-            registry.register(warhammerDesh = WMItemBuilder.createStandardWarhammer(BalkonsExpansion.MOD_ID, "warhammer.desh", MarsItems.TOOLDESH));
-            registry.register(flailDesh = WMItemBuilder.createStandardFlail(BalkonsExpansion.MOD_ID, "flail.desh", MarsItems.TOOLDESH));
-            registry.register(katanaDesh = WMItemBuilder.createStandardKatana(BalkonsExpansion.MOD_ID, "katana.desh", MarsItems.TOOLDESH));
-            registry.register(boomerangDesh = WMItemBuilder.createStandardBoomerang(BalkonsExpansion.MOD_ID, "boomerang.desh", MarsItems.TOOLDESH));
-            registry.register(bayonetDesh = WMItemBuilder.createStandardMusketWithBayonet(BalkonsExpansion.MOD_ID, "musketbayonet.desh", MarsItems.TOOLDESH, knifeDesh));
+            registry.register(knifeDesh = BEItemBuilder.createCustomKnife("knife.desh", MarsItems.TOOLDESH));
+            registry.register(warhammerDesh = BEItemBuilder.createCustomWarhammer("warhammer.desh", MarsItems.TOOLDESH));
+            registry.register(flailDesh = BEItemBuilder.createCustomFlail("flail.desh", MarsItems.TOOLDESH));
+            registry.register(katanaDesh = BEItemBuilder.createCustomKatana("katana.desh", MarsItems.TOOLDESH));
+            registry.register(boomerangDesh = BEItemBuilder.createCustomBoomerang("boomerang.desh", MarsItems.TOOLDESH));
+            registry.register(bayonetDesh = BEItemBuilder.createCustomMusketBayonet("musketbayonet.desh", MarsItems.TOOLDESH, knifeDesh));
         }
 
         if (BEConfig.galacticraft_settings.GC_TITANIUM_MATERIAL) {
-            registry.register(spearTitanium = WMItemBuilder.createStandardSpear(BalkonsExpansion.MOD_ID, "spear.titanium", AsteroidsItems.TOOL_TITANIUM));
-            registry.register(halberdTitanium = WMItemBuilder.createStandardHalberd(BalkonsExpansion.MOD_ID, "halberd.titanium", AsteroidsItems.TOOL_TITANIUM));
+            registry.register(spearTitanium = BEItemBuilder.createCustomSpear("spear.titanium", AsteroidsItems.TOOL_TITANIUM));
+            registry.register(halberdTitanium = BEItemBuilder.createCustomHalberd("halberd.titanium", AsteroidsItems.TOOL_TITANIUM));
             registry.register(battleaxeTitanium = BEItemBuilder.createCustomBattleaxe("battleaxe.titanium", AsteroidsItems.TOOL_TITANIUM, 0.45F, 1.0F));
-            registry.register(knifeTitanium = WMItemBuilder.createStandardKnife(BalkonsExpansion.MOD_ID, "knife.titanium", AsteroidsItems.TOOL_TITANIUM));
-            registry.register(warhammerTitanium = WMItemBuilder.createStandardWarhammer(BalkonsExpansion.MOD_ID, "warhammer.titanium", AsteroidsItems.TOOL_TITANIUM));
-            registry.register(flailTitanium = WMItemBuilder.createStandardFlail(BalkonsExpansion.MOD_ID, "flail.titanium", AsteroidsItems.TOOL_TITANIUM));
-            registry.register(katanaTitanium = WMItemBuilder.createStandardKatana(BalkonsExpansion.MOD_ID, "katana.titanium", AsteroidsItems.TOOL_TITANIUM));
-            registry.register(boomerangTitanium = WMItemBuilder.createStandardBoomerang(BalkonsExpansion.MOD_ID, "boomerang.titanium", AsteroidsItems.TOOL_TITANIUM));
-            registry.register(bayonetTitanium = WMItemBuilder.createStandardMusketWithBayonet(BalkonsExpansion.MOD_ID, "musketbayonet.titanium", AsteroidsItems.TOOL_TITANIUM, knifeTitanium));
+            registry.register(knifeTitanium = BEItemBuilder.createCustomKnife("knife.titanium", AsteroidsItems.TOOL_TITANIUM));
+            registry.register(warhammerTitanium = BEItemBuilder.createCustomWarhammer("warhammer.titanium", AsteroidsItems.TOOL_TITANIUM));
+            registry.register(flailTitanium = BEItemBuilder.createCustomFlail("flail.titanium", AsteroidsItems.TOOL_TITANIUM));
+            registry.register(katanaTitanium = BEItemBuilder.createCustomKatana("katana.titanium", AsteroidsItems.TOOL_TITANIUM));
+            registry.register(boomerangTitanium = BEItemBuilder.createCustomBoomerang("boomerang.titanium", AsteroidsItems.TOOL_TITANIUM));
+            registry.register(bayonetTitanium = BEItemBuilder.createCustomMusketBayonet("musketbayonet.titanium", AsteroidsItems.TOOL_TITANIUM, knifeTitanium));
         }
     }
 

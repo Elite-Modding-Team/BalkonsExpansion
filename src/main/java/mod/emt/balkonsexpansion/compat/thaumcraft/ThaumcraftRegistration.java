@@ -1,6 +1,5 @@
 package mod.emt.balkonsexpansion.compat.thaumcraft;
 
-import ckathode.weaponmod.WMItemBuilder;
 import ckathode.weaponmod.item.ItemFlail;
 import ckathode.weaponmod.item.ItemMelee;
 import ckathode.weaponmod.item.ItemMusket;
@@ -8,7 +7,6 @@ import mod.emt.balkonsexpansion.BEConfig;
 import mod.emt.balkonsexpansion.BEItemBuilder;
 import mod.emt.balkonsexpansion.BERecipes;
 import mod.emt.balkonsexpansion.BERegistry;
-import mod.emt.balkonsexpansion.BalkonsExpansion;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipe;
@@ -45,15 +43,15 @@ public class ThaumcraftRegistration {
         IForgeRegistry<Item> registry = event.getRegistry();
 
         if (BEConfig.thaumcraft_settings.TC_THAUMIUM_MATERIAL) {
-            registry.register(spearThaumium = WMItemBuilder.createStandardSpear(BalkonsExpansion.MOD_ID, "spear.thaumium", ThaumcraftMaterials.TOOLMAT_THAUMIUM));
-            registry.register(halberdThaumium = WMItemBuilder.createStandardHalberd(BalkonsExpansion.MOD_ID, "halberd.thaumium", ThaumcraftMaterials.TOOLMAT_THAUMIUM));
+            registry.register(spearThaumium = BEItemBuilder.createCustomSpear("spear.thaumium", ThaumcraftMaterials.TOOLMAT_THAUMIUM));
+            registry.register(halberdThaumium = BEItemBuilder.createCustomHalberd("halberd.thaumium", ThaumcraftMaterials.TOOLMAT_THAUMIUM));
             registry.register(battleaxeThaumium = BEItemBuilder.createCustomBattleaxe("battleaxe.thaumium", ThaumcraftMaterials.TOOLMAT_THAUMIUM, 0.2F, 1.0F));
-            registry.register(knifeThaumium = WMItemBuilder.createStandardKnife(BalkonsExpansion.MOD_ID, "knife.thaumium", ThaumcraftMaterials.TOOLMAT_THAUMIUM));
-            registry.register(warhammerThaumium = WMItemBuilder.createStandardWarhammer(BalkonsExpansion.MOD_ID, "warhammer.thaumium", ThaumcraftMaterials.TOOLMAT_THAUMIUM));
-            registry.register(flailThaumium = WMItemBuilder.createStandardFlail(BalkonsExpansion.MOD_ID, "flail.thaumium", ThaumcraftMaterials.TOOLMAT_THAUMIUM));
-            registry.register(katanaThaumium = WMItemBuilder.createStandardKatana(BalkonsExpansion.MOD_ID, "katana.thaumium", ThaumcraftMaterials.TOOLMAT_THAUMIUM));
-            registry.register(boomerangThaumium = WMItemBuilder.createStandardBoomerang(BalkonsExpansion.MOD_ID, "boomerang.thaumium", ThaumcraftMaterials.TOOLMAT_THAUMIUM));
-            registry.register(bayonetThaumium = WMItemBuilder.createStandardMusketWithBayonet(BalkonsExpansion.MOD_ID, "musketbayonet.thaumium", ThaumcraftMaterials.TOOLMAT_THAUMIUM, knifeThaumium));
+            registry.register(knifeThaumium = BEItemBuilder.createCustomKnife("knife.thaumium", ThaumcraftMaterials.TOOLMAT_THAUMIUM));
+            registry.register(warhammerThaumium = BEItemBuilder.createCustomWarhammer("warhammer.thaumium", ThaumcraftMaterials.TOOLMAT_THAUMIUM));
+            registry.register(flailThaumium = BEItemBuilder.createCustomFlail("flail.thaumium", ThaumcraftMaterials.TOOLMAT_THAUMIUM));
+            registry.register(katanaThaumium = BEItemBuilder.createCustomKatana("katana.thaumium", ThaumcraftMaterials.TOOLMAT_THAUMIUM));
+            registry.register(boomerangThaumium = BEItemBuilder.createCustomBoomerang("boomerang.thaumium", ThaumcraftMaterials.TOOLMAT_THAUMIUM));
+            registry.register(bayonetThaumium = BEItemBuilder.createCustomMusketBayonet("musketbayonet.thaumium", ThaumcraftMaterials.TOOLMAT_THAUMIUM, knifeThaumium));
         }
     }
 

@@ -1,6 +1,5 @@
 package mod.emt.balkonsexpansion.compat.railcraft;
 
-import ckathode.weaponmod.WMItemBuilder;
 import ckathode.weaponmod.item.ItemFlail;
 import ckathode.weaponmod.item.ItemMelee;
 import ckathode.weaponmod.item.ItemMusket;
@@ -8,7 +7,6 @@ import mod.emt.balkonsexpansion.BEConfig;
 import mod.emt.balkonsexpansion.BEItemBuilder;
 import mod.emt.balkonsexpansion.BERecipes;
 import mod.emt.balkonsexpansion.BERegistry;
-import mod.emt.balkonsexpansion.BalkonsExpansion;
 import mods.railcraft.common.items.RailcraftItems;
 import mods.railcraft.common.items.ItemMaterials;
 import net.minecraft.item.Item;
@@ -36,15 +34,15 @@ public class RailcraftRegistration {
         IForgeRegistry<Item> registry = event.getRegistry();
 
         if (BEConfig.railcraft_settings.RC_STEEL_MATERIAL) {
-            registry.register(spearSteel = WMItemBuilder.createStandardSpear(BalkonsExpansion.MOD_ID, "spear.steel.rc", ItemMaterials.STEEL_TOOL));
-            registry.register(halberdSteel = WMItemBuilder.createStandardHalberd(BalkonsExpansion.MOD_ID, "halberd.steel.rc", ItemMaterials.STEEL_TOOL));
+            registry.register(spearSteel = BEItemBuilder.createCustomSpear("spear.steel.rc", ItemMaterials.STEEL_TOOL));
+            registry.register(halberdSteel = BEItemBuilder.createCustomHalberd("halberd.steel.rc", ItemMaterials.STEEL_TOOL));
             registry.register(battleaxeSteel = BEItemBuilder.createCustomBattleaxe("battleaxe.steel.rc", ItemMaterials.STEEL_TOOL, 0.2F, 1.0F));
-            registry.register(knifeSteel = WMItemBuilder.createStandardKnife(BalkonsExpansion.MOD_ID, "knife.steel.rc", ItemMaterials.STEEL_TOOL));
-            registry.register(warhammerSteel = WMItemBuilder.createStandardWarhammer(BalkonsExpansion.MOD_ID, "warhammer.steel.rc", ItemMaterials.STEEL_TOOL));
-            registry.register(flailSteel = WMItemBuilder.createStandardFlail(BalkonsExpansion.MOD_ID, "flail.steel.rc", ItemMaterials.STEEL_TOOL));
-            registry.register(katanaSteel = WMItemBuilder.createStandardKatana(BalkonsExpansion.MOD_ID, "katana.steel.rc", ItemMaterials.STEEL_TOOL));
-            registry.register(boomerangSteel = WMItemBuilder.createStandardBoomerang(BalkonsExpansion.MOD_ID, "boomerang.steel.rc", ItemMaterials.STEEL_TOOL));
-            registry.register(bayonetSteel = WMItemBuilder.createStandardMusketWithBayonet(BalkonsExpansion.MOD_ID, "musketbayonet.steel.rc", ItemMaterials.STEEL_TOOL, knifeSteel));
+            registry.register(knifeSteel = BEItemBuilder.createCustomKnife("knife.steel.rc", ItemMaterials.STEEL_TOOL));
+            registry.register(warhammerSteel = BEItemBuilder.createCustomWarhammer("warhammer.steel.rc", ItemMaterials.STEEL_TOOL));
+            registry.register(flailSteel = BEItemBuilder.createCustomFlail("flail.steel.rc", ItemMaterials.STEEL_TOOL));
+            registry.register(katanaSteel = BEItemBuilder.createCustomKatana("katana.steel.rc", ItemMaterials.STEEL_TOOL));
+            registry.register(boomerangSteel = BEItemBuilder.createCustomBoomerang("boomerang.steel.rc", ItemMaterials.STEEL_TOOL));
+            registry.register(bayonetSteel = BEItemBuilder.createCustomMusketBayonet("musketbayonet.steel.rc", ItemMaterials.STEEL_TOOL, knifeSteel));
         }
     }
 

@@ -1,6 +1,5 @@
 package mod.emt.balkonsexpansion.compat.ic2classic;
 
-import ckathode.weaponmod.WMItemBuilder;
 import ckathode.weaponmod.item.ItemFlail;
 import ckathode.weaponmod.item.ItemMelee;
 import ckathode.weaponmod.item.ItemMusket;
@@ -9,8 +8,6 @@ import mod.emt.balkonsexpansion.BEConfig;
 import mod.emt.balkonsexpansion.BEItemBuilder;
 import mod.emt.balkonsexpansion.BERecipes;
 import mod.emt.balkonsexpansion.BERegistry;
-import mod.emt.balkonsexpansion.BalkonsExpansion;
-import mods.railcraft.common.items.ItemMaterials;
 import net.minecraft.item.Item;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraftforge.event.RegistryEvent;
@@ -34,15 +31,15 @@ public class IC2ClassicRegistration {
         IForgeRegistry<Item> registry = event.getRegistry();
 
         if (BEConfig.ic2_classic_settings.IC2C_BRONZE_MATERIAL) {
-            registry.register(spearBronze = WMItemBuilder.createStandardSpear(BalkonsExpansion.MOD_ID, "spear.bronze.ic2c", ToolHelper.bronzeToolMaterial));
-            registry.register(halberdBronze = WMItemBuilder.createStandardHalberd(BalkonsExpansion.MOD_ID, "halberd.bronze.ic2c", ToolHelper.bronzeToolMaterial));
+            registry.register(spearBronze = BEItemBuilder.createCustomSpear("spear.bronze.ic2c", ToolHelper.bronzeToolMaterial));
+            registry.register(halberdBronze = BEItemBuilder.createCustomHalberd("halberd.bronze.ic2c", ToolHelper.bronzeToolMaterial));
             registry.register(battleaxeBronze = BEItemBuilder.createCustomBattleaxe("battleaxe.bronze.ic2c", ToolHelper.bronzeToolMaterial, 0.2F, 1.0F));
-            registry.register(knifeBronze = WMItemBuilder.createStandardKnife(BalkonsExpansion.MOD_ID, "knife.bronze.ic2c", ItemMaterials.STEEL_TOOL));
-            registry.register(warhammerBronze = WMItemBuilder.createStandardWarhammer(BalkonsExpansion.MOD_ID, "warhammer.bronze.ic2c", ToolHelper.bronzeToolMaterial));
-            registry.register(flailBronze = WMItemBuilder.createStandardFlail(BalkonsExpansion.MOD_ID, "flail.bronze.ic2c", ToolHelper.bronzeToolMaterial));
-            registry.register(katanaBronze = WMItemBuilder.createStandardKatana(BalkonsExpansion.MOD_ID, "katana.bronze.ic2c", ToolHelper.bronzeToolMaterial));
-            registry.register(boomerangBronze = WMItemBuilder.createStandardBoomerang(BalkonsExpansion.MOD_ID, "boomerang.bronze.ic2c", ToolHelper.bronzeToolMaterial));
-            registry.register(bayonetBronze = WMItemBuilder.createStandardMusketWithBayonet(BalkonsExpansion.MOD_ID, "musketbayonet.bronze.ic2c", ToolHelper.bronzeToolMaterial, knifeBronze));
+            registry.register(knifeBronze = BEItemBuilder.createCustomKnife("knife.bronze.ic2c", ToolHelper.bronzeToolMaterial));
+            registry.register(warhammerBronze = BEItemBuilder.createCustomWarhammer("warhammer.bronze.ic2c", ToolHelper.bronzeToolMaterial));
+            registry.register(flailBronze = BEItemBuilder.createCustomFlail("flail.bronze.ic2c", ToolHelper.bronzeToolMaterial));
+            registry.register(katanaBronze = BEItemBuilder.createCustomKatana("katana.bronze.ic2c", ToolHelper.bronzeToolMaterial));
+            registry.register(boomerangBronze = BEItemBuilder.createCustomBoomerang("boomerang.bronze.ic2c", ToolHelper.bronzeToolMaterial));
+            registry.register(bayonetBronze = BEItemBuilder.createCustomMusketBayonet("musketbayonet.bronze.ic2c", ToolHelper.bronzeToolMaterial, knifeBronze));
         }
     }
 

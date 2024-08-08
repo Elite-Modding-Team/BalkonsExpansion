@@ -5,33 +5,26 @@ import com.google.common.collect.Multimap;
 import ckathode.weaponmod.WeaponModAttributes;
 import ckathode.weaponmod.item.IExtendedReachItem;
 import ckathode.weaponmod.item.IItemWeapon;
-import ckathode.weaponmod.item.MeleeCompBattleaxe;
+import ckathode.weaponmod.item.MeleeComponent;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemStack;
 
-// Allows us to set custom attribute amounts for our battleaxes.
-public class MeleeCompBattleaxeCustom extends MeleeCompBattleaxe {
+// Allows us to set custom attribute amounts for our katanas.
+public class MeleeCompKatanaCustom extends MeleeComponent {
     private float knockbackAmount;
-    private float ignoreArmorAmount;
 
-    public MeleeCompBattleaxeCustom(ToolMaterial material, float knockbackAmount, float ignoreArmorAmount) {
-        super(material);
+    public MeleeCompKatanaCustom(ToolMaterial material, float knockbackAmount) {
+        super(MeleeSpecs.KATANA, material);
         this.knockbackAmount = knockbackAmount;
-        this.ignoreArmorAmount = ignoreArmorAmount;
     }
 
     @Override
     public float getKnockBack(ItemStack itemstack, EntityLivingBase entityliving, EntityLivingBase attacker) {
         // Must include (+ 0.4F), otherwise it'll calculate wrong.
         return knockbackAmount + 0.4F;
-    }
-
-    @Override
-    public float getIgnoreArmorAmount(ToolMaterial material) {
-        return ignoreArmorAmount;
     }
 
     @Override
@@ -54,11 +47,6 @@ public class MeleeCompBattleaxeCustom extends MeleeCompBattleaxe {
                         ((IExtendedReachItem) this).getExtendedReach(null, null, null) - 3.0F, 0));
             } catch (NullPointerException ignored) {
             }
-        }
-
-        if (getIgnoreArmorAmount(weaponMaterial) != 0.0F) {
-            multimap.put(WeaponModAttributes.IGNORE_ARMOUR_DAMAGE.getName(),
-                    new AttributeModifier(IItemWeapon.IGNORE_ARMOUR_MODIFIER, "Weapon ignore armour modifier", getIgnoreArmorAmount(weaponMaterial), 0));
         }
     }
 }

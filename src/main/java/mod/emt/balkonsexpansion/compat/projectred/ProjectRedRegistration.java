@@ -1,13 +1,12 @@
 package mod.emt.balkonsexpansion.compat.projectred;
 
-import ckathode.weaponmod.WMItemBuilder;
 import ckathode.weaponmod.item.ItemFlail;
 import ckathode.weaponmod.item.ItemMelee;
 import ckathode.weaponmod.item.ItemMusket;
 import mod.emt.balkonsexpansion.BEConfig;
+import mod.emt.balkonsexpansion.BEItemBuilder;
 import mod.emt.balkonsexpansion.BERecipes;
 import mod.emt.balkonsexpansion.BERegistry;
-import mod.emt.balkonsexpansion.BalkonsExpansion;
 import mrtjp.projectred.ProjectRedExploration;
 import net.minecraft.item.Item;
 import net.minecraft.item.crafting.IRecipe;
@@ -50,39 +49,39 @@ public class ProjectRedRegistration {
         IForgeRegistry<Item> registry = event.getRegistry();
 
         if (BEConfig.project_red_settings.PR_RUBY_MATERIAL) {
-            registry.register(spearRuby = WMItemBuilder.createStandardSpear(BalkonsExpansion.MOD_ID, "spear.ruby.pr", ProjectRedExploration.toolMaterialRuby()));
-            registry.register(halberdRuby = WMItemBuilder.createStandardHalberd(BalkonsExpansion.MOD_ID, "halberd.ruby.pr", ProjectRedExploration.toolMaterialRuby()));
-            registry.register(battleaxeRuby = WMItemBuilder.createStandardBattleaxe(BalkonsExpansion.MOD_ID, "battleaxe.ruby.pr", ProjectRedExploration.toolMaterialRuby()));
-            registry.register(knifeRuby = WMItemBuilder.createStandardKnife(BalkonsExpansion.MOD_ID, "knife.ruby.pr", ProjectRedExploration.toolMaterialRuby()));
-            registry.register(warhammerRuby = WMItemBuilder.createStandardWarhammer(BalkonsExpansion.MOD_ID, "warhammer.ruby.pr", ProjectRedExploration.toolMaterialRuby()));
-            registry.register(flailRuby = WMItemBuilder.createStandardFlail(BalkonsExpansion.MOD_ID, "flail.ruby.pr", ProjectRedExploration.toolMaterialRuby()));
-            registry.register(katanaRuby = WMItemBuilder.createStandardKatana(BalkonsExpansion.MOD_ID, "katana.ruby.pr", ProjectRedExploration.toolMaterialRuby()));
-            registry.register(boomerangRuby = WMItemBuilder.createStandardBoomerang(BalkonsExpansion.MOD_ID, "boomerang.ruby.pr", ProjectRedExploration.toolMaterialRuby()));
-            registry.register(bayonetRuby = WMItemBuilder.createStandardMusketWithBayonet(BalkonsExpansion.MOD_ID, "musketbayonet.ruby.pr", ProjectRedExploration.toolMaterialRuby(), knifeRuby));
+            registry.register(spearRuby = BEItemBuilder.createCustomSpear("spear.ruby.pr", ProjectRedExploration.toolMaterialRuby()));
+            registry.register(halberdRuby = BEItemBuilder.createCustomHalberd("halberd.ruby.pr", ProjectRedExploration.toolMaterialRuby()));
+            registry.register(battleaxeRuby = BEItemBuilder.createCustomBattleaxe("battleaxe.ruby.pr", ProjectRedExploration.toolMaterialRuby()));
+            registry.register(knifeRuby = BEItemBuilder.createCustomKnife("knife.ruby.pr", ProjectRedExploration.toolMaterialRuby()));
+            registry.register(warhammerRuby = BEItemBuilder.createCustomWarhammer("warhammer.ruby.pr", ProjectRedExploration.toolMaterialRuby()));
+            registry.register(flailRuby = BEItemBuilder.createCustomFlail("flail.ruby.pr", ProjectRedExploration.toolMaterialRuby()));
+            registry.register(katanaRuby = BEItemBuilder.createCustomKatana("katana.ruby.pr", ProjectRedExploration.toolMaterialRuby()));
+            registry.register(boomerangRuby = BEItemBuilder.createCustomBoomerang("boomerang.ruby.pr", ProjectRedExploration.toolMaterialRuby()));
+            registry.register(bayonetRuby = BEItemBuilder.createCustomMusketBayonet("musketbayonet.ruby.pr", ProjectRedExploration.toolMaterialRuby(), knifeRuby));
         }
 
         if (BEConfig.project_red_settings.PR_SAPPHIRE_MATERIAL) {
-            registry.register(spearSapphire = WMItemBuilder.createStandardSpear(BalkonsExpansion.MOD_ID, "spear.sapphire.pr", ProjectRedExploration.toolMaterialSapphire()));
-            registry.register(halberdSapphire = WMItemBuilder.createStandardHalberd(BalkonsExpansion.MOD_ID, "halberd.sapphire.pr", ProjectRedExploration.toolMaterialSapphire()));
-            registry.register(battleaxeSapphire = WMItemBuilder.createStandardBattleaxe(BalkonsExpansion.MOD_ID, "battleaxe.sapphire.pr", ProjectRedExploration.toolMaterialSapphire()));
-            registry.register(knifeSapphire = WMItemBuilder.createStandardKnife(BalkonsExpansion.MOD_ID, "knife.sapphire.pr", ProjectRedExploration.toolMaterialSapphire()));
-            registry.register(warhammerSapphire = WMItemBuilder.createStandardWarhammer(BalkonsExpansion.MOD_ID, "warhammer.sapphire.pr", ProjectRedExploration.toolMaterialSapphire()));
-            registry.register(flailSapphire = WMItemBuilder.createStandardFlail(BalkonsExpansion.MOD_ID, "flail.sapphire.pr", ProjectRedExploration.toolMaterialSapphire()));
-            registry.register(katanaSapphire = WMItemBuilder.createStandardKatana(BalkonsExpansion.MOD_ID, "katana.sapphire.pr", ProjectRedExploration.toolMaterialSapphire()));
-            registry.register(boomerangSapphire = WMItemBuilder.createStandardBoomerang(BalkonsExpansion.MOD_ID, "boomerang.sapphire.pr", ProjectRedExploration.toolMaterialSapphire()));
-            registry.register(bayonetSapphire = WMItemBuilder.createStandardMusketWithBayonet(BalkonsExpansion.MOD_ID, "musketbayonet.sapphire.pr", ProjectRedExploration.toolMaterialSapphire(), knifeSapphire));
+            registry.register(spearSapphire = BEItemBuilder.createCustomSpear("spear.sapphire.pr", ProjectRedExploration.toolMaterialSapphire()));
+            registry.register(halberdSapphire = BEItemBuilder.createCustomHalberd("halberd.sapphire.pr", ProjectRedExploration.toolMaterialSapphire()));
+            registry.register(battleaxeSapphire = BEItemBuilder.createCustomBattleaxe("battleaxe.sapphire.pr", ProjectRedExploration.toolMaterialSapphire()));
+            registry.register(knifeSapphire = BEItemBuilder.createCustomKnife("knife.sapphire.pr", ProjectRedExploration.toolMaterialSapphire()));
+            registry.register(warhammerSapphire = BEItemBuilder.createCustomWarhammer("warhammer.sapphire.pr", ProjectRedExploration.toolMaterialSapphire()));
+            registry.register(flailSapphire = BEItemBuilder.createCustomFlail("flail.sapphire.pr", ProjectRedExploration.toolMaterialSapphire()));
+            registry.register(katanaSapphire = BEItemBuilder.createCustomKatana("katana.sapphire.pr", ProjectRedExploration.toolMaterialSapphire()));
+            registry.register(boomerangSapphire = BEItemBuilder.createCustomBoomerang("boomerang.sapphire.pr", ProjectRedExploration.toolMaterialSapphire()));
+            registry.register(bayonetSapphire = BEItemBuilder.createCustomMusketBayonet("musketbayonet.sapphire.pr", ProjectRedExploration.toolMaterialSapphire(), knifeSapphire));
         }
 
         if (BEConfig.project_red_settings.PR_PERIDOT_MATERIAL) {
-            registry.register(spearPeridot = WMItemBuilder.createStandardSpear(BalkonsExpansion.MOD_ID, "spear.peridot.pr", ProjectRedExploration.toolMaterialPeridot()));
-            registry.register(halberdPeridot = WMItemBuilder.createStandardHalberd(BalkonsExpansion.MOD_ID, "halberd.peridot.pr", ProjectRedExploration.toolMaterialPeridot()));
-            registry.register(battleaxePeridot = WMItemBuilder.createStandardBattleaxe(BalkonsExpansion.MOD_ID, "battleaxe.peridot.pr", ProjectRedExploration.toolMaterialPeridot()));
-            registry.register(knifePeridot = WMItemBuilder.createStandardKnife(BalkonsExpansion.MOD_ID, "knife.peridot.pr", ProjectRedExploration.toolMaterialPeridot()));
-            registry.register(warhammerPeridot = WMItemBuilder.createStandardWarhammer(BalkonsExpansion.MOD_ID, "warhammer.peridot.pr", ProjectRedExploration.toolMaterialPeridot()));
-            registry.register(flailPeridot = WMItemBuilder.createStandardFlail(BalkonsExpansion.MOD_ID, "flail.peridot.pr", ProjectRedExploration.toolMaterialPeridot()));
-            registry.register(katanaPeridot = WMItemBuilder.createStandardKatana(BalkonsExpansion.MOD_ID, "katana.peridot.pr", ProjectRedExploration.toolMaterialPeridot()));
-            registry.register(boomerangPeridot = WMItemBuilder.createStandardBoomerang(BalkonsExpansion.MOD_ID, "boomerang.peridot.pr", ProjectRedExploration.toolMaterialPeridot()));
-            registry.register(bayonetPeridot = WMItemBuilder.createStandardMusketWithBayonet(BalkonsExpansion.MOD_ID, "musketbayonet.peridot.pr", ProjectRedExploration.toolMaterialPeridot(), knifePeridot));
+            registry.register(spearPeridot = BEItemBuilder.createCustomSpear("spear.peridot.pr", ProjectRedExploration.toolMaterialPeridot()));
+            registry.register(halberdPeridot = BEItemBuilder.createCustomHalberd("halberd.peridot.pr", ProjectRedExploration.toolMaterialPeridot()));
+            registry.register(battleaxePeridot = BEItemBuilder.createCustomBattleaxe("battleaxe.peridot.pr", ProjectRedExploration.toolMaterialPeridot()));
+            registry.register(knifePeridot = BEItemBuilder.createCustomKnife("knife.peridot.pr", ProjectRedExploration.toolMaterialPeridot()));
+            registry.register(warhammerPeridot = BEItemBuilder.createCustomWarhammer("warhammer.peridot.pr", ProjectRedExploration.toolMaterialPeridot()));
+            registry.register(flailPeridot = BEItemBuilder.createCustomFlail("flail.peridot.pr", ProjectRedExploration.toolMaterialPeridot()));
+            registry.register(katanaPeridot = BEItemBuilder.createCustomKatana("katana.peridot.pr", ProjectRedExploration.toolMaterialPeridot()));
+            registry.register(boomerangPeridot = BEItemBuilder.createCustomBoomerang("boomerang.peridot.pr", ProjectRedExploration.toolMaterialPeridot()));
+            registry.register(bayonetPeridot = BEItemBuilder.createCustomMusketBayonet("musketbayonet.peridot.pr", ProjectRedExploration.toolMaterialPeridot(), knifePeridot));
         }
     }
 
