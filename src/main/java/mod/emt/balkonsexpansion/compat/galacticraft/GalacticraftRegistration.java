@@ -52,39 +52,39 @@ public class GalacticraftRegistration {
         IForgeRegistry<Item> registry = event.getRegistry();
 
         if (BEConfig.galacticraft_settings.GC_HEAVY_DUTY_MATERIAL) {
-            registry.register(spearHeavyDuty = BEItemBuilder.createCustomSpear("spear.heavy_duty", GCItems.TOOL_STEEL));
-            registry.register(halberdHeavyDuty = BEItemBuilder.createCustomHalberd("halberd.heavy_duty", GCItems.TOOL_STEEL));
-            registry.register(battleaxeHeavyDuty = BEItemBuilder.createCustomBattleaxe("battleaxe.heavy_duty", GCItems.TOOL_STEEL, 0.2F, 1.0F));
-            registry.register(knifeHeavyDuty = BEItemBuilder.createCustomKnife("knife.heavy_duty", GCItems.TOOL_STEEL));
-            registry.register(warhammerHeavyDuty = BEItemBuilder.createCustomWarhammer("warhammer.heavy_duty", GCItems.TOOL_STEEL));
+            registry.register(spearHeavyDuty = BEItemBuilder.createCustomSpear("spear.heavy_duty", GCItems.TOOL_STEEL, -0.15F, 1.0F));
+            registry.register(halberdHeavyDuty = BEItemBuilder.createCustomHalberd("halberd.heavy_duty", GCItems.TOOL_STEEL, 0.4F, 1.0F));
+            registry.register(battleaxeHeavyDuty = BEItemBuilder.createCustomBattleaxe("battleaxe.heavy_duty", GCItems.TOOL_STEEL, 0.25F, 1.0F));
+            registry.register(knifeHeavyDuty = BEItemBuilder.createCustomKnife("knife.heavy_duty", GCItems.TOOL_STEEL, -0.15F));
+            registry.register(warhammerHeavyDuty = BEItemBuilder.createCustomWarhammer("warhammer.heavy_duty", GCItems.TOOL_STEEL, 0.55F));
             registry.register(flailHeavyDuty = BEItemBuilder.createCustomFlail("flail.heavy_duty", GCItems.TOOL_STEEL));
             registry.register(katanaHeavyDuty = BEItemBuilder.createCustomKatana("katana.heavy_duty", GCItems.TOOL_STEEL));
-            registry.register(boomerangHeavyDuty = BEItemBuilder.createCustomBoomerang("boomerang.heavy_duty", GCItems.TOOL_STEEL));
-            registry.register(bayonetHeavyDuty = BEItemBuilder.createCustomMusketBayonet("musketbayonet.heavy_duty", GCItems.TOOL_STEEL, knifeHeavyDuty));
+            registry.register(boomerangHeavyDuty = BEItemBuilder.createCustomBoomerang("boomerang.heavy_duty", GCItems.TOOL_STEEL, 0.1F));
+            registry.register(bayonetHeavyDuty = BEItemBuilder.createCustomMusketBayonet("musketbayonet.heavy_duty", GCItems.TOOL_STEEL, knifeHeavyDuty, -0.15F));
         }
 
         if (BEConfig.galacticraft_settings.GC_DESH_MATERIAL) {
-            registry.register(spearDesh = BEItemBuilder.createCustomSpear("spear.desh", MarsItems.TOOLDESH));
-            registry.register(halberdDesh = BEItemBuilder.createCustomHalberd("halberd.desh", MarsItems.TOOLDESH));
-            registry.register(battleaxeDesh = BEItemBuilder.createCustomBattleaxe("battleaxe.desh", MarsItems.TOOLDESH, 0.3F, 1.0F));
-            registry.register(knifeDesh = BEItemBuilder.createCustomKnife("knife.desh", MarsItems.TOOLDESH));
-            registry.register(warhammerDesh = BEItemBuilder.createCustomWarhammer("warhammer.desh", MarsItems.TOOLDESH));
+            registry.register(spearDesh = BEItemBuilder.createCustomSpear("spear.desh", MarsItems.TOOLDESH, -0.1F, 1.0F));
+            registry.register(halberdDesh = BEItemBuilder.createCustomHalberd("halberd.desh", MarsItems.TOOLDESH, 0.5F, 1.0F));
+            registry.register(battleaxeDesh = BEItemBuilder.createCustomBattleaxe("battleaxe.desh", MarsItems.TOOLDESH, 0.35F, 1.0F));
+            registry.register(knifeDesh = BEItemBuilder.createCustomKnife("knife.desh", MarsItems.TOOLDESH, -0.1F));
+            registry.register(warhammerDesh = BEItemBuilder.createCustomWarhammer("warhammer.desh", MarsItems.TOOLDESH, 0.65F));
             registry.register(flailDesh = BEItemBuilder.createCustomFlail("flail.desh", MarsItems.TOOLDESH));
-            registry.register(katanaDesh = BEItemBuilder.createCustomKatana("katana.desh", MarsItems.TOOLDESH));
-            registry.register(boomerangDesh = BEItemBuilder.createCustomBoomerang("boomerang.desh", MarsItems.TOOLDESH));
-            registry.register(bayonetDesh = BEItemBuilder.createCustomMusketBayonet("musketbayonet.desh", MarsItems.TOOLDESH, knifeDesh));
+            registry.register(katanaDesh = BEItemBuilder.createCustomKatana("katana.desh", MarsItems.TOOLDESH, -0.5F));
+            registry.register(boomerangDesh = BEItemBuilder.createCustomBoomerang("boomerang.desh", MarsItems.TOOLDESH, 0.2F));
+            registry.register(bayonetDesh = BEItemBuilder.createCustomMusketBayonet("musketbayonet.desh", MarsItems.TOOLDESH, knifeDesh, -0.1F));
         }
 
         if (BEConfig.galacticraft_settings.GC_TITANIUM_MATERIAL) {
-            registry.register(spearTitanium = BEItemBuilder.createCustomSpear("spear.titanium", AsteroidsItems.TOOL_TITANIUM));
-            registry.register(halberdTitanium = BEItemBuilder.createCustomHalberd("halberd.titanium", AsteroidsItems.TOOL_TITANIUM));
+            registry.register(spearTitanium = BEItemBuilder.createCustomSpear("spear.titanium", AsteroidsItems.TOOL_TITANIUM, -0.1F, 1.5F));
+            registry.register(halberdTitanium = BEItemBuilder.createCustomHalberd("halberd.titanium", AsteroidsItems.TOOL_TITANIUM, 0.6F, 1.5F));
             registry.register(battleaxeTitanium = BEItemBuilder.createCustomBattleaxe("battleaxe.titanium", AsteroidsItems.TOOL_TITANIUM, 0.45F, 1.0F));
-            registry.register(knifeTitanium = BEItemBuilder.createCustomKnife("knife.titanium", AsteroidsItems.TOOL_TITANIUM));
-            registry.register(warhammerTitanium = BEItemBuilder.createCustomWarhammer("warhammer.titanium", AsteroidsItems.TOOL_TITANIUM));
+            registry.register(knifeTitanium = BEItemBuilder.createCustomKnife("knife.titanium", AsteroidsItems.TOOL_TITANIUM, -0.1F));
+            registry.register(warhammerTitanium = BEItemBuilder.createCustomWarhammer("warhammer.titanium", AsteroidsItems.TOOL_TITANIUM, 0.7F));
             registry.register(flailTitanium = BEItemBuilder.createCustomFlail("flail.titanium", AsteroidsItems.TOOL_TITANIUM));
-            registry.register(katanaTitanium = BEItemBuilder.createCustomKatana("katana.titanium", AsteroidsItems.TOOL_TITANIUM));
-            registry.register(boomerangTitanium = BEItemBuilder.createCustomBoomerang("boomerang.titanium", AsteroidsItems.TOOL_TITANIUM));
-            registry.register(bayonetTitanium = BEItemBuilder.createCustomMusketBayonet("musketbayonet.titanium", AsteroidsItems.TOOL_TITANIUM, knifeTitanium));
+            registry.register(katanaTitanium = BEItemBuilder.createCustomKatana("katana.titanium", AsteroidsItems.TOOL_TITANIUM, -0.5F));
+            registry.register(boomerangTitanium = BEItemBuilder.createCustomBoomerang("boomerang.titanium", AsteroidsItems.TOOL_TITANIUM, 0.3F));
+            registry.register(bayonetTitanium = BEItemBuilder.createCustomMusketBayonet("musketbayonet.titanium", AsteroidsItems.TOOL_TITANIUM, knifeTitanium, -0.1F));
         }
     }
 

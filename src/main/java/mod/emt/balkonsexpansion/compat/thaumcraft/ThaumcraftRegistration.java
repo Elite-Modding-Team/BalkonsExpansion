@@ -44,15 +44,15 @@ public class ThaumcraftRegistration {
         IForgeRegistry<Item> registry = event.getRegistry();
 
         if (BEConfig.thaumcraft_settings.TC_THAUMIUM_MATERIAL) {
-            registry.register(spearThaumium = BEItemBuilder.createCustomSpear("spear.thaumium", ThaumcraftMaterials.TOOLMAT_THAUMIUM));
-            registry.register(halberdThaumium = BEItemBuilder.createCustomHalberd("halberd.thaumium", ThaumcraftMaterials.TOOLMAT_THAUMIUM));
-            registry.register(battleaxeThaumium = BEItemBuilder.createCustomBattleaxe("battleaxe.thaumium", ThaumcraftMaterials.TOOLMAT_THAUMIUM, 0.2F, 1.0F, EnumRarity.UNCOMMON));
-            registry.register(knifeThaumium = BEItemBuilder.createCustomKnife("knife.thaumium", ThaumcraftMaterials.TOOLMAT_THAUMIUM));
-            registry.register(warhammerThaumium = BEItemBuilder.createCustomWarhammer("warhammer.thaumium", ThaumcraftMaterials.TOOLMAT_THAUMIUM));
-            registry.register(flailThaumium = BEItemBuilder.createCustomFlail("flail.thaumium", ThaumcraftMaterials.TOOLMAT_THAUMIUM));
-            registry.register(katanaThaumium = BEItemBuilder.createCustomKatana("katana.thaumium", ThaumcraftMaterials.TOOLMAT_THAUMIUM));
-            registry.register(boomerangThaumium = BEItemBuilder.createCustomBoomerang("boomerang.thaumium", ThaumcraftMaterials.TOOLMAT_THAUMIUM));
-            registry.register(bayonetThaumium = BEItemBuilder.createCustomMusketBayonet("musketbayonet.thaumium", ThaumcraftMaterials.TOOLMAT_THAUMIUM, knifeThaumium));
+            registry.register(spearThaumium = BEItemBuilder.createCustomSpear("spear.thaumium", ThaumcraftMaterials.TOOLMAT_THAUMIUM, -0.15F, 1.0F, EnumRarity.UNCOMMON));
+            registry.register(halberdThaumium = BEItemBuilder.createCustomHalberd("halberd.thaumium", ThaumcraftMaterials.TOOLMAT_THAUMIUM, 0.4F, 1.0F, EnumRarity.UNCOMMON));
+            registry.register(battleaxeThaumium = BEItemBuilder.createCustomBattleaxe("battleaxe.thaumium", ThaumcraftMaterials.TOOLMAT_THAUMIUM, 0.25F, 1.0F, EnumRarity.UNCOMMON));
+            registry.register(knifeThaumium = BEItemBuilder.createCustomKnife("knife.thaumium", ThaumcraftMaterials.TOOLMAT_THAUMIUM, -0.15F, EnumRarity.UNCOMMON));
+            registry.register(warhammerThaumium = BEItemBuilder.createCustomWarhammer("warhammer.thaumium", ThaumcraftMaterials.TOOLMAT_THAUMIUM, 0.55F, EnumRarity.UNCOMMON));
+            registry.register(flailThaumium = BEItemBuilder.createCustomFlail("flail.thaumium", ThaumcraftMaterials.TOOLMAT_THAUMIUM, EnumRarity.UNCOMMON));
+            registry.register(katanaThaumium = BEItemBuilder.createCustomKatana("katana.thaumium", ThaumcraftMaterials.TOOLMAT_THAUMIUM, -0.4F, EnumRarity.UNCOMMON));
+            registry.register(boomerangThaumium = BEItemBuilder.createCustomBoomerang("boomerang.thaumium", ThaumcraftMaterials.TOOLMAT_THAUMIUM, 0.1F, EnumRarity.UNCOMMON));
+            registry.register(bayonetThaumium = BEItemBuilder.createCustomMusketBayonet("musketbayonet.thaumium", ThaumcraftMaterials.TOOLMAT_THAUMIUM, knifeThaumium, -0.15F, EnumRarity.UNCOMMON));
         }
     }
 

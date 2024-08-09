@@ -69,6 +69,10 @@ public class BEItemBuilder {
         return createCustomItemMelee(BalkonsExpansion.MOD_ID, id, new MeleeCompBoomerangCustom(material, knockbackAmount), rarity);
     }
 
+    public static ItemFlail createCustomFlail(String id, @Nonnull Item.ToolMaterial material, EnumRarity rarity) {
+        return createCustomItemFlail(BalkonsExpansion.MOD_ID, id, new MeleeCompNone(material), rarity);
+    }
+
     public static ItemMelee createCustomHalberd(String id, @Nonnull Item.ToolMaterial material, float knockbackAmount, float reachAmount, EnumRarity rarity) {
         return createCustomItemMelee(BalkonsExpansion.MOD_ID, id, new MeleeCompHalberdCustom(material, knockbackAmount, reachAmount), rarity);
     }

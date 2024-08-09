@@ -34,15 +34,15 @@ public class RailcraftRegistration {
         IForgeRegistry<Item> registry = event.getRegistry();
 
         if (BEConfig.railcraft_settings.RC_STEEL_MATERIAL) {
-            registry.register(spearSteel = BEItemBuilder.createCustomSpear("spear.steel.rc", ItemMaterials.STEEL_TOOL));
-            registry.register(halberdSteel = BEItemBuilder.createCustomHalberd("halberd.steel.rc", ItemMaterials.STEEL_TOOL));
-            registry.register(battleaxeSteel = BEItemBuilder.createCustomBattleaxe("battleaxe.steel.rc", ItemMaterials.STEEL_TOOL, 0.2F, 1.0F));
-            registry.register(knifeSteel = BEItemBuilder.createCustomKnife("knife.steel.rc", ItemMaterials.STEEL_TOOL));
-            registry.register(warhammerSteel = BEItemBuilder.createCustomWarhammer("warhammer.steel.rc", ItemMaterials.STEEL_TOOL));
+            registry.register(spearSteel = BEItemBuilder.createCustomSpear("spear.steel.rc", ItemMaterials.STEEL_TOOL,  -0.15F, 1.0F));
+            registry.register(halberdSteel = BEItemBuilder.createCustomHalberd("halberd.steel.rc", ItemMaterials.STEEL_TOOL, 0.4F, 1.0F));
+            registry.register(battleaxeSteel = BEItemBuilder.createCustomBattleaxe("battleaxe.steel.rc", ItemMaterials.STEEL_TOOL, 0.25F, 1.0F));
+            registry.register(knifeSteel = BEItemBuilder.createCustomKnife("knife.steel.rc", ItemMaterials.STEEL_TOOL, -0.15F));
+            registry.register(warhammerSteel = BEItemBuilder.createCustomWarhammer("warhammer.steel.rc", ItemMaterials.STEEL_TOOL, 0.55F));
             registry.register(flailSteel = BEItemBuilder.createCustomFlail("flail.steel.rc", ItemMaterials.STEEL_TOOL));
             registry.register(katanaSteel = BEItemBuilder.createCustomKatana("katana.steel.rc", ItemMaterials.STEEL_TOOL));
-            registry.register(boomerangSteel = BEItemBuilder.createCustomBoomerang("boomerang.steel.rc", ItemMaterials.STEEL_TOOL));
-            registry.register(bayonetSteel = BEItemBuilder.createCustomMusketBayonet("musketbayonet.steel.rc", ItemMaterials.STEEL_TOOL, knifeSteel));
+            registry.register(boomerangSteel = BEItemBuilder.createCustomBoomerang("boomerang.steel.rc", ItemMaterials.STEEL_TOOL, 0.1F));
+            registry.register(bayonetSteel = BEItemBuilder.createCustomMusketBayonet("musketbayonet.steel.rc", ItemMaterials.STEEL_TOOL, knifeSteel, -0.15F));
         }
     }
 
