@@ -76,8 +76,8 @@ public class GalacticraftRegistration {
         }
 
         if (BEConfig.galacticraft_settings.GC_TITANIUM_MATERIAL) {
-            registry.register(spearTitanium = BEItemBuilder.createCustomSpear("spear.titanium", AsteroidsItems.TOOL_TITANIUM, -0.1F, 1.5F));
-            registry.register(halberdTitanium = BEItemBuilder.createCustomHalberd("halberd.titanium", AsteroidsItems.TOOL_TITANIUM, 0.6F, 1.5F));
+            registry.register(spearTitanium = BEItemBuilder.createCustomSpear("spear.titanium", AsteroidsItems.TOOL_TITANIUM, -0.1F, 2.0F));
+            registry.register(halberdTitanium = BEItemBuilder.createCustomHalberd("halberd.titanium", AsteroidsItems.TOOL_TITANIUM, 0.6F, 2.0F));
             registry.register(battleaxeTitanium = BEItemBuilder.createCustomBattleaxe("battleaxe.titanium", AsteroidsItems.TOOL_TITANIUM, 0.45F, 1.0F));
             registry.register(knifeTitanium = BEItemBuilder.createCustomKnife("knife.titanium", AsteroidsItems.TOOL_TITANIUM, -0.1F));
             registry.register(warhammerTitanium = BEItemBuilder.createCustomWarhammer("warhammer.titanium", AsteroidsItems.TOOL_TITANIUM, 0.7F));
