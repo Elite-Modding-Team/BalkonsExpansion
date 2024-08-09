@@ -30,6 +30,10 @@ public class BEEvents {
             if (!source.isUnblockable() && player.isActiveItemStackBlocking()) {
                 ItemStack stack = player.getActiveItemStack();
                 Item item = stack.getItem();
+                
+                // Skips unwanted items and null values to prevent crashes.
+                if (!(item instanceof IItemWeapon)) return;
+                
                 MeleeComponent meleeComp = ((IItemWeapon) stack.getItem()).getMeleeComponent();
 
                 // Additional blocking sound for battleaxes and katanas.
