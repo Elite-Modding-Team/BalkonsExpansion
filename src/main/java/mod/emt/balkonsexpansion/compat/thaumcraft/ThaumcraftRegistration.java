@@ -54,6 +54,18 @@ public class ThaumcraftRegistration {
             registry.register(boomerangThaumium = BEItemBuilder.createCustomBoomerang("boomerang.thaumium", ThaumcraftMaterials.TOOLMAT_THAUMIUM, 0.1F, EnumRarity.UNCOMMON));
             registry.register(bayonetThaumium = BEItemBuilder.createCustomMusketBayonet("musketbayonet.thaumium", ThaumcraftMaterials.TOOLMAT_THAUMIUM, knifeThaumium, -0.15F, EnumRarity.UNCOMMON));
         }
+
+        if (BEConfig.thaumcraft_settings.TC_VOID_MATERIAL) {
+            registry.register(spearVoid = ThaumcraftItemBuilder.createVoidSpear("spear.void", ThaumcraftMaterials.TOOLMAT_VOID, 0.0F, 2.0F));
+            registry.register(halberdVoid = ThaumcraftItemBuilder.createVoidHalberd("halberd.void", ThaumcraftMaterials.TOOLMAT_VOID, 0.6F, 2.0F));
+            registry.register(battleaxeVoid = ThaumcraftItemBuilder.createVoidBattleaxe("battleaxe.void", ThaumcraftMaterials.TOOLMAT_VOID, 0.45F, 1.0F));
+            registry.register(knifeVoid = ThaumcraftItemBuilder.createVoidKnife("knife.void", ThaumcraftMaterials.TOOLMAT_VOID, -0.1F));
+            registry.register(warhammerVoid = ThaumcraftItemBuilder.createVoidWarhammer("warhammer.void", ThaumcraftMaterials.TOOLMAT_VOID, 0.7F));
+            registry.register(flailVoid = ThaumcraftItemBuilder.createVoidFlail("flail.void", ThaumcraftMaterials.TOOLMAT_VOID));
+            registry.register(katanaVoid = ThaumcraftItemBuilder.createVoidKatana("katana.void", ThaumcraftMaterials.TOOLMAT_VOID, -0.6F));
+            registry.register(boomerangVoid = ThaumcraftItemBuilder.createVoidBoomerang("boomerang.void", ThaumcraftMaterials.TOOLMAT_VOID, 0.3F));
+            //registry.register(bayonetThaumium = BEItemBuilder.createCustomMusketBayonet("musketbayonet.thaumium", ThaumcraftMaterials.TOOLMAT_THAUMIUM, knifeThaumium, -0.15F, EnumRarity.UNCOMMON));
+        }
     }
 
     @SubscribeEvent
@@ -81,6 +93,28 @@ public class ThaumcraftRegistration {
             GameRegistry.addSmelting(new ItemStack(spearThaumium, 1, 32767), new ItemStack(ItemsTC.nuggets, 1, 6), 0.6F);
             GameRegistry.addSmelting(new ItemStack(warhammerThaumium, 1, 32767), new ItemStack(ItemsTC.nuggets, 1, 6), 0.6F);
         }
+
+        if (BEConfig.thaumcraft_settings.TC_VOID_MATERIAL) {
+            registry.register(BERecipes.registerBattleaxeRecipe("ingotVoid", "stickWood", battleaxeVoid));
+            registry.register(BERecipes.registerBoomerangRecipe("ingotVoid", ItemsTC.voidSeed, boomerangVoid));
+            //registry.register(BERecipes.registerBayonetRecipe(knifeVoid, bayonetVoid));
+            registry.register(BERecipes.registerFlailRecipe("ingotVoid", "stickWood", "string", flailVoid));
+            registry.register(BERecipes.registerHalberdRecipe("ingotVoid", "stickWood", halberdVoid));
+            registry.register(BERecipes.registerKatanaRecipe("ingotVoid", "stickWood", katanaVoid));
+            registry.register(BERecipes.registerKnifeRecipe("ingotVoid", "stickWood", knifeVoid));
+            registry.register(BERecipes.registerKnifeAltRecipe("ingotVoid", "stickWood", knifeVoid));
+            registry.register(BERecipes.registerSpearRecipe("ingotVoid", "stickWood", spearVoid));
+            registry.register(BERecipes.registerWarhammerRecipe("ingotVoid", "stickWood", warhammerVoid));
+
+            GameRegistry.addSmelting(new ItemStack(battleaxeVoid, 1, 32767), new ItemStack(ItemsTC.nuggets, 1, 7), 1.2F);
+            GameRegistry.addSmelting(new ItemStack(boomerangVoid, 1, 32767), new ItemStack(ItemsTC.nuggets, 1, 7), 1.2F);
+            GameRegistry.addSmelting(new ItemStack(flailVoid, 1, 32767), new ItemStack(ItemsTC.nuggets, 1, 7), 1.2F);
+            GameRegistry.addSmelting(new ItemStack(halberdVoid, 1, 32767), new ItemStack(ItemsTC.nuggets, 1, 7), 1.2F);
+            GameRegistry.addSmelting(new ItemStack(katanaVoid, 1, 32767), new ItemStack(ItemsTC.nuggets, 1, 7), 1.2F);
+            GameRegistry.addSmelting(new ItemStack(knifeVoid, 1, 32767), new ItemStack(ItemsTC.nuggets, 1, 7), 1.2F);
+            GameRegistry.addSmelting(new ItemStack(spearVoid, 1, 32767), new ItemStack(ItemsTC.nuggets, 1, 7), 1.2F);
+            GameRegistry.addSmelting(new ItemStack(warhammerVoid, 1, 32767), new ItemStack(ItemsTC.nuggets, 1, 7), 1.2F);
+        }
     }
 
     @SideOnly(Side.CLIENT)
@@ -95,6 +129,18 @@ public class ThaumcraftRegistration {
             BERegistry.registerWeaponItemModel(knifeThaumium);
             BERegistry.registerWeaponItemModel(spearThaumium);
             BERegistry.registerWeaponItemModel(warhammerThaumium);
+        }
+
+        if (BEConfig.thaumcraft_settings.TC_VOID_MATERIAL) {
+            BERegistry.registerWeaponItemModel(battleaxeVoid);
+            BERegistry.registerWeaponItemModel(boomerangVoid);
+            //BERegistry.registerWeaponItemModel(bayonetThaumium);
+            BERegistry.registerWeaponItemModel(flailVoid);
+            BERegistry.registerWeaponItemModel(halberdVoid);
+            BERegistry.registerWeaponItemModel(katanaVoid);
+            BERegistry.registerWeaponItemModel(knifeVoid);
+            BERegistry.registerWeaponItemModel(spearVoid);
+            BERegistry.registerWeaponItemModel(warhammerVoid);
         }
     }
 }

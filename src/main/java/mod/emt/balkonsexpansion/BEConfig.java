@@ -121,6 +121,11 @@ public class BEConfig {
         @Config.Comment("Enables support for the Thaumium material [default: true]")
         @Config.RequiresWorldRestart
         public boolean TC_THAUMIUM_MATERIAL = true;
+
+        @Config.Name("Material: Void")
+        @Config.Comment("Enables support for the Void material [default: true]")
+        @Config.RequiresWorldRestart
+        public boolean TC_VOID_MATERIAL = true;
     }
 
     @Mod.EventBusSubscriber(modid = BalkonsExpansion.MOD_ID)

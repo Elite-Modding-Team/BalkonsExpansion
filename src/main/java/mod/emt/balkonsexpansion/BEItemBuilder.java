@@ -3,9 +3,6 @@ package mod.emt.balkonsexpansion;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
-import ckathode.weaponmod.WMItemBuilder;
-import ckathode.weaponmod.item.ItemFlail;
-import ckathode.weaponmod.item.ItemMelee;
 import ckathode.weaponmod.item.ItemMusket;
 import ckathode.weaponmod.item.MeleeCompNone;
 import ckathode.weaponmod.item.MeleeComponent;
@@ -26,23 +23,23 @@ public class BEItemBuilder {
     // ==================================================================== //
     // Custom builders used to specify a custom attribute amount
     // ==================================================================== //
-    public static ItemMelee createCustomBattleaxe(String id, @Nonnull Item.ToolMaterial material, float knockbackAmount, float ignoreArmorAmount) {
+    public static BEItemMelee createCustomBattleaxe(String id, @Nonnull Item.ToolMaterial material, float knockbackAmount, float ignoreArmorAmount) {
         return createCustomItemMelee(BalkonsExpansion.MOD_ID, id, new MeleeCompBattleaxeCustom(material, knockbackAmount, ignoreArmorAmount), EnumRarity.COMMON);
     }
 
-    public static ItemMelee createCustomBoomerang(String id, @Nonnull Item.ToolMaterial material, float knockbackAmount) {
+    public static BEItemMelee createCustomBoomerang(String id, @Nonnull Item.ToolMaterial material, float knockbackAmount) {
         return createCustomItemMelee(BalkonsExpansion.MOD_ID, id, new MeleeCompBoomerangCustom(material, knockbackAmount), EnumRarity.COMMON);
     }
 
-    public static ItemMelee createCustomHalberd(String id, @Nonnull Item.ToolMaterial material, float knockbackAmount, float reachAmount) {
+    public static BEItemMelee createCustomHalberd(String id, @Nonnull Item.ToolMaterial material, float knockbackAmount, float reachAmount) {
         return createCustomItemMelee(BalkonsExpansion.MOD_ID, id, new MeleeCompHalberdCustom(material, knockbackAmount, reachAmount), EnumRarity.COMMON);
     }
 
-    public static ItemMelee createCustomKatana(String id, @Nonnull Item.ToolMaterial material, float knockbackAmount) {
+    public static BEItemMelee createCustomKatana(String id, @Nonnull Item.ToolMaterial material, float knockbackAmount) {
         return createCustomItemMelee(BalkonsExpansion.MOD_ID, id, new MeleeCompKatanaCustom(material, knockbackAmount), EnumRarity.COMMON);
     }
 
-    public static ItemMelee createCustomKnife(String id, @Nonnull Item.ToolMaterial material, float knockbackAmount) {
+    public static BEItemMelee createCustomKnife(String id, @Nonnull Item.ToolMaterial material, float knockbackAmount) {
         return createCustomItemMelee(BalkonsExpansion.MOD_ID, id, new MeleeCompKnifeCustom(material, knockbackAmount), EnumRarity.COMMON);
     }
 
@@ -50,38 +47,38 @@ public class BEItemBuilder {
         return createCustomItemMusket(BalkonsExpansion.MOD_ID, id, new MeleeCompKnifeCustom(material, knockbackAmount), bayonetItem, EnumRarity.COMMON);
     }
 
-    public static ItemMelee createCustomSpear(String id, @Nonnull Item.ToolMaterial material, float knockbackAmount, float reachAmount) {
+    public static BEItemMelee createCustomSpear(String id, @Nonnull Item.ToolMaterial material, float knockbackAmount, float reachAmount) {
         return createCustomItemMelee(BalkonsExpansion.MOD_ID, id, new MeleeCompSpearCustom(material, knockbackAmount, reachAmount), EnumRarity.COMMON);
     }
 
-    public static ItemMelee createCustomWarhammer(String id, @Nonnull Item.ToolMaterial material, float knockbackAmount) {
+    public static BEItemMelee createCustomWarhammer(String id, @Nonnull Item.ToolMaterial material, float knockbackAmount) {
         return createCustomItemMelee(BalkonsExpansion.MOD_ID, id, new MeleeCompWarhammerCustom(material, knockbackAmount), EnumRarity.COMMON);
     }
 
     // ==================================================================== //
     // Same as above except you can customize the rarity
     // ==================================================================== //
-    public static ItemMelee createCustomBattleaxe(String id, @Nonnull Item.ToolMaterial material, float knockbackAmount, float ignoreArmorAmount, EnumRarity rarity) {
+    public static BEItemMelee createCustomBattleaxe(String id, @Nonnull Item.ToolMaterial material, float knockbackAmount, float ignoreArmorAmount, EnumRarity rarity) {
         return createCustomItemMelee(BalkonsExpansion.MOD_ID, id, new MeleeCompBattleaxeCustom(material, knockbackAmount, ignoreArmorAmount), rarity);
     }
 
-    public static ItemMelee createCustomBoomerang(String id, @Nonnull Item.ToolMaterial material, float knockbackAmount, EnumRarity rarity) {
+    public static BEItemMelee createCustomBoomerang(String id, @Nonnull Item.ToolMaterial material, float knockbackAmount, EnumRarity rarity) {
         return createCustomItemMelee(BalkonsExpansion.MOD_ID, id, new MeleeCompBoomerangCustom(material, knockbackAmount), rarity);
     }
 
-    public static ItemFlail createCustomFlail(String id, @Nonnull Item.ToolMaterial material, EnumRarity rarity) {
+    public static BEItemFlail createCustomFlail(String id, @Nonnull Item.ToolMaterial material, EnumRarity rarity) {
         return createCustomItemFlail(BalkonsExpansion.MOD_ID, id, new MeleeCompNone(material), rarity);
     }
 
-    public static ItemMelee createCustomHalberd(String id, @Nonnull Item.ToolMaterial material, float knockbackAmount, float reachAmount, EnumRarity rarity) {
+    public static BEItemMelee createCustomHalberd(String id, @Nonnull Item.ToolMaterial material, float knockbackAmount, float reachAmount, EnumRarity rarity) {
         return createCustomItemMelee(BalkonsExpansion.MOD_ID, id, new MeleeCompHalberdCustom(material, knockbackAmount, reachAmount), rarity);
     }
 
-    public static ItemMelee createCustomKatana(String id, @Nonnull Item.ToolMaterial material, float knockbackAmount, EnumRarity rarity) {
+    public static BEItemMelee createCustomKatana(String id, @Nonnull Item.ToolMaterial material, float knockbackAmount, EnumRarity rarity) {
         return createCustomItemMelee(BalkonsExpansion.MOD_ID, id, new MeleeCompKatanaCustom(material, knockbackAmount), rarity);
     }
 
-    public static ItemMelee createCustomKnife(String id, @Nonnull Item.ToolMaterial material, float knockbackAmount, EnumRarity rarity) {
+    public static BEItemMelee createCustomKnife(String id, @Nonnull Item.ToolMaterial material, float knockbackAmount, EnumRarity rarity) {
         return createCustomItemMelee(BalkonsExpansion.MOD_ID, id, new MeleeCompKnifeCustom(material, knockbackAmount), rarity);
     }
 
@@ -89,38 +86,38 @@ public class BEItemBuilder {
         return createCustomItemMusket(BalkonsExpansion.MOD_ID, id, new MeleeCompKnifeCustom(material, knockbackAmount), bayonetItem, rarity);
     }
 
-    public static ItemMelee createCustomSpear(String id, @Nonnull Item.ToolMaterial material, float knockbackAmount, float reachAmount, EnumRarity rarity) {
+    public static BEItemMelee createCustomSpear(String id, @Nonnull Item.ToolMaterial material, float knockbackAmount, float reachAmount, EnumRarity rarity) {
         return createCustomItemMelee(BalkonsExpansion.MOD_ID, id, new MeleeCompSpearCustom(material, knockbackAmount, reachAmount), rarity);
     }
 
-    public static ItemMelee createCustomWarhammer(String id, @Nonnull Item.ToolMaterial material, float knockbackAmount, EnumRarity rarity) {
+    public static BEItemMelee createCustomWarhammer(String id, @Nonnull Item.ToolMaterial material, float knockbackAmount, EnumRarity rarity) {
         return createCustomItemMelee(BalkonsExpansion.MOD_ID, id, new MeleeCompWarhammerCustom(material, knockbackAmount), rarity);
     }
 
     // ==================================================================== //
     // More basic builders that are mainly used to easily register items
     // ==================================================================== //
-    public static ItemMelee createCustomBattleaxe(String id, @Nonnull Item.ToolMaterial material) {
+    public static BEItemMelee createCustomBattleaxe(String id, @Nonnull Item.ToolMaterial material) {
         return createCustomItemMelee(BalkonsExpansion.MOD_ID, id, new MeleeCompBattleaxeCustom(material, 0.1F, 1.0F), EnumRarity.COMMON);
     }
 
-    public static ItemMelee createCustomBoomerang(String id, @Nonnull Item.ToolMaterial material) {
+    public static BEItemMelee createCustomBoomerang(String id, @Nonnull Item.ToolMaterial material) {
         return createCustomItemMelee(BalkonsExpansion.MOD_ID, id, new MeleeCompBoomerangCustom(material, 0.0F), EnumRarity.COMMON);
     }
 
-    public static ItemFlail createCustomFlail(String id, @Nonnull Item.ToolMaterial material) {
+    public static BEItemFlail createCustomFlail(String id, @Nonnull Item.ToolMaterial material) {
         return createCustomItemFlail(BalkonsExpansion.MOD_ID, id, new MeleeCompNone(material), EnumRarity.COMMON);
     }
 
-    public static ItemMelee createCustomHalberd(String id, @Nonnull Item.ToolMaterial material) {
+    public static BEItemMelee createCustomHalberd(String id, @Nonnull Item.ToolMaterial material) {
         return createCustomItemMelee(BalkonsExpansion.MOD_ID, id, new MeleeCompHalberdCustom(material, 0.2F, 1.0F), EnumRarity.COMMON);
     }
 
-    public static ItemMelee createCustomKatana(String id, @Nonnull Item.ToolMaterial material) {
+    public static BEItemMelee createCustomKatana(String id, @Nonnull Item.ToolMaterial material) {
         return createCustomItemMelee(BalkonsExpansion.MOD_ID, id, new MeleeCompKatanaCustom(material, -0.4F), EnumRarity.COMMON);
     }
 
-    public static ItemMelee createCustomKnife(String id, @Nonnull Item.ToolMaterial material) {
+    public static BEItemMelee createCustomKnife(String id, @Nonnull Item.ToolMaterial material) {
         return createCustomItemMelee(BalkonsExpansion.MOD_ID, id, new MeleeCompKnifeCustom(material, -0.2F), EnumRarity.COMMON);
     }
 
@@ -128,11 +125,11 @@ public class BEItemBuilder {
         return createCustomItemMusket(BalkonsExpansion.MOD_ID, id, new MeleeCompKnifeCustom(material, -0.2F), bayonetItem, EnumRarity.COMMON);
     }
 
-    public static ItemMelee createCustomSpear(String id, @Nonnull Item.ToolMaterial material) {
+    public static BEItemMelee createCustomSpear(String id, @Nonnull Item.ToolMaterial material) {
         return createCustomItemMelee(BalkonsExpansion.MOD_ID, id, new MeleeCompSpearCustom(material, -0.2F, 1.0F), EnumRarity.COMMON);
     }
 
-    public static ItemMelee createCustomWarhammer(String id, @Nonnull Item.ToolMaterial material) {
+    public static BEItemMelee createCustomWarhammer(String id, @Nonnull Item.ToolMaterial material) {
         return createCustomItemMelee(BalkonsExpansion.MOD_ID, id, new MeleeCompWarhammerCustom(material, 0.3F), EnumRarity.COMMON);
     }
 

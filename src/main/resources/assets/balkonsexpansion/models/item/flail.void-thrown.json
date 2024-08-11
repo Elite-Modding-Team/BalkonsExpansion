@@ -1,0 +1,6 @@
+{
+  "parent": "balkonsexpansion:item/flail.void",
+  "textures": {
+    "layer0": "balkonsexpansion:thaumcraft/items/flail-thrown.void"
+  }
+}

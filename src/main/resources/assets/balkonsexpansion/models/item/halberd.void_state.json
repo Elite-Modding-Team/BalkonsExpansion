@@ -1,0 +1,6 @@
+{
+  "parent": "balkonsexpansion:item/halberd.void",
+  "textures": {
+    "layer0": "balkonsexpansion:thaumcraft/items/halberd-stab.void"
+  }
+}
