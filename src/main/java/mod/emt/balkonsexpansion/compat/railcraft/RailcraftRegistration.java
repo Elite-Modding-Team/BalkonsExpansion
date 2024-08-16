@@ -1,12 +1,12 @@
 package mod.emt.balkonsexpansion.compat.railcraft;
 
-import ckathode.weaponmod.item.ItemFlail;
-import ckathode.weaponmod.item.ItemMelee;
-import ckathode.weaponmod.item.ItemMusket;
 import mod.emt.balkonsexpansion.BEConfig;
 import mod.emt.balkonsexpansion.BEItemBuilder;
 import mod.emt.balkonsexpansion.BERecipes;
 import mod.emt.balkonsexpansion.BERegistry;
+import mod.emt.balkonsexpansion.item.BEItemFlail;
+import mod.emt.balkonsexpansion.item.BEItemMelee;
+import mod.emt.balkonsexpansion.item.BEItemMusket;
 import mods.railcraft.common.items.RailcraftItems;
 import mods.railcraft.common.items.ItemMaterials;
 import net.minecraft.item.Item;
@@ -20,15 +20,15 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import net.minecraftforge.registries.IForgeRegistry;
 
 public class RailcraftRegistration {
-    public static ItemMelee battleaxeSteel;
-    public static ItemMelee boomerangSteel;
-    public static ItemMusket bayonetSteel;
-    public static ItemFlail flailSteel;
-    public static ItemMelee halberdSteel;
-    public static ItemMelee katanaSteel;
-    public static ItemMelee knifeSteel;
-    public static ItemMelee spearSteel;
-    public static ItemMelee warhammerSteel;
+    public static BEItemMelee battleaxeSteel;
+    public static BEItemMelee boomerangSteel;
+    public static BEItemMusket bayonetSteel;
+    public static BEItemFlail flailSteel;
+    public static BEItemMelee halberdSteel;
+    public static BEItemMelee katanaSteel;
+    public static BEItemMelee knifeSteel;
+    public static BEItemMelee spearSteel;
+    public static BEItemMelee warhammerSteel;
 
     public static void registerItems(RegistryEvent.Register<Item> event) {
         IForgeRegistry<Item> registry = event.getRegistry();

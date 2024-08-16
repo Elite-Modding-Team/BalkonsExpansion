@@ -1,13 +1,13 @@
 package mod.emt.balkonsexpansion.compat.ic2classic;
 
-import ckathode.weaponmod.item.ItemFlail;
-import ckathode.weaponmod.item.ItemMelee;
-import ckathode.weaponmod.item.ItemMusket;
 import ic2.core.util.helpers.ToolHelper;
 import mod.emt.balkonsexpansion.BEConfig;
 import mod.emt.balkonsexpansion.BEItemBuilder;
 import mod.emt.balkonsexpansion.BERecipes;
 import mod.emt.balkonsexpansion.BERegistry;
+import mod.emt.balkonsexpansion.item.BEItemFlail;
+import mod.emt.balkonsexpansion.item.BEItemMelee;
+import mod.emt.balkonsexpansion.item.BEItemMusket;
 import net.minecraft.item.Item;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraftforge.event.RegistryEvent;
@@ -17,15 +17,15 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import net.minecraftforge.registries.IForgeRegistry;
 
 public class IC2ClassicRegistration {
-    public static ItemMelee battleaxeBronze;
-    public static ItemMelee boomerangBronze;
-    public static ItemMusket bayonetBronze;
-    public static ItemFlail flailBronze;
-    public static ItemMelee halberdBronze;
-    public static ItemMelee katanaBronze;
-    public static ItemMelee knifeBronze;
-    public static ItemMelee spearBronze;
-    public static ItemMelee warhammerBronze;
+    public static BEItemMelee battleaxeBronze;
+    public static BEItemMelee boomerangBronze;
+    public static BEItemMusket bayonetBronze;
+    public static BEItemFlail flailBronze;
+    public static BEItemMelee halberdBronze;
+    public static BEItemMelee katanaBronze;
+    public static BEItemMelee knifeBronze;
+    public static BEItemMelee spearBronze;
+    public static BEItemMelee warhammerBronze;
 
     public static void registerItems(RegistryEvent.Register<Item> event) {
         IForgeRegistry<Item> registry = event.getRegistry();

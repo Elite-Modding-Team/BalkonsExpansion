@@ -1,12 +1,13 @@
 package mod.emt.balkonsexpansion.compat.thaumcraft;
 
-import ckathode.weaponmod.item.ItemFlail;
-import ckathode.weaponmod.item.ItemMelee;
-import ckathode.weaponmod.item.ItemMusket;
 import mod.emt.balkonsexpansion.BEConfig;
 import mod.emt.balkonsexpansion.BEItemBuilder;
 import mod.emt.balkonsexpansion.BERecipes;
 import mod.emt.balkonsexpansion.BERegistry;
+import mod.emt.balkonsexpansion.compat.thaumcraft.item.BEItemFlailVoid;
+import mod.emt.balkonsexpansion.item.BEItemFlail;
+import mod.emt.balkonsexpansion.item.BEItemMelee;
+import mod.emt.balkonsexpansion.item.BEItemMusket;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -21,24 +22,24 @@ import thaumcraft.api.ThaumcraftMaterials;
 import thaumcraft.api.items.ItemsTC;
 
 public class ThaumcraftRegistration {
-    public static ItemMelee battleaxeThaumium;
-    public static ItemMelee battleaxeVoid;
-    public static ItemMelee boomerangThaumium;
-    public static ItemMelee boomerangVoid;
-    public static ItemMusket bayonetThaumium;
-    public static ItemMusket bayonetVoid;
-    public static ItemFlail flailThaumium;
-    public static ItemFlail flailVoid;
-    public static ItemMelee halberdThaumium;
-    public static ItemMelee halberdVoid;
-    public static ItemMelee katanaThaumium;
-    public static ItemMelee katanaVoid;
-    public static ItemMelee knifeThaumium;
-    public static ItemMelee knifeVoid;
-    public static ItemMelee spearThaumium;
-    public static ItemMelee spearVoid;
-    public static ItemMelee warhammerThaumium;
-    public static ItemMelee warhammerVoid;
+    public static BEItemMelee battleaxeThaumium;
+    public static BEItemMelee battleaxeVoid;
+    public static BEItemMelee boomerangThaumium;
+    public static BEItemMelee boomerangVoid;
+    public static BEItemMusket bayonetThaumium;
+    public static BEItemMusket bayonetVoid;
+    public static BEItemFlail flailThaumium;
+    public static BEItemFlailVoid flailVoid;
+    public static BEItemMelee halberdThaumium;
+    public static BEItemMelee halberdVoid;
+    public static BEItemMelee katanaThaumium;
+    public static BEItemMelee katanaVoid;
+    public static BEItemMelee knifeThaumium;
+    public static BEItemMelee knifeVoid;
+    public static BEItemMelee spearThaumium;
+    public static BEItemMelee spearVoid;
+    public static BEItemMelee warhammerThaumium;
+    public static BEItemMelee warhammerVoid;
 
     public static void registerItems(RegistryEvent.Register<Item> event) {
         IForgeRegistry<Item> registry = event.getRegistry();
@@ -52,7 +53,7 @@ public class ThaumcraftRegistration {
             registry.register(flailThaumium = BEItemBuilder.createCustomFlail("flail.thaumium", ThaumcraftMaterials.TOOLMAT_THAUMIUM, EnumRarity.UNCOMMON));
             registry.register(katanaThaumium = BEItemBuilder.createCustomKatana("katana.thaumium", ThaumcraftMaterials.TOOLMAT_THAUMIUM, -0.4F, EnumRarity.UNCOMMON));
             registry.register(boomerangThaumium = BEItemBuilder.createCustomBoomerang("boomerang.thaumium", ThaumcraftMaterials.TOOLMAT_THAUMIUM, 0.1F, EnumRarity.UNCOMMON));
-            registry.register(bayonetThaumium = BEItemBuilder.createCustomMusketBayonet("musketbayonet.thaumium", ThaumcraftMaterials.TOOLMAT_THAUMIUM, knifeThaumium, -0.15F, EnumRarity.UNCOMMON));
+           registry.register(bayonetThaumium = BEItemBuilder.createCustomMusketBayonet("musketbayonet.thaumium", ThaumcraftMaterials.TOOLMAT_THAUMIUM, knifeThaumium, -0.15F, EnumRarity.UNCOMMON));
         }
 
         if (BEConfig.thaumcraft_settings.TC_VOID_MATERIAL) {

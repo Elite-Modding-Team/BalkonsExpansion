@@ -43,7 +43,7 @@ public class BEItemBuilder {
         return createCustomItemMelee(BalkonsExpansion.MOD_ID, id, new MeleeCompKnifeCustom(material, knockbackAmount), EnumRarity.COMMON);
     }
 
-    public static ItemMusket createCustomMusketBayonet(String id, @Nonnull Item.ToolMaterial material, @Nonnull Item bayonetItem, float knockbackAmount) {
+    public static BEItemMusket createCustomMusketBayonet(String id, @Nonnull Item.ToolMaterial material, @Nonnull Item bayonetItem, float knockbackAmount) {
         return createCustomItemMusket(BalkonsExpansion.MOD_ID, id, new MeleeCompKnifeCustom(material, knockbackAmount), bayonetItem, EnumRarity.COMMON);
     }
 
@@ -82,7 +82,7 @@ public class BEItemBuilder {
         return createCustomItemMelee(BalkonsExpansion.MOD_ID, id, new MeleeCompKnifeCustom(material, knockbackAmount), rarity);
     }
 
-    public static ItemMusket createCustomMusketBayonet(String id, @Nonnull Item.ToolMaterial material, @Nonnull Item bayonetItem, float knockbackAmount, EnumRarity rarity) {
+    public static BEItemMusket createCustomMusketBayonet(String id, @Nonnull Item.ToolMaterial material, @Nonnull Item bayonetItem, float knockbackAmount, EnumRarity rarity) {
         return createCustomItemMusket(BalkonsExpansion.MOD_ID, id, new MeleeCompKnifeCustom(material, knockbackAmount), bayonetItem, rarity);
     }
 
@@ -121,7 +121,7 @@ public class BEItemBuilder {
         return createCustomItemMelee(BalkonsExpansion.MOD_ID, id, new MeleeCompKnifeCustom(material, -0.2F), EnumRarity.COMMON);
     }
 
-    public static ItemMusket createCustomMusketBayonet(String id, @Nonnull Item.ToolMaterial material, @Nonnull Item bayonetItem) {
+    public static BEItemMusket createCustomMusketBayonet(String id, @Nonnull Item.ToolMaterial material, @Nonnull Item bayonetItem) {
         return createCustomItemMusket(BalkonsExpansion.MOD_ID, id, new MeleeCompKnifeCustom(material, -0.2F), bayonetItem, EnumRarity.COMMON);
     }
 
