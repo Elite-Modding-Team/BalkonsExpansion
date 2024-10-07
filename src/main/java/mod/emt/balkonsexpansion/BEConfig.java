@@ -122,7 +122,7 @@ public class BEConfig {
         @Config.RequiresWorldRestart
         public boolean TC_THAUMIUM_MATERIAL = true;
 
-        @Config.Name("Material: Void [WIP]")
+        @Config.Name("Material: Void")
         @Config.Comment("Enables support for the Void material [default: true]")
         @Config.RequiresWorldRestart
         public boolean TC_VOID_MATERIAL = true;

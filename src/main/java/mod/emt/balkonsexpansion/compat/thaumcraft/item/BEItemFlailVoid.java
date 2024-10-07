@@ -32,7 +32,7 @@ public class BEItemFlailVoid extends BEItemFlail implements IWarpingGear {
     @Override
     public void onUpdate(ItemStack stack, World world, Entity entity, int itemSlot, boolean isSelected) {
         super.onUpdate(stack, world, entity, itemSlot, isSelected);
-
+        
         if (stack.isItemDamaged() && entity != null && entity.ticksExisted % 20 == 0) {
             stack.attemptDamageItem(-1, world.rand, entity instanceof EntityPlayerMP ? (EntityPlayerMP) entity : null);
         }
