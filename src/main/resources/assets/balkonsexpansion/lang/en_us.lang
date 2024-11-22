@@ -27,7 +27,7 @@ item.warhammer.desh.name=Desh Warhammer
 item.warhammer.heavy_duty.name=Heavy Duty Warhammer
 item.warhammer.titanium.name=Titanium Warhammer
 
-# Industrial Craft 2 Classic
+# IndustrialCraft 2 Classic
 item.battleaxe.bronze.ic2c.name=Bronze Battleaxe
 item.boomerang.bronze.ic2c.name=Bronze Boomerang
 item.flail.bronze.ic2c.name=Bronze Flail
@@ -37,6 +37,17 @@ item.knife.bronze.ic2c.name=Bronze Knife
 item.musketbayonet.bronze.ic2c.name=Musket with Bronze Bayonet
 item.spear.bronze.ic2c.name=Bronze Spear
 item.warhammer.bronze.ic2c.name=Bronze Warhammer
+
+# IndustrialCraft 2 Experimental
+item.battleaxe.bronze.ic2e.name=Bronze Battleaxe
+item.boomerang.bronze.ic2e.name=Bronze Boomerang
+item.flail.bronze.ic2e.name=Bronze Flail
+item.halberd.bronze.ic2e.name=Bronze Halberd
+item.katana.bronze.ic2e.name=Bronze Katana
+item.knife.bronze.ic2e.name=Bronze Knife
+item.musketbayonet.bronze.ic2e.name=Musket with Bronze Bayonet
+item.spear.bronze.ic2e.name=Bronze Spear
+item.warhammer.bronze.ic2e.name=Bronze Warhammer
 
 # Mo' Creatures Extended
 item.battleaxe.ancient_silver.name=Ancient Silver Battleaxe

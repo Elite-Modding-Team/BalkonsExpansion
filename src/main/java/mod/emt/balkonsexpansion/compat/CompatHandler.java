@@ -6,6 +6,8 @@ import mod.emt.balkonsexpansion.compat.galacticraft.GalacticraftMaterialColors;
 import mod.emt.balkonsexpansion.compat.galacticraft.GalacticraftRegistration;
 import mod.emt.balkonsexpansion.compat.ic2classic.IC2ClassicMaterialColors;
 import mod.emt.balkonsexpansion.compat.ic2classic.IC2ClassicRegistration;
+import mod.emt.balkonsexpansion.compat.ic2experimental.IC2ExperimentalMaterialColors;
+import mod.emt.balkonsexpansion.compat.ic2experimental.IC2ExperimentalRegistration;
 import mod.emt.balkonsexpansion.compat.projectred.ProjectRedMaterialColors;
 import mod.emt.balkonsexpansion.compat.projectred.ProjectRedRegistration;
 import mod.emt.balkonsexpansion.compat.railcraft.RailcraftMaterialColors;
@@ -37,17 +39,29 @@ public class CompatHandler {
         if (Loader.isModLoaded("galacticraftcore") && (Loader.isModLoaded("galacticraftplanets") && BEConfig.mod_integration_settings.GALACTICRAFT_INTEGRATION)) {
             GalacticraftRegistration.registerItems(event);
             GalacticraftMaterialColors.registerMaterialColors();
+
             if (FMLLaunchHandler.side().isClient()) {
                 GalacticraftRegistration.registerRenderersItem();
             }
         }
 
-        // Industrial Craft 2 Classic
-        if (Loader.isModLoaded("ic2-classic-spmod") && BEConfig.mod_integration_settings.IC2_CLASSIC_INTEGRATION) {
+        // IndustrialCraft 2 Classic
+        if (Loader.isModLoaded("ic2-classic-spmod") && BEConfig.mod_integration_settings.IC2_INTEGRATION) {
             IC2ClassicRegistration.registerItems(event);
             IC2ClassicMaterialColors.registerMaterialColors();
+
             if (FMLLaunchHandler.side().isClient()) {
                 IC2ClassicRegistration.registerRenderersItem();
+            }
+        }
+
+        // IndustrialCraft 2 Experimental
+        if (Loader.isModLoaded("ic2") && !Loader.isModLoaded("ic2-classic-spmod") && BEConfig.mod_integration_settings.IC2_INTEGRATION) {
+            IC2ExperimentalRegistration.registerItems(event);
+            IC2ExperimentalMaterialColors.registerMaterialColors();
+
+            if (FMLLaunchHandler.side().isClient()) {
+                IC2ExperimentalRegistration.registerRenderersItem();
             }
         }
 
@@ -55,6 +69,7 @@ public class CompatHandler {
         if (Loader.isModLoaded("projectred-exploration") && BEConfig.mod_integration_settings.PROJECT_RED_INTEGRATION) {
             ProjectRedRegistration.registerItems(event);
             ProjectRedMaterialColors.registerMaterialColors();
+
             if (FMLLaunchHandler.side().isClient()) {
                 ProjectRedRegistration.registerRenderersItem();
             }
@@ -64,6 +79,7 @@ public class CompatHandler {
         if (Loader.isModLoaded("railcraft") && BEConfig.mod_integration_settings.RAILCRAFT_INTEGRATION) {
             RailcraftRegistration.registerItems(event);
             RailcraftMaterialColors.registerMaterialColors();
+
             if (FMLLaunchHandler.side().isClient()) {
                 RailcraftRegistration.registerRenderersItem();
             }
@@ -73,6 +89,7 @@ public class CompatHandler {
         if (Loader.isModLoaded("thaumcraft") && BEConfig.mod_integration_settings.THAUMCRAFT_INTEGRATION) {
             ThaumcraftRegistration.registerItems(event);
             ThaumcraftMaterialColors.registerMaterialColors();
+
             if (FMLLaunchHandler.side().isClient()) {
                 ThaumcraftRegistration.registerRenderersItem();
             }
@@ -84,9 +101,12 @@ public class CompatHandler {
         // Galacticraft Legacy
         if (Loader.isModLoaded("galacticraftcore") && (Loader.isModLoaded("galacticraftplanets") && BEConfig.mod_integration_settings.GALACTICRAFT_INTEGRATION))
             GalacticraftRegistration.registerRecipes(event);
-        // Industrial Craft 2 Classic
-        if (Loader.isModLoaded("ic2-classic-spmod") && BEConfig.mod_integration_settings.IC2_CLASSIC_INTEGRATION)
+        // IndustrialCraft 2 Classic
+        if (Loader.isModLoaded("ic2-classic-spmod") && BEConfig.mod_integration_settings.IC2_INTEGRATION)
             IC2ClassicRegistration.registerRecipes(event);
+        // IndustrialCraft 2 Experimental
+        if (Loader.isModLoaded("ic2") && !Loader.isModLoaded("ic2-classic-spmod") && BEConfig.mod_integration_settings.IC2_INTEGRATION)
+            IC2ExperimentalRegistration.registerRecipes(event);
         // Project Red
         if (Loader.isModLoaded("projectred-exploration") && BEConfig.mod_integration_settings.PROJECT_RED_INTEGRATION)
             ProjectRedRegistration.registerRecipes(event);

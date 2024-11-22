@@ -19,7 +19,7 @@ ___
 	- Desh
 	- Heavy Duty
 	- Titanium
-- **IC2 Classic:**
+- **IndustrialCraft 2 (Classic and Experimental):**
 	- Bronze
 - **Project Red Exploration:**
 	- Peridot
@@ -29,3 +29,4 @@ ___
 	- Steel
 - **Thaumcraft:**
 	- Thaumium
+	- Void

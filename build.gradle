@@ -106,13 +106,15 @@ dependencies {
     }
 
     // Balkon's WeaponMod Legacy
-    implementation rfg.deobf('curse.maven:balkons-weaponmod-legacy-1033985:5600030')
+    implementation rfg.deobf('curse.maven:balkons-weaponmod-legacy-1033985:5853367')
     // Galacticraft Legacy
     implementation rfg.deobf('curse.maven:galacticraft-legacy-564236:4671122')
     // IC2 Classic
-    implementation rfg.deobf('curse.maven:ic2-classic-242942:5554368')
+    implementation rfg.deobf('curse.maven:ic2-classic-242942:5800761')
+    // IC2 Experimental
+    implementation rfg.deobf('curse.maven:industrial-craft-242638:3838713')
     // Mo' Creatures Extended
-    implementation rfg.deobf('curse.maven:mo-creatures-extended-867351:5393397')
+    implementation rfg.deobf('curse.maven:mo-creatures-extended-867351:5654788')
     // Project Red
     compileOnly 'curse.maven:codechickenlib-242818:2779848'
     compileOnly 'curse.maven:mrtjpcore-229002:2735197'

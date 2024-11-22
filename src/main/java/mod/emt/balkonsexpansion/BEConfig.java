@@ -17,8 +17,8 @@ public class BEConfig {
     @Config.Comment("Galacticraft Legacy")
     public static GalacticraftSettings galacticraft_settings = new GalacticraftSettings();
 
-    @Config.Comment("Industrial Craft 2 Classic")
-    public static IC2ClassicSettings ic2_classic_settings = new IC2ClassicSettings();
+    @Config.Comment("IndustrialCraft 2")
+    public static IC2Settings ic2_settings = new IC2Settings();
 
     @Config.Comment("Project Red Exploration")
     public static ProjectRedSettings project_red_settings = new ProjectRedSettings();
@@ -47,10 +47,10 @@ public class BEConfig {
         @Config.RequiresMcRestart
         public boolean GALACTICRAFT_INTEGRATION = true;
 
-        @Config.Name("Industrial Craft 2 Classic")
-        @Config.Comment("Enables Industrial Craft 2 Classic integration [default: true]")
+        @Config.Name("IndustrialCraft 2")
+        @Config.Comment("Enables IndustrialCraft 2 Classic and IndustrialCraft 2 Experimental integration [default: true]")
         @Config.RequiresMcRestart
-        public boolean IC2_CLASSIC_INTEGRATION = true;
+        public boolean IC2_INTEGRATION = true;
 
         @Config.Name("Project Red Exploration")
         @Config.Comment("Enables Project Red Exploration integration [default: true]")
@@ -85,11 +85,11 @@ public class BEConfig {
         public boolean GC_TITANIUM_MATERIAL = true;
     }
 
-    public static class IC2ClassicSettings {
-        @Config.Name("Material: Bronze (IC2 Classic)")
-        @Config.Comment("Enables support for the Bronze material from IC2 Classic [default: true]")
+    public static class IC2Settings {
+        @Config.Name("Material: Bronze (IC2 Classic and IC2 Experimental)")
+        @Config.Comment("Enables support for the Bronze material from IC2 Classic and IC2 Experimental [default: true]")
         @Config.RequiresWorldRestart
-        public boolean IC2C_BRONZE_MATERIAL = true;
+        public boolean IC2_BRONZE_MATERIAL = true;
     }
 
     public static class ProjectRedSettings {
