@@ -44,7 +44,7 @@
       "predicate": {
         "weaponmod:state": 1
       },
-      "model": "balkonsexpansion:item/halberd.titanium_state"
+      "model": "balkonsexpansion:item/halberd.titanium.gc_state"
     }
   ]
 }

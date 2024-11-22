@@ -1,14 +1,14 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "balkonsexpansion:galacticraft/items/battleaxe.titanium"
+    "layer0": "balkonsexpansion:galacticraft/items/katana.titanium"
   },
   "overrides": [
     {
       "predicate": {
         "weaponmod:block": 1
       },
-      "model": "balkonsexpansion:item/battleaxe.titanium.block"
+      "model": "balkonsexpansion:item/katana.titanium.gc.block"
     }
   ]
 }

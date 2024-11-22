@@ -8,7 +8,7 @@
       "predicate": {
         "weaponmod:ready-to-throw": 1
       },
-      "model": "balkonsexpansion:item/boomerang.titanium_ready"
+      "model": "balkonsexpansion:item/boomerang.titanium.gc_ready"
     }
   ]
 }

@@ -8,7 +8,7 @@
       "predicate": {
         "weaponmod:thrown": 1
       },
-      "model": "balkonsexpansion:item/flail.titanium-thrown"
+      "model": "balkonsexpansion:item/flail.titanium.gc-thrown"
     }
   ]
 }

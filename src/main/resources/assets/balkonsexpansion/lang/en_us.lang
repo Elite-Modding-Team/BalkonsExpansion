@@ -1,31 +1,31 @@
 # Galacticraft Legacy
 item.battleaxe.desh.name=Desh Battleaxe
 item.battleaxe.heavy_duty.name=Heavy Duty Battleaxe
-item.battleaxe.titanium.name=Titanium Battleaxe
+item.battleaxe.titanium.gc.name=Titanium Battleaxe
 item.boomerang.desh.name=Desh Boomerang
 item.boomerang.heavy_duty.name=Heavy Duty Boomerang
-item.boomerang.titanium.name=Titanium Boomerang
+item.boomerang.titanium.gc.name=Titanium Boomerang
 item.flail.desh.name=Desh Flail
 item.flail.heavy_duty.name=Heavy Duty Flail
-item.flail.titanium.name=Titanium Flail
+item.flail.titanium.gc.name=Titanium Flail
 item.halberd.desh.name=Desh Halberd
 item.halberd.heavy_duty.name=Heavy Duty Halberd
-item.halberd.titanium.name=Titanium Halberd
+item.halberd.titanium.gc.name=Titanium Halberd
 item.katana.desh.name=Desh Katana
 item.katana.heavy_duty.name=Heavy Duty Katana
-item.katana.titanium.name=Titanium Katana
+item.katana.titanium.gc.name=Titanium Katana
 item.knife.desh.name=Desh Knife
 item.knife.heavy_duty.name=Heavy Duty Knife
-item.knife.titanium.name=Titanium Knife
+item.knife.titanium.gc.name=Titanium Knife
 item.musketbayonet.desh.name=Musket with Desh Bayonet
 item.musketbayonet.heavy_duty.name=Musket with Heavy Duty Bayonet
-item.musketbayonet.titanium.name=Musket with Titanium Bayonet
+item.musketbayonet.titanium.gc.name=Musket with Titanium Bayonet
 item.spear.desh.name=Desh Spear
 item.spear.heavy_duty.name=Heavy Duty Spear
-item.spear.titanium.name=Titanium Spear
+item.spear.titanium.gc.name=Titanium Spear
 item.warhammer.desh.name=Desh Warhammer
 item.warhammer.heavy_duty.name=Heavy Duty Warhammer
-item.warhammer.titanium.name=Titanium Warhammer
+item.warhammer.titanium.gc.name=Titanium Warhammer
 
 # IndustrialCraft 2 Classic
 item.battleaxe.bronze.ic2c.name=Bronze Battleaxe

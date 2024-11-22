@@ -79,8 +79,8 @@ public class BEConfig {
         @Config.RequiresWorldRestart
         public boolean GC_HEAVY_DUTY_MATERIAL = true;
 
-        @Config.Name("Material: Titanium")
-        @Config.Comment("Enables support for the Titanium material [default: true]")
+        @Config.Name("Material: Titanium (Galacticraft Legacy)")
+        @Config.Comment("Enables support for the Titanium material from Galacticraft Legacy [default: true]")
         @Config.RequiresWorldRestart
         public boolean GC_TITANIUM_MATERIAL = true;
     }

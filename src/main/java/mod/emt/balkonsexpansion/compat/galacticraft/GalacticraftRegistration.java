@@ -76,15 +76,15 @@ public class GalacticraftRegistration {
         }
 
         if (BEConfig.galacticraft_settings.GC_TITANIUM_MATERIAL) {
-            registry.register(spearTitanium = BEItemBuilder.createCustomSpear("spear.titanium", AsteroidsItems.TOOL_TITANIUM, -0.1F, 2.0F));
-            registry.register(halberdTitanium = BEItemBuilder.createCustomHalberd("halberd.titanium", AsteroidsItems.TOOL_TITANIUM, 0.6F, 2.0F));
-            registry.register(battleaxeTitanium = BEItemBuilder.createCustomBattleaxe("battleaxe.titanium", AsteroidsItems.TOOL_TITANIUM, 0.45F, 1.0F));
-            registry.register(knifeTitanium = BEItemBuilder.createCustomKnife("knife.titanium", AsteroidsItems.TOOL_TITANIUM, -0.1F));
-            registry.register(warhammerTitanium = BEItemBuilder.createCustomWarhammer("warhammer.titanium", AsteroidsItems.TOOL_TITANIUM, 0.7F));
-            registry.register(flailTitanium = BEItemBuilder.createCustomFlail("flail.titanium", AsteroidsItems.TOOL_TITANIUM));
-            registry.register(katanaTitanium = BEItemBuilder.createCustomKatana("katana.titanium", AsteroidsItems.TOOL_TITANIUM, -0.5F));
-            registry.register(boomerangTitanium = BEItemBuilder.createCustomBoomerang("boomerang.titanium", AsteroidsItems.TOOL_TITANIUM, 0.3F));
-            registry.register(bayonetTitanium = BEItemBuilder.createCustomMusketBayonet("musketbayonet.titanium", AsteroidsItems.TOOL_TITANIUM, knifeTitanium, -0.1F));
+            registry.register(spearTitanium = BEItemBuilder.createCustomSpear("spear.titanium.gc", AsteroidsItems.TOOL_TITANIUM, -0.1F, 2.0F));
+            registry.register(halberdTitanium = BEItemBuilder.createCustomHalberd("halberd.titanium.gc", AsteroidsItems.TOOL_TITANIUM, 0.6F, 2.0F));
+            registry.register(battleaxeTitanium = BEItemBuilder.createCustomBattleaxe("battleaxe.titanium.gc", AsteroidsItems.TOOL_TITANIUM, 0.45F, 1.0F));
+            registry.register(knifeTitanium = BEItemBuilder.createCustomKnife("knife.titanium.gc", AsteroidsItems.TOOL_TITANIUM, -0.1F));
+            registry.register(warhammerTitanium = BEItemBuilder.createCustomWarhammer("warhammer.titanium.gc", AsteroidsItems.TOOL_TITANIUM, 0.7F));
+            registry.register(flailTitanium = BEItemBuilder.createCustomFlail("flail.titanium.gc", AsteroidsItems.TOOL_TITANIUM));
+            registry.register(katanaTitanium = BEItemBuilder.createCustomKatana("katana.titanium.gc", AsteroidsItems.TOOL_TITANIUM, -0.5F));
+            registry.register(boomerangTitanium = BEItemBuilder.createCustomBoomerang("boomerang.titanium.gc", AsteroidsItems.TOOL_TITANIUM, 0.3F));
+            registry.register(bayonetTitanium = BEItemBuilder.createCustomMusketBayonet("musketbayonet.titanium.gc", AsteroidsItems.TOOL_TITANIUM, knifeTitanium, -0.1F));
         }
     }
 

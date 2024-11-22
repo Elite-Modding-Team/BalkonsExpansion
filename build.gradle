@@ -111,8 +111,6 @@ dependencies {
     implementation rfg.deobf('curse.maven:galacticraft-legacy-564236:4671122')
     // IC2 Classic
     implementation rfg.deobf('curse.maven:ic2-classic-242942:5800761')
-    // IC2 Experimental
-    implementation rfg.deobf('curse.maven:industrial-craft-242638:3838713')
     // Mo' Creatures Extended
     implementation rfg.deobf('curse.maven:mo-creatures-extended-867351:5654788')
     // Project Red

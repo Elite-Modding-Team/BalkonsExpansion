@@ -1,5 +1,5 @@
 {
-  "parent": "balkonsexpansion:item/flail.titanium",
+  "parent": "balkonsexpansion:item/flail.titanium.gc",
   "textures": {
     "layer0": "balkonsexpansion:galacticraft/items/flail-thrown.titanium"
   }

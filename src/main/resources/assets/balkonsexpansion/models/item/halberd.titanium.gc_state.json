@@ -1,5 +1,5 @@
 {
-  "parent": "balkonsexpansion:item/halberd.titanium",
+  "parent": "balkonsexpansion:item/halberd.titanium.gc",
   "textures": {
     "layer0": "balkonsexpansion:galacticraft/items/halberd.titanium"
   },

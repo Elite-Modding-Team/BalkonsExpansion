@@ -44,7 +44,7 @@
       "predicate": {
         "weaponmod:reload": 1
       },
-      "model": "balkonsexpansion:item/musketbayonet.titanium_reload"
+      "model": "balkonsexpansion:item/musketbayonet.titanium.gc_reload"
     }
   ]
 }
