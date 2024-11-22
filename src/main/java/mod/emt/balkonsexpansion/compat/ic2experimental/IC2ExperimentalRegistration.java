@@ -60,7 +60,7 @@ public class IC2ExperimentalRegistration {
             registry.register(BERecipes.registerWarhammerRecipe("ingotBronze", "stickWood", warhammerBronze));
         }
 
-        // IC2 Classic tools have no smelting recipes so none needs to be added.
+        // IC2 tools have no smelting recipes so support isn't needed.
     }
 
     @SideOnly(Side.CLIENT)

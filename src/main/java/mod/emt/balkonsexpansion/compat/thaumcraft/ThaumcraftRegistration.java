@@ -65,7 +65,7 @@ public class ThaumcraftRegistration {
             registry.register(flailVoid = ThaumcraftItemBuilder.createVoidFlail("flail.void", ThaumcraftMaterials.TOOLMAT_VOID));
             registry.register(katanaVoid = ThaumcraftItemBuilder.createVoidKatana("katana.void", ThaumcraftMaterials.TOOLMAT_VOID, -0.6F));
             registry.register(boomerangVoid = ThaumcraftItemBuilder.createVoidBoomerang("boomerang.void", ThaumcraftMaterials.TOOLMAT_VOID, 0.3F));
-            //registry.register(bayonetThaumium = BEItemBuilder.createCustomMusketBayonet("musketbayonet.thaumium", ThaumcraftMaterials.TOOLMAT_THAUMIUM, knifeThaumium, -0.15F, EnumRarity.UNCOMMON));
+            //registry.register(bayonetThaumium = BEItemBuilder.createCustomMusketBayonet("musketbayonet.void", ThaumcraftMaterials.TOOLMAT_VOID, knifeVoid, -0.15F, EnumRarity.UNCOMMON));
         }
     }
 
@@ -135,7 +135,7 @@ public class ThaumcraftRegistration {
         if (BEConfig.thaumcraft_settings.TC_VOID_MATERIAL) {
             BERegistry.registerWeaponItemModel(battleaxeVoid);
             BERegistry.registerWeaponItemModel(boomerangVoid);
-            //BERegistry.registerWeaponItemModel(bayonetThaumium);
+            //BERegistry.registerWeaponItemModel(bayonetVoid);
             BERegistry.registerWeaponItemModel(flailVoid);
             BERegistry.registerWeaponItemModel(halberdVoid);
             BERegistry.registerWeaponItemModel(katanaVoid);

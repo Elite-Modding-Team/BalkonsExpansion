@@ -132,7 +132,7 @@ public class GalacticraftRegistration {
             registry.register(BERecipes.registerWarhammerRecipe(new ItemStack(AsteroidsItems.basicItem, 1, 6), "ingotIron", warhammerTitanium));
         }
 
-        // Galacticraft tools have no smelting recipes so none needs to be added.
+        // Galacticraft tools have no smelting recipes so support isn't needed.
     }
 
     @SideOnly(Side.CLIENT)
