@@ -7,7 +7,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import static mod.emt.balkonsexpansion.BalkonsExpansion.*;
+import static mod.icarus.balkonsexpansion.BalkonsExpansion.*;
 
 @Mod(modid = MOD_ID, name = NAME, version = VERSION, acceptedMinecraftVersions = ACCEPTED_VERSIONS, dependencies = DEPENDENCIES)
 public class BalkonsExpansion {
