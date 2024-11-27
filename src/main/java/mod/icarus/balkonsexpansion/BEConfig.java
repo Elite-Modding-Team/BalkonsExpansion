@@ -14,8 +14,17 @@ public class BEConfig {
     @Config.Comment("!Mod Integration")
     public static ModIntegrationSettings mod_integration_settings = new ModIntegrationSettings();
 
+    @Config.Comment("Applied Energistics 2")
+    public static AE2Settings ae2_settings = new AE2Settings();
+
+    @Config.Comment("Defiled Lands")
+    public static DefiledLandsSettings defiled_lands_settings = new DefiledLandsSettings();
+
     @Config.Comment("Galacticraft Legacy")
     public static GalacticraftSettings galacticraft_settings = new GalacticraftSettings();
+
+    @Config.Comment("Immersive Engineering")
+    public static ImmersiveEngineeringSettings ie_settings = new ImmersiveEngineeringSettings();
 
     @Config.Comment("IndustrialCraft 2")
     public static IC2Settings ic2_settings = new IC2Settings();
@@ -42,6 +51,16 @@ public class BEConfig {
     }
 
     public static class ModIntegrationSettings {
+        @Config.Name("Applied Energistics 2")
+        @Config.Comment("Enables Applied Energistics 2 integration [default: true]")
+        @Config.RequiresMcRestart
+        public boolean AE2_INTEGRATION = true;
+
+        @Config.Name("Defiled Lands")
+        @Config.Comment("Enables Defiled Lands integration [default: true]")
+        @Config.RequiresMcRestart
+        public boolean DL_INTEGRATION = true;
+
         @Config.Name("Galacticraft Legacy")
         @Config.Comment("Enables Galacticraft Legacy integration [default: true]")
         @Config.RequiresMcRestart
@@ -51,6 +70,11 @@ public class BEConfig {
         @Config.Comment("Enables IndustrialCraft 2 Classic and IndustrialCraft 2 Experimental integration [default: true]")
         @Config.RequiresMcRestart
         public boolean IC2_INTEGRATION = true;
+
+        @Config.Name("Immersive Engineering")
+        @Config.Comment("Enables Immersive Engineering integration [default: true]")
+        @Config.RequiresMcRestart
+        public boolean IE_INTEGRATION = true;
 
         @Config.Name("Project Red Exploration")
         @Config.Comment("Enables Project Red Exploration integration [default: true]")
@@ -66,6 +90,25 @@ public class BEConfig {
         @Config.Comment("Enables Thaumcraft integration [default: true]")
         @Config.RequiresMcRestart
         public boolean THAUMCRAFT_INTEGRATION = true;
+    }
+
+    public static class AE2Settings {
+        @Config.Name("Material: Certus Quartz")
+        @Config.Comment("Enables support for the Certus Quartz material [default: true]")
+        @Config.RequiresWorldRestart
+        public boolean AE2_CERTUS_QUARTZ_MATERIAL = true;
+
+        @Config.Name("Material: Nether Quartz (Applied Energistics 2)")
+        @Config.Comment("Enables support for the Nether Quartz material from Applied Energistics 2 [default: true]")
+        @Config.RequiresWorldRestart
+        public boolean AE2_NETHER_QUARTZ_MATERIAL = true;
+    }
+
+    public static class DefiledLandsSettings {
+        @Config.Name("Material: Umbrium")
+        @Config.Comment("Enables support for the Umbrium material [default: true]")
+        @Config.RequiresWorldRestart
+        public boolean DL_UMBRIUM_MATERIAL = true;
     }
 
     public static class GalacticraftSettings {
@@ -90,6 +133,13 @@ public class BEConfig {
         @Config.Comment("Enables support for the Bronze material from IC2 Classic and IC2 Experimental [default: true]")
         @Config.RequiresWorldRestart
         public boolean IC2_BRONZE_MATERIAL = true;
+    }
+
+    public static class ImmersiveEngineeringSettings {
+        @Config.Name("Material: Steel (Immersive Engineering)")
+        @Config.Comment("Enables support for the Steel material from Immersive Engineering [default: true]")
+        @Config.RequiresWorldRestart
+        public boolean IE_STEEL_MATERIAL = true;
     }
 
     public static class ProjectRedSettings {
