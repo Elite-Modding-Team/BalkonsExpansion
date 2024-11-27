@@ -15,10 +15,17 @@
 - None yet! :)
 ___
 ### **Supported Mods:** ###
+- **Applied Energistics 2:**
+	- Certus Quartz
+	- Nether Quartz
+- **Defiled Lands:**
+	- Umbrium
 - **Galacticraft Legacy:**
 	- Desh
 	- Heavy Duty
 	- Titanium
+- **Immersive Engineering:**
+	- Steel
 - **IndustrialCraft 2 (Classic and Experimental):**
 	- Bronze
 - **Project Red Exploration:**

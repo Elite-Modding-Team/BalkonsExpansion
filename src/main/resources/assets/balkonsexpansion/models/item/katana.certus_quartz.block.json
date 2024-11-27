@@ -1,0 +1,6 @@
+{
+  "parent": "weaponmod:item/handheld_block",
+  "textures": {
+    "layer0": "balkonsexpansion:ae2/items/katana.certus_quartz"
+  }
+}

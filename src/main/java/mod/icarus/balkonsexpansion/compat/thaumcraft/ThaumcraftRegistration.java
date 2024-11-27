@@ -17,6 +17,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+import net.minecraftforge.oredict.OreDictionary;
 import net.minecraftforge.registries.IForgeRegistry;
 import thaumcraft.api.ThaumcraftMaterials;
 import thaumcraft.api.items.ItemsTC;
@@ -85,14 +86,14 @@ public class ThaumcraftRegistration {
             registry.register(BERecipes.registerSpearRecipe("ingotThaumium", "stickWood", spearThaumium));
             registry.register(BERecipes.registerWarhammerRecipe("ingotThaumium", "stickWood", warhammerThaumium));
 
-            GameRegistry.addSmelting(new ItemStack(battleaxeThaumium, 1, 32767), new ItemStack(ItemsTC.nuggets, 1, 6), 0.6F);
-            GameRegistry.addSmelting(new ItemStack(boomerangThaumium, 1, 32767), new ItemStack(ItemsTC.nuggets, 1, 6), 0.6F);
-            GameRegistry.addSmelting(new ItemStack(flailThaumium, 1, 32767), new ItemStack(ItemsTC.nuggets, 1, 6), 0.6F);
-            GameRegistry.addSmelting(new ItemStack(halberdThaumium, 1, 32767), new ItemStack(ItemsTC.nuggets, 1, 6), 0.6F);
-            GameRegistry.addSmelting(new ItemStack(katanaThaumium, 1, 32767), new ItemStack(ItemsTC.nuggets, 1, 6), 0.6F);
-            GameRegistry.addSmelting(new ItemStack(knifeThaumium, 1, 32767), new ItemStack(ItemsTC.nuggets, 1, 6), 0.6F);
-            GameRegistry.addSmelting(new ItemStack(spearThaumium, 1, 32767), new ItemStack(ItemsTC.nuggets, 1, 6), 0.6F);
-            GameRegistry.addSmelting(new ItemStack(warhammerThaumium, 1, 32767), new ItemStack(ItemsTC.nuggets, 1, 6), 0.6F);
+            GameRegistry.addSmelting(new ItemStack(battleaxeThaumium, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(ItemsTC.nuggets, 1, 6), 0.6F);
+            GameRegistry.addSmelting(new ItemStack(boomerangThaumium, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(ItemsTC.nuggets, 1, 6), 0.6F);
+            GameRegistry.addSmelting(new ItemStack(flailThaumium, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(ItemsTC.nuggets, 1, 6), 0.6F);
+            GameRegistry.addSmelting(new ItemStack(halberdThaumium, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(ItemsTC.nuggets, 1, 6), 0.6F);
+            GameRegistry.addSmelting(new ItemStack(katanaThaumium, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(ItemsTC.nuggets, 1, 6), 0.6F);
+            GameRegistry.addSmelting(new ItemStack(knifeThaumium, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(ItemsTC.nuggets, 1, 6), 0.6F);
+            GameRegistry.addSmelting(new ItemStack(spearThaumium, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(ItemsTC.nuggets, 1, 6), 0.6F);
+            GameRegistry.addSmelting(new ItemStack(warhammerThaumium, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(ItemsTC.nuggets, 1, 6), 0.6F);
         }
 
         if (BEConfig.thaumcraft_settings.TC_VOID_MATERIAL) {
@@ -107,14 +108,14 @@ public class ThaumcraftRegistration {
             registry.register(BERecipes.registerSpearRecipe("ingotVoid", "stickWood", spearVoid));
             registry.register(BERecipes.registerWarhammerRecipe("ingotVoid", "stickWood", warhammerVoid));
 
-            GameRegistry.addSmelting(new ItemStack(battleaxeVoid, 1, 32767), new ItemStack(ItemsTC.nuggets, 1, 7), 1.2F);
-            GameRegistry.addSmelting(new ItemStack(boomerangVoid, 1, 32767), new ItemStack(ItemsTC.nuggets, 1, 7), 1.2F);
-            GameRegistry.addSmelting(new ItemStack(flailVoid, 1, 32767), new ItemStack(ItemsTC.nuggets, 1, 7), 1.2F);
-            GameRegistry.addSmelting(new ItemStack(halberdVoid, 1, 32767), new ItemStack(ItemsTC.nuggets, 1, 7), 1.2F);
-            GameRegistry.addSmelting(new ItemStack(katanaVoid, 1, 32767), new ItemStack(ItemsTC.nuggets, 1, 7), 1.2F);
-            GameRegistry.addSmelting(new ItemStack(knifeVoid, 1, 32767), new ItemStack(ItemsTC.nuggets, 1, 7), 1.2F);
-            GameRegistry.addSmelting(new ItemStack(spearVoid, 1, 32767), new ItemStack(ItemsTC.nuggets, 1, 7), 1.2F);
-            GameRegistry.addSmelting(new ItemStack(warhammerVoid, 1, 32767), new ItemStack(ItemsTC.nuggets, 1, 7), 1.2F);
+            GameRegistry.addSmelting(new ItemStack(battleaxeVoid, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(ItemsTC.nuggets, 1, 7), 1.2F);
+            GameRegistry.addSmelting(new ItemStack(boomerangVoid, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(ItemsTC.nuggets, 1, 7), 1.2F);
+            GameRegistry.addSmelting(new ItemStack(flailVoid, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(ItemsTC.nuggets, 1, 7), 1.2F);
+            GameRegistry.addSmelting(new ItemStack(halberdVoid, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(ItemsTC.nuggets, 1, 7), 1.2F);
+            GameRegistry.addSmelting(new ItemStack(katanaVoid, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(ItemsTC.nuggets, 1, 7), 1.2F);
+            GameRegistry.addSmelting(new ItemStack(knifeVoid, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(ItemsTC.nuggets, 1, 7), 1.2F);
+            GameRegistry.addSmelting(new ItemStack(spearVoid, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(ItemsTC.nuggets, 1, 7), 1.2F);
+            GameRegistry.addSmelting(new ItemStack(warhammerVoid, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(ItemsTC.nuggets, 1, 7), 1.2F);
         }
     }
 

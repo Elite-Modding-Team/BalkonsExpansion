@@ -105,12 +105,18 @@ dependencies {
         implementation 'zone.rong:mixinbooter:9.1'
     }
 
+    // Applied Energistics 2
+    implementation rfg.deobf('curse.maven:ae2-extended-life-570458:5411078')
     // Balkon's WeaponMod Legacy
     implementation rfg.deobf('curse.maven:balkons-weaponmod-legacy-1033985:5853367')
+    // Defiled Lands
+    implementation rfg.deobf('curse.maven:defiled-lands-273502:2835318')
     // Galacticraft Legacy
     implementation rfg.deobf('curse.maven:galacticraft-legacy-564236:4671122')
     // IC2 Classic
     implementation rfg.deobf('curse.maven:ic2-classic-242942:5800761')
+    // Immersive Engineering
+    implementation rfg.deobf('curse.maven:immersive-engineering-231951:2974106')
     // Mo' Creatures Extended
     implementation rfg.deobf('curse.maven:mo-creatures-extended-867351:5654788')
     // Project Red

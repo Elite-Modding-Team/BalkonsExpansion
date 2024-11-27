@@ -1,3 +1,34 @@
+# Applied Energistics 2
+item.battleaxe.certus_quartz.name=Certus Quartz Battleaxe
+item.battleaxe.nether_quartz.ae2.name=Nether Quartz Battleaxe
+item.boomerang.certus_quartz.name=Certus Quartz Boomerang
+item.boomerang.nether_quartz.ae2.name=Nether Quartz Boomerang
+item.flail.certus_quartz.name=Certus Quartz Flail
+item.flail.nether_quartz.ae2.name=Nether Quartz Flail
+item.halberd.certus_quartz.name=Certus Quartz Halberd
+item.halberd.nether_quartz.ae2.name=Nether Quartz Halberd
+item.katana.certus_quartz.name=Certus Quartz Katana
+item.katana.nether_quartz.ae2.name=Nether Quartz Katana
+item.knife.certus_quartz.name=Certus Quartz Knife
+item.knife.nether_quartz.ae2.name=Nether Quartz Knife
+item.musketbayonet.certus_quartz.name=Musket with Certus Quartz Bayonet
+item.musketbayonet.nether_quartz.ae2.name=Musket with Nether Quartz Bayonet
+item.spear.certus_quartz.name=Certus Quartz Spear
+item.spear.nether_quartz.ae2.name=Nether Quartz Spear
+item.warhammer.certus_quartz.name=Certus Quartz Warhammer
+item.warhammer.nether_quartz.ae2.name=Nether Quartz Warhammer
+
+# Defiled Lands
+item.battleaxe.umbrium.name=Umbrium Battleaxe
+item.boomerang.umbrium.name=Umbrium Boomerang
+item.flail.umbrium.name=Umbrium Flail
+item.halberd.umbrium.name=Umbrium Halberd
+item.katana.umbrium.name=Umbrium Katana
+item.knife.umbrium.name=Umbrium Knife
+item.musketbayonet.umbrium.name=Musket with Umbrium Bayonet
+item.spear.umbrium.name=Umbrium Spear
+item.warhammer.umbrium.name=Umbrium Warhammer
+
 # Galacticraft Legacy
 item.battleaxe.desh.name=Desh Battleaxe
 item.battleaxe.heavy_duty.name=Heavy Duty Battleaxe
@@ -26,6 +57,17 @@ item.spear.titanium.gc.name=Titanium Spear
 item.warhammer.desh.name=Desh Warhammer
 item.warhammer.heavy_duty.name=Heavy Duty Warhammer
 item.warhammer.titanium.gc.name=Titanium Warhammer
+
+# Immersive Engineering
+item.battleaxe.steel.ie.name=Steel Battleaxe
+item.boomerang.steel.ie.name=Steel Boomerang
+item.flail.steel.ie.name=Steel Flail
+item.halberd.steel.ie.name=Steel Halberd
+item.katana.steel.ie.name=Steel Katana
+item.knife.steel.ie.name=Steel Knife
+item.musketbayonet.steel.ie.name=Musket with Steel Bayonet
+item.spear.steel.ie.name=Steel Spear
+item.warhammer.steel.ie.name=Steel Warhammer
 
 # IndustrialCraft 2 Classic
 item.battleaxe.bronze.ic2c.name=Bronze Battleaxe

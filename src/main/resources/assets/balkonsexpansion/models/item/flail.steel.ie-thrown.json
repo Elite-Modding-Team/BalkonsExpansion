@@ -1,0 +1,6 @@
+{
+  "parent": "balkonsexpansion:item/flail.steel.ie",
+  "textures": {
+    "layer0": "balkonsexpansion:immersiveengineering/items/flail-thrown.steel"
+  }
+}

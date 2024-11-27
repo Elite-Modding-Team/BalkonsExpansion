@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "balkonsexpansion:ae2/items/warhammer.nether_quartz"
+  }
+}

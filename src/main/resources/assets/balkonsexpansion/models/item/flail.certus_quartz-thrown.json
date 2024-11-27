@@ -1,0 +1,6 @@
+{
+  "parent": "balkonsexpansion:item/flail.certus_quartz",
+  "textures": {
+    "layer0": "weaponmod:items/flail-thrown"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "balkonsexpansion:item/flail.nether_quartz.ae2",
+  "textures": {
+    "layer0": "weaponmod:items/flail-thrown"
+  }
+}

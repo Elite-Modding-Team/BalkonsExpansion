@@ -17,6 +17,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+import net.minecraftforge.oredict.OreDictionary;
 import net.minecraftforge.registries.IForgeRegistry;
 
 public class RailcraftRegistration {
@@ -34,7 +35,7 @@ public class RailcraftRegistration {
         IForgeRegistry<Item> registry = event.getRegistry();
 
         if (BEConfig.railcraft_settings.RC_STEEL_MATERIAL) {
-            registry.register(spearSteel = BEItemBuilder.createCustomSpear("spear.steel.rc", ItemMaterials.STEEL_TOOL,  -0.15F, 1.0F));
+            registry.register(spearSteel = BEItemBuilder.createCustomSpear("spear.steel.rc", ItemMaterials.STEEL_TOOL, -0.15F, 1.0F));
             registry.register(halberdSteel = BEItemBuilder.createCustomHalberd("halberd.steel.rc", ItemMaterials.STEEL_TOOL, 0.4F, 1.0F));
             registry.register(battleaxeSteel = BEItemBuilder.createCustomBattleaxe("battleaxe.steel.rc", ItemMaterials.STEEL_TOOL, 0.25F, 1.0F));
             registry.register(knifeSteel = BEItemBuilder.createCustomKnife("knife.steel.rc", ItemMaterials.STEEL_TOOL, -0.15F));
@@ -62,14 +63,14 @@ public class RailcraftRegistration {
             registry.register(BERecipes.registerSpearRecipe("ingotSteel", "stickWood", spearSteel));
             registry.register(BERecipes.registerWarhammerRecipe("ingotSteel", "stickWood", warhammerSteel));
 
-            GameRegistry.addSmelting(new ItemStack(battleaxeSteel, 1, 32767), new ItemStack(RailcraftItems.NUGGET.item(), 1, 0), 0.1F);
-            GameRegistry.addSmelting(new ItemStack(boomerangSteel, 1, 32767), new ItemStack(RailcraftItems.NUGGET.item(), 1, 0), 0.1F);
-            GameRegistry.addSmelting(new ItemStack(flailSteel, 1, 32767), new ItemStack(RailcraftItems.NUGGET.item(), 1, 0), 0.1F);
-            GameRegistry.addSmelting(new ItemStack(halberdSteel, 1, 32767), new ItemStack(RailcraftItems.NUGGET.item(), 1, 0), 0.1F);
-            GameRegistry.addSmelting(new ItemStack(katanaSteel, 1, 32767), new ItemStack(RailcraftItems.NUGGET.item(), 1, 0), 0.1F);
-            GameRegistry.addSmelting(new ItemStack(knifeSteel, 1, 32767), new ItemStack(RailcraftItems.NUGGET.item(), 1, 0), 0.1F);
-            GameRegistry.addSmelting(new ItemStack(spearSteel, 1, 32767), new ItemStack(RailcraftItems.NUGGET.item(), 1, 0), 0.1F);
-            GameRegistry.addSmelting(new ItemStack(warhammerSteel, 1, 32767), new ItemStack(RailcraftItems.NUGGET.item(), 1, 0), 0.1F);
+            GameRegistry.addSmelting(new ItemStack(battleaxeSteel, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(RailcraftItems.NUGGET.item(), 1, 0), 0.1F);
+            GameRegistry.addSmelting(new ItemStack(boomerangSteel, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(RailcraftItems.NUGGET.item(), 1, 0), 0.1F);
+            GameRegistry.addSmelting(new ItemStack(flailSteel, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(RailcraftItems.NUGGET.item(), 1, 0), 0.1F);
+            GameRegistry.addSmelting(new ItemStack(halberdSteel, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(RailcraftItems.NUGGET.item(), 1, 0), 0.1F);
+            GameRegistry.addSmelting(new ItemStack(katanaSteel, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(RailcraftItems.NUGGET.item(), 1, 0), 0.1F);
+            GameRegistry.addSmelting(new ItemStack(knifeSteel, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(RailcraftItems.NUGGET.item(), 1, 0), 0.1F);
+            GameRegistry.addSmelting(new ItemStack(spearSteel, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(RailcraftItems.NUGGET.item(), 1, 0), 0.1F);
+            GameRegistry.addSmelting(new ItemStack(warhammerSteel, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(RailcraftItems.NUGGET.item(), 1, 0), 0.1F);
         }
     }
 

@@ -1,0 +1,6 @@
+{
+  "parent": "balkonsexpansion:item/flail.umbrium",
+  "textures": {
+    "layer0": "balkonsexpansion:defiledlands/items/flail-thrown.umbrium"
+  }
+}

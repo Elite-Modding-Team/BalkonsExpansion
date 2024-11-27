@@ -1,0 +1,14 @@
+{
+  "parent": "weaponmod:item/handheld_rod",
+  "textures": {
+    "layer0": "balkonsexpansion:ae2/items/flail.nether_quartz"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "weaponmod:thrown": 1
+      },
+      "model": "balkonsexpansion:item/flail.nether_quartz.ae2-thrown"
+    }
+  ]
+}

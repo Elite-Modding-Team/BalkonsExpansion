@@ -2,12 +2,18 @@ package mod.icarus.balkonsexpansion.compat;
 
 import mod.icarus.balkonsexpansion.BEConfig;
 import mod.icarus.balkonsexpansion.BalkonsExpansion;
+import mod.icarus.balkonsexpansion.compat.ae2.AE2MaterialColors;
+import mod.icarus.balkonsexpansion.compat.ae2.AE2Registration;
+import mod.icarus.balkonsexpansion.compat.defiledlands.DefiledLandsMaterialColors;
+import mod.icarus.balkonsexpansion.compat.defiledlands.DefiledLandsRegistration;
 import mod.icarus.balkonsexpansion.compat.galacticraft.GalacticraftMaterialColors;
 import mod.icarus.balkonsexpansion.compat.galacticraft.GalacticraftRegistration;
 import mod.icarus.balkonsexpansion.compat.ic2classic.IC2ClassicMaterialColors;
 import mod.icarus.balkonsexpansion.compat.ic2classic.IC2ClassicRegistration;
 import mod.icarus.balkonsexpansion.compat.ic2experimental.IC2ExperimentalMaterialColors;
 import mod.icarus.balkonsexpansion.compat.ic2experimental.IC2ExperimentalRegistration;
+import mod.icarus.balkonsexpansion.compat.immersiveengineering.IEMaterialColors;
+import mod.icarus.balkonsexpansion.compat.immersiveengineering.IERegistration;
 import mod.icarus.balkonsexpansion.compat.projectred.ProjectRedMaterialColors;
 import mod.icarus.balkonsexpansion.compat.projectred.ProjectRedRegistration;
 import mod.icarus.balkonsexpansion.compat.railcraft.RailcraftMaterialColors;
@@ -35,6 +41,26 @@ public class CompatHandler {
 
     @SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> event) {
+        // Applied Energistics 2
+        if (Loader.isModLoaded("appliedenergistics2") && BEConfig.mod_integration_settings.AE2_INTEGRATION) {
+            AE2Registration.registerItems(event);
+            AE2MaterialColors.registerMaterialColors();
+
+            if (FMLLaunchHandler.side().isClient()) {
+                AE2Registration.registerRenderersItem();
+            }
+        }
+
+        // Defiled Lands
+        if (Loader.isModLoaded("defiledlands") && BEConfig.mod_integration_settings.DL_INTEGRATION) {
+            DefiledLandsRegistration.registerItems(event);
+            DefiledLandsMaterialColors.registerMaterialColors();
+
+            if (FMLLaunchHandler.side().isClient()) {
+                DefiledLandsRegistration.registerRenderersItem();
+            }
+        }
+
         // Galacticraft Legacy
         if (Loader.isModLoaded("galacticraftcore") && (Loader.isModLoaded("galacticraftplanets") && BEConfig.mod_integration_settings.GALACTICRAFT_INTEGRATION)) {
             GalacticraftRegistration.registerItems(event);
@@ -42,6 +68,16 @@ public class CompatHandler {
 
             if (FMLLaunchHandler.side().isClient()) {
                 GalacticraftRegistration.registerRenderersItem();
+            }
+        }
+
+        // Immersive Engineering
+        if (Loader.isModLoaded("immersiveengineering") && BEConfig.mod_integration_settings.IE_INTEGRATION) {
+            IERegistration.registerItems(event);
+            IEMaterialColors.registerMaterialColors();
+
+            if (FMLLaunchHandler.side().isClient()) {
+                IERegistration.registerRenderersItem();
             }
         }
 
@@ -98,9 +134,18 @@ public class CompatHandler {
 
     @SubscribeEvent
     public static void registerRecipes(RegistryEvent.Register<IRecipe> event) {
+        // Applied Energistics 2
+        if (Loader.isModLoaded("appliedenergistics2") && BEConfig.mod_integration_settings.AE2_INTEGRATION)
+            AE2Registration.registerRecipes(event);
+        // Defiled Lands
+        if (Loader.isModLoaded("defiledlands") && BEConfig.mod_integration_settings.DL_INTEGRATION)
+            DefiledLandsRegistration.registerRecipes(event);
         // Galacticraft Legacy
         if (Loader.isModLoaded("galacticraftcore") && (Loader.isModLoaded("galacticraftplanets") && BEConfig.mod_integration_settings.GALACTICRAFT_INTEGRATION))
             GalacticraftRegistration.registerRecipes(event);
+        // Immersive Engineering
+        if (Loader.isModLoaded("immersiveengineering") && BEConfig.mod_integration_settings.IE_INTEGRATION)
+            IERegistration.registerRecipes(event);
         // IndustrialCraft 2 Classic
         if (Loader.isModLoaded("ic2-classic-spmod") && BEConfig.mod_integration_settings.IC2_INTEGRATION)
             IC2ClassicRegistration.registerRecipes(event);

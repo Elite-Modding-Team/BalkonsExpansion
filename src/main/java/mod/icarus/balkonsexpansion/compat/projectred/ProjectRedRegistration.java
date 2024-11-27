@@ -127,8 +127,6 @@ public class ProjectRedRegistration {
             registry.register(BERecipes.registerSpearRecipe("gemSapphire", "stickWood", spearSapphire));
             registry.register(BERecipes.registerWarhammerRecipe("gemSapphire", "stickWood", warhammerSapphire));
         }
-
-        // Project Red tools have no smelting recipes so none needs to be added.
     }
 
     @SideOnly(Side.CLIENT)
