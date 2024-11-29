@@ -17,6 +17,9 @@ public class BEConfig {
     @Config.Comment("Applied Energistics 2")
     public static AE2Settings ae2_settings = new AE2Settings();
 
+    @Config.Comment("Better With Mods")
+    public static BetterWithModsSettings bwm_settings = new BetterWithModsSettings();
+
     @Config.Comment("Defiled Lands")
     public static DefiledLandsSettings defiled_lands_settings = new DefiledLandsSettings();
 
@@ -55,6 +58,11 @@ public class BEConfig {
         @Config.Comment("Enables Applied Energistics 2 integration [default: true]")
         @Config.RequiresMcRestart
         public boolean AE2_INTEGRATION = true;
+
+        @Config.Name("Better With Mods")
+        @Config.Comment("Enables Better With Mods integration [default: true]")
+        @Config.RequiresMcRestart
+        public boolean BWM_INTEGRATION = true;
 
         @Config.Name("Defiled Lands")
         @Config.Comment("Enables Defiled Lands integration [default: true]")
@@ -102,6 +110,13 @@ public class BEConfig {
         @Config.Comment("Enables support for the Nether Quartz material from Applied Energistics 2 [default: true]")
         @Config.RequiresWorldRestart
         public boolean AE2_NETHER_QUARTZ_MATERIAL = true;
+    }
+
+    public static class BetterWithModsSettings {
+        @Config.Name("Material: Soulforged Steel (Refined)")
+        @Config.Comment("Enables support for the Soulforged Steel (Refined) material [default: true]")
+        @Config.RequiresWorldRestart
+        public boolean BWM_STEEL_MATERIAL = true;
     }
 
     public static class DefiledLandsSettings {
