@@ -95,7 +95,7 @@ public class GalacticraftRegistration {
         // Metadata sucks.
         if (BEConfig.galacticraft_settings.GC_DESH_MATERIAL) {
             registry.register(BERecipes.registerBattleaxeRecipe(new ItemStack(MarsItems.marsItemBasic, 1, 2), new ItemStack(MarsItems.marsItemBasic, 1, 1), battleaxeDesh));
-            registry.register(BERecipes.registerBoomerangRecipe(new ItemStack(MarsItems.marsItemBasic, 1, 2), new ItemStack(MarsItems.marsItemBasic, 1, 2), boomerangDesh));
+            registry.register(BERecipes.registerBoomerangRecipe(new ItemStack(MarsItems.marsItemBasic, 1, 2), "ingotIron", boomerangDesh));
             registry.register(BERecipes.registerBayonetRecipe(knifeDesh, bayonetDesh));
             registry.register(BERecipes.registerFlailRecipe(new ItemStack(MarsItems.marsItemBasic, 1, 2), new ItemStack(MarsItems.marsItemBasic, 1, 1), "string", flailDesh));
             registry.register(BERecipes.registerHalberdRecipe(new ItemStack(MarsItems.marsItemBasic, 1, 2), new ItemStack(MarsItems.marsItemBasic, 1, 1), halberdDesh));

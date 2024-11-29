@@ -57,7 +57,7 @@ public class BWMRegistration {
             BERecipesBWM.registerSteelAnvilTool3("ingotSoulforgedSteel", ItemMaterial.getMaterial(ItemMaterial.EnumMaterial.HAFT), "string", flailSteel, "   *", "  #*", " # *", "#  X");
             BERecipesBWM.registerSteelAnvilTool2("ingotSoulforgedSteel", ItemMaterial.getMaterial(ItemMaterial.EnumMaterial.HAFT), halberdSteel, "  XX", "  #X", " #  ", "#   ");
             BERecipesBWM.registerSteelAnvilTool2("ingotSoulforgedSteel", ItemMaterial.getMaterial(ItemMaterial.EnumMaterial.HAFT), katanaSteel, " X", "X ", "X ", "# ");
-            BERecipesBWM.registerSteelAnvilTool2("ingotSoulforgedSteel", ItemMaterial.getMaterial(ItemMaterial.EnumMaterial.HAFT), knifeSteel, "X", "X", "#");
+            BERecipesBWM.registerSteelAnvilTool2("ingotSoulforgedSteel", ItemMaterial.getMaterial(ItemMaterial.EnumMaterial.HAFT), knifeSteel, "X", "#");
             BERecipesBWM.registerSteelAnvilTool2("ingotSoulforgedSteel", ItemMaterial.getMaterial(ItemMaterial.EnumMaterial.HAFT), spearSteel, "   X", "  # ", " #  ", "#   ");
             BERecipesBWM.registerSteelAnvilTool2("ingotSoulforgedSteel", ItemMaterial.getMaterial(ItemMaterial.EnumMaterial.HAFT), warhammerSteel, "X#X", "X#X", " # ", " # ");
         }
