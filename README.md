@@ -18,6 +18,8 @@ ___
 - **Applied Energistics 2:**
 	- Certus Quartz
 	- Nether Quartz
+- **Better With Mods:**
+	- Soulforged Steel (Refined)
 - **Defiled Lands:**
 	- Umbrium
 - **Galacticraft Legacy:**

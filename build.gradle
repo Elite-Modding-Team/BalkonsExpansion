@@ -109,6 +109,8 @@ dependencies {
     implementation rfg.deobf('curse.maven:ae2-extended-life-570458:5411078')
     // Balkon's WeaponMod Legacy
     implementation rfg.deobf('curse.maven:balkons-weaponmod-legacy-1033985:5853367')
+    // Better With Mods
+    implementation rfg.deobf('curse.maven:bwm-suite-246760:5702821')
     // Defiled Lands
     implementation rfg.deobf('curse.maven:defiled-lands-273502:2835318')
     // Galacticraft Legacy
@@ -119,6 +121,8 @@ dependencies {
     implementation rfg.deobf('curse.maven:immersive-engineering-231951:2974106')
     // Mo' Creatures Extended
     implementation rfg.deobf('curse.maven:mo-creatures-extended-867351:5654788')
+    // Patchouli
+    implementation rfg.deobf('curse.maven:patchouli-rofl-edition-905159:5201041')
     // Project Red
     compileOnly 'curse.maven:codechickenlib-242818:2779848'
     compileOnly 'curse.maven:mrtjpcore-229002:2735197'

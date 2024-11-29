@@ -4,6 +4,8 @@ import mod.icarus.balkonsexpansion.BEConfig;
 import mod.icarus.balkonsexpansion.BalkonsExpansion;
 import mod.icarus.balkonsexpansion.compat.ae2.AE2MaterialColors;
 import mod.icarus.balkonsexpansion.compat.ae2.AE2Registration;
+import mod.icarus.balkonsexpansion.compat.bwm.BWMMaterialColors;
+import mod.icarus.balkonsexpansion.compat.bwm.BWMRegistration;
 import mod.icarus.balkonsexpansion.compat.defiledlands.DefiledLandsMaterialColors;
 import mod.icarus.balkonsexpansion.compat.defiledlands.DefiledLandsRegistration;
 import mod.icarus.balkonsexpansion.compat.galacticraft.GalacticraftMaterialColors;
@@ -48,6 +50,16 @@ public class CompatHandler {
 
             if (FMLLaunchHandler.side().isClient()) {
                 AE2Registration.registerRenderersItem();
+            }
+        }
+
+        // Better With Mods
+        if (Loader.isModLoaded("betterwithmods") && BEConfig.mod_integration_settings.BWM_INTEGRATION) {
+            BWMRegistration.registerItems(event);
+            BWMMaterialColors.registerMaterialColors();
+
+            if (FMLLaunchHandler.side().isClient()) {
+                BWMRegistration.registerRenderersItem();
             }
         }
 
@@ -137,6 +149,9 @@ public class CompatHandler {
         // Applied Energistics 2
         if (Loader.isModLoaded("appliedenergistics2") && BEConfig.mod_integration_settings.AE2_INTEGRATION)
             AE2Registration.registerRecipes(event);
+        // Better With Mods
+        if (Loader.isModLoaded("betterwithmods") && BEConfig.mod_integration_settings.BWM_INTEGRATION)
+            BWMRegistration.registerRecipes(event);
         // Defiled Lands
         if (Loader.isModLoaded("defiledlands") && BEConfig.mod_integration_settings.DL_INTEGRATION)
             DefiledLandsRegistration.registerRecipes(event);

@@ -18,6 +18,17 @@ item.spear.nether_quartz.ae2.name=Nether Quartz Spear
 item.warhammer.certus_quartz.name=Certus Quartz Warhammer
 item.warhammer.nether_quartz.ae2.name=Nether Quartz Warhammer
 
+# Better With Mods
+item.battleaxe.steel.bwm.name=Refined Battleaxe
+item.boomerang.steel.bwm.name=Refined Boomerang
+item.flail.steel.bwm.name=Refined Flail
+item.halberd.steel.bwm.name=Refined Halberd
+item.katana.steel.bwm.name=Refined Katana
+item.knife.steel.bwm.name=Refined Knife
+item.musketbayonet.steel.bwm.name=Musket with Refined Bayonet
+item.spear.steel.bwm.name=Refined Spear
+item.warhammer.steel.bwm.name=Refined Warhammer
+
 # Defiled Lands
 item.battleaxe.umbrium.name=Umbrium Battleaxe
 item.boomerang.umbrium.name=Umbrium Boomerang
