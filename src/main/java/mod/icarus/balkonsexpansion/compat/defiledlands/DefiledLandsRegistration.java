@@ -1,6 +1,5 @@
 package mod.icarus.balkonsexpansion.compat.defiledlands;
 
-import mods.railcraft.common.items.RailcraftItems;
 import lykrast.defiledlands.common.init.ModItems;
 import mod.icarus.balkonsexpansion.BEConfig;
 import mod.icarus.balkonsexpansion.BEItemBuilder;
@@ -9,7 +8,6 @@ import mod.icarus.balkonsexpansion.BERegistry;
 import mod.icarus.balkonsexpansion.item.BEItemFlail;
 import mod.icarus.balkonsexpansion.item.BEItemMelee;
 import mod.icarus.balkonsexpansion.item.BEItemMusket;
-import mods.railcraft.common.items.ItemMaterials;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipe;

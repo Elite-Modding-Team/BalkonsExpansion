@@ -1,0 +1,14 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "balkonsexpansion:mistyworld/items/boomerang.niobium"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "weaponmod:ready-to-throw": 1
+      },
+      "model": "balkonsexpansion:item/boomerang.niobium.mw_ready"
+    }
+  ]
+}

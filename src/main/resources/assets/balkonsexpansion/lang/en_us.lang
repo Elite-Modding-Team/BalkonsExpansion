@@ -102,6 +102,17 @@ item.musketbayonet.bronze.ic2e.name=Musket with Bronze Bayonet
 item.spear.bronze.ic2e.name=Bronze Spear
 item.warhammer.bronze.ic2e.name=Bronze Warhammer
 
+# Misty World
+item.battleaxe.niobium.mw.name=Niobium Battleaxe
+item.boomerang.niobium.mw.name=Niobium Boomerang
+item.flail.niobium.mw.name=Niobium Flail
+item.halberd.niobium.mw.name=Niobium Halberd
+item.katana.niobium.mw.name=Niobium Katana
+item.knife.niobium.mw.name=Niobium Knife
+item.musketbayonet.niobium.mw.name=Musket with Niobium Bayonet
+item.spear.niobium.mw.name=Niobium Spear
+item.warhammer.niobium.mw.name=Niobium Warhammer
+
 # Mo' Creatures Extended
 item.battleaxe.ancient_silver.name=Ancient Silver Battleaxe
 item.battleaxe.dark_scorpion.name=Dark Scorpion Battleaxe

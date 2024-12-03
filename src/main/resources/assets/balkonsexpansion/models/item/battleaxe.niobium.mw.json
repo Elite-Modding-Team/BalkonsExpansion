@@ -1,0 +1,14 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "balkonsexpansion:mistyworld/items/battleaxe.niobium"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "weaponmod:block": 1
+      },
+      "model": "balkonsexpansion:item/battleaxe.niobium.mw.block"
+    }
+  ]
+}

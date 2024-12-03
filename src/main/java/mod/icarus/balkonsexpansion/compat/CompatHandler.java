@@ -2,26 +2,17 @@ package mod.icarus.balkonsexpansion.compat;
 
 import mod.icarus.balkonsexpansion.BEConfig;
 import mod.icarus.balkonsexpansion.BalkonsExpansion;
-import mod.icarus.balkonsexpansion.compat.ae2.AE2MaterialColors;
-import mod.icarus.balkonsexpansion.compat.ae2.AE2Registration;
-import mod.icarus.balkonsexpansion.compat.bwm.BWMMaterialColors;
-import mod.icarus.balkonsexpansion.compat.bwm.BWMRegistration;
-import mod.icarus.balkonsexpansion.compat.defiledlands.DefiledLandsMaterialColors;
-import mod.icarus.balkonsexpansion.compat.defiledlands.DefiledLandsRegistration;
-import mod.icarus.balkonsexpansion.compat.galacticraft.GalacticraftMaterialColors;
-import mod.icarus.balkonsexpansion.compat.galacticraft.GalacticraftRegistration;
-import mod.icarus.balkonsexpansion.compat.ic2classic.IC2ClassicMaterialColors;
-import mod.icarus.balkonsexpansion.compat.ic2classic.IC2ClassicRegistration;
-import mod.icarus.balkonsexpansion.compat.ic2experimental.IC2ExperimentalMaterialColors;
-import mod.icarus.balkonsexpansion.compat.ic2experimental.IC2ExperimentalRegistration;
-import mod.icarus.balkonsexpansion.compat.immersiveengineering.IEMaterialColors;
-import mod.icarus.balkonsexpansion.compat.immersiveengineering.IERegistration;
-import mod.icarus.balkonsexpansion.compat.projectred.ProjectRedMaterialColors;
-import mod.icarus.balkonsexpansion.compat.projectred.ProjectRedRegistration;
-import mod.icarus.balkonsexpansion.compat.railcraft.RailcraftMaterialColors;
-import mod.icarus.balkonsexpansion.compat.railcraft.RailcraftRegistration;
-import mod.icarus.balkonsexpansion.compat.thaumcraft.ThaumcraftMaterialColors;
-import mod.icarus.balkonsexpansion.compat.thaumcraft.ThaumcraftRegistration;
+import mod.icarus.balkonsexpansion.compat.ae2.*;
+import mod.icarus.balkonsexpansion.compat.bwm.*;
+import mod.icarus.balkonsexpansion.compat.defiledlands.*;
+import mod.icarus.balkonsexpansion.compat.galacticraft.*;
+import mod.icarus.balkonsexpansion.compat.ic2classic.*;
+import mod.icarus.balkonsexpansion.compat.ic2experimental.*;
+import mod.icarus.balkonsexpansion.compat.immersiveengineering.*;
+import mod.icarus.balkonsexpansion.compat.mistyworld.*;
+import mod.icarus.balkonsexpansion.compat.projectred.*;
+import mod.icarus.balkonsexpansion.compat.railcraft.*;
+import mod.icarus.balkonsexpansion.compat.thaumcraft.*;
 import net.minecraft.item.Item;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraftforge.event.RegistryEvent;
@@ -113,6 +104,16 @@ public class CompatHandler {
             }
         }
 
+        // Misty World
+        if (Loader.isModLoaded("mist") && BEConfig.mod_integration_settings.MISTY_WORLD_INTEGRATION) {
+            MistyWorldRegistration.registerItems(event);
+            MistyWorldMaterialColors.registerMaterialColors();
+
+            if (FMLLaunchHandler.side().isClient()) {
+                MistyWorldRegistration.registerRenderersItem();
+            }
+        }
+
         // Project Red
         if (Loader.isModLoaded("projectred-exploration") && BEConfig.mod_integration_settings.PROJECT_RED_INTEGRATION) {
             ProjectRedRegistration.registerItems(event);
@@ -167,6 +168,9 @@ public class CompatHandler {
         // IndustrialCraft 2 Experimental
         if (Loader.isModLoaded("ic2") && !Loader.isModLoaded("ic2-classic-spmod") && BEConfig.mod_integration_settings.IC2_INTEGRATION)
             IC2ExperimentalRegistration.registerRecipes(event);
+        // Misty World
+        if (Loader.isModLoaded("mist") && BEConfig.mod_integration_settings.MISTY_WORLD_INTEGRATION)
+            MistyWorldRegistration.registerRecipes(event);
         // Project Red
         if (Loader.isModLoaded("projectred-exploration") && BEConfig.mod_integration_settings.PROJECT_RED_INTEGRATION)
             ProjectRedRegistration.registerRecipes(event);

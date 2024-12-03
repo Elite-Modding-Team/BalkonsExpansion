@@ -30,6 +30,8 @@ ___
 	- Steel
 - **IndustrialCraft 2 (Classic and Experimental):**
 	- Bronze
+- **Misty World:**
+	- Niobium
 - **Project Red Exploration:**
 	- Peridot
 	- Ruby

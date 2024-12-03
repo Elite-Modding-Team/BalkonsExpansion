@@ -32,6 +32,9 @@ public class BEConfig {
     @Config.Comment("IndustrialCraft 2")
     public static IC2Settings ic2_settings = new IC2Settings();
 
+    @Config.Comment("Misty World")
+    public static MistyWorldSettings misty_world_settings = new MistyWorldSettings();
+
     @Config.Comment("Project Red Exploration")
     public static ProjectRedSettings project_red_settings = new ProjectRedSettings();
 
@@ -83,6 +86,11 @@ public class BEConfig {
         @Config.Comment("Enables Immersive Engineering integration [default: true]")
         @Config.RequiresMcRestart
         public boolean IE_INTEGRATION = true;
+
+        @Config.Name("Misty World")
+        @Config.Comment("Enables Misty World integration [default: true]")
+        @Config.RequiresMcRestart
+        public boolean MISTY_WORLD_INTEGRATION = true;
 
         @Config.Name("Project Red Exploration")
         @Config.Comment("Enables Project Red Exploration integration [default: true]")
@@ -155,6 +163,13 @@ public class BEConfig {
         @Config.Comment("Enables support for the Steel material from Immersive Engineering [default: true]")
         @Config.RequiresWorldRestart
         public boolean IE_STEEL_MATERIAL = true;
+    }
+
+    public static class MistyWorldSettings {
+        @Config.Name("Material: Niobium (Misty World)")
+        @Config.Comment("Enables support for the Niobium material from Misty World [default: true]")
+        @Config.RequiresWorldRestart
+        public boolean MW_NIOBIUM_MATERIAL = true;
     }
 
     public static class ProjectRedSettings {

@@ -119,6 +119,8 @@ dependencies {
     implementation rfg.deobf('curse.maven:ic2-classic-242942:5800761')
     // Immersive Engineering
     implementation rfg.deobf('curse.maven:immersive-engineering-231951:2974106')
+    // Misty World
+    implementation rfg.deobf('curse.maven:misty-world-unveiled-1104150:5750561')
     // Mo' Creatures Extended
     implementation rfg.deobf('curse.maven:mo-creatures-extended-867351:5654788')
     // Patchouli

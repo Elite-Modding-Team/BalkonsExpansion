@@ -16,7 +16,7 @@ public class BalkonsExpansion {
     public static final String VERSION = Tags.VERSION;
     public static final String ACCEPTED_VERSIONS = "[1.12.2]";
     public static final String DEPENDENCIES = "required-after:weaponmod@[1.22.1,);after:patchouli;after:appliedenergistics2;after:betterwithmods;after:defiledlands;after:galacticraftcore;after:galacticraftplanets;" +
-            "after:ic2;after:immersiveengineering;after:mocreatures@[12.4.3,);after:projectred-exploration;after:railcraft;after:thaumcraft@[1.12.2-6.1.BETA26,);";
+            "after:ic2;after:immersiveengineering;after:mist;after:mocreatures@[12.4.3,);after:projectred-exploration;after:railcraft;after:thaumcraft@[1.12.2-6.1.BETA26,);";
     public static final Logger LOGGER = LogManager.getLogger(NAME);
 
     @Mod.Instance
