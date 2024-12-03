@@ -1,7 +1,7 @@
 {
   "parent": "weaponmod:item/handheld_block",
   "textures": {
-    "layer0": "balkonsexpansion:mistyworld/items/musketbayonet.bronze"
+    "layer0": "balkonsexpansion:mistyworld/items/musketbayonet.niobium"
   },
   "display": {
     "thirdperson_righthand": {
