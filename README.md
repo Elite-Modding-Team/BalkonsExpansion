@@ -40,4 +40,4 @@ ___
 	- Steel
 - **Thaumcraft:**
 	- Thaumium
-	- Void
+	- Void - Regenerates durability.

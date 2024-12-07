@@ -5,6 +5,7 @@
     "description": "An addon for Balkon's WeaponMod: Legacy in 1.12.2 that supports various other mods",
     "version": "${version}",
     "mcversion": "${mcversion}",
+    "url": "https://github.com/Elite-Modding-Team/BalkonsExpansion",
     "logoFile": "assets/balkonsexpansion/textures/logo.png",
     "authorList": ["IcarussOne"],
     "credits": "\n \u00A7eDevelopers:\n [*] IcarussOne - Main Developer & Texture Artist\n \u00A76Special Thanks:\n [*] HypaSpeeed - The wonderful Balkon's WeaponMod port to 1.12.2 and providing support for addons like this one\n [*] ACGaming - Setting up the mod's infrastructure, answering questions, and helping out with the mod in general\n [*] xJon - Creating and maintaining Tekkit 2 and Tekkit SMP, both of which inspired this project to be made\n \u00A7dTranslators:\n [*] None yet! :)"
