@@ -1,5 +1,9 @@
 ### An addon for Balkon's WeaponMod: Legacy in 1.12.2 that supports various other mods
 
+Code from this mod is licensed under GNU General Public License v3 (see LICENSE.txt).
+
+Assets specifically made for this mod are licensed as All Rights Reserved (see LICENSE-ASSETS.txt).
+
 **Developers:**
 
 * Main Developer & Texture Artist ~ IcarussOne
