@@ -108,7 +108,7 @@ dependencies {
     // Applied Energistics 2
     implementation rfg.deobf('curse.maven:ae2-extended-life-570458:5411078')
     // Balkon's WeaponMod Legacy
-    implementation rfg.deobf('curse.maven:balkons-weaponmod-legacy-1033985:5853367')
+    implementation rfg.deobf('curse.maven:balkons-weaponmod-legacy-1033985:6332469')
     // Better With Mods
     implementation rfg.deobf('curse.maven:bwm-suite-246760:5702821')
     // Defiled Lands
@@ -120,11 +120,11 @@ dependencies {
     // Immersive Engineering
     implementation rfg.deobf('curse.maven:immersive-engineering-231951:2974106')
     // Misty World
-    implementation rfg.deobf('curse.maven:misty-world-unveiled-1104150:5750561')
+    implementation rfg.deobf('curse.maven:misty-world-unveiled-1104150:6232515')
     // Mo' Creatures Extended
-    implementation rfg.deobf('curse.maven:mo-creatures-extended-867351:5654788')
+    implementation rfg.deobf('curse.maven:mo-creatures-extended-867351:6327889')
     // Patchouli
-    implementation rfg.deobf('curse.maven:patchouli-rofl-edition-905159:5201041')
+    implementation rfg.deobf('curse.maven:patchouli-rofl-edition-905159:6178311')
     // Project Red
     compileOnly 'curse.maven:codechickenlib-242818:2779848'
     compileOnly 'curse.maven:mrtjpcore-229002:2735197'
