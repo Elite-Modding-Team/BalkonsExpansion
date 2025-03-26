@@ -49,11 +49,6 @@ public class BEConfig {
         @Config.Comment("Enables extra blocking sounds for battleaxes and katanas [default: true]")
         @Config.RequiresMcRestart
         public boolean MELEE_BLOCKING_SOUNDS = true;
-
-        @Config.Name("No Ranged Blocking")
-        @Config.Comment("Disables blocking when reloading ranged weapons or preparing boomerangs because this is mainly unintentional behavior [default: true]")
-        @Config.RequiresMcRestart
-        public boolean NO_RANGED_BLOCKING = true;
     }
 
     public static class ModIntegrationSettings {
