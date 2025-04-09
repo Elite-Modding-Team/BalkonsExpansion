@@ -1,0 +1,239 @@
+# Applied Energistics 2
+item.battleaxe.certus_quartz.name=Certusquarzkampfaxt
+item.battleaxe.nether_quartz.ae2.name=Netherquarzkampfaxt
+item.boomerang.certus_quartz.name=Certusquarzbumerang
+item.boomerang.nether_quartz.ae2.name=Netherquarzbumerang
+item.flail.certus_quartz.name=Certusquarzstreitflegel
+item.flail.nether_quartz.ae2.name=Netherquarzstreitflegel
+item.halberd.certus_quartz.name=Certusquarzhellebarde
+item.halberd.nether_quartz.ae2.name=Netherquarzhellebarde
+item.katana.certus_quartz.name=Certusquarzkatana
+item.katana.nether_quartz.ae2.name=Netherquarzkatana
+item.knife.certus_quartz.name=Certusquarzmesser
+item.knife.nether_quartz.ae2.name=Netherquarzmesser
+item.musketbayonet.certus_quartz.name=Muskete mit Certusquarzbajonett
+item.musketbayonet.nether_quartz.ae2.name=Muskete mit Netherquarzbajonett
+item.spear.certus_quartz.name=Certusquarzspeer
+item.spear.nether_quartz.ae2.name=Netherquarzspeer
+item.warhammer.certus_quartz.name=Certusquarzkriegshammer
+item.warhammer.nether_quartz.ae2.name=Netherquarzkriegshammer
+
+# Better With Mods
+item.battleaxe.steel.bwm.name=Verstärkte Kampfaxt
+item.boomerang.steel.bwm.name=Verstärkter Bumerang
+item.flail.steel.bwm.name=Verstärkter Streitflegel
+item.halberd.steel.bwm.name=Verstärkte Hellebarde
+item.katana.steel.bwm.name=Verstärkter Katana
+item.knife.steel.bwm.name=Verstärktes Messer
+item.musketbayonet.steel.bwm.name=Muskete mit Verstärktem Bajonett
+item.spear.steel.bwm.name=Verstärkter Speer
+item.warhammer.steel.bwm.name=Verstärkter Kriegshammer
+
+# Defiled Lands
+item.battleaxe.umbrium.name=Umbriumkampfaxt
+item.boomerang.umbrium.name=Umbriumbumerang
+item.flail.umbrium.name=Umbriumstreitflegel
+item.halberd.umbrium.name=Umbriumhellebarde
+item.katana.umbrium.name=Umbriumkatana
+item.knife.umbrium.name=Umbriummesser
+item.musketbayonet.umbrium.name=Muskete mit Umbriumbajonett
+item.spear.umbrium.name=Umbriumspeer
+item.warhammer.umbrium.name=Umbriumkriegshammer
+
+# Galacticraft Legacy
+item.battleaxe.desh.name=Desh-Kampfaxt
+item.battleaxe.heavy_duty.name=Schwere Kampfaxt
+item.battleaxe.titanium.gc.name=Titankampfaxt
+item.boomerang.desh.name=Desh-Bumerang
+item.boomerang.heavy_duty.name=Schwerer Bumerang
+item.boomerang.titanium.gc.name=Titanbumerang
+item.flail.desh.name=Desh-Streitflegel
+item.flail.heavy_duty.name=Schwerer Streitflegel
+item.flail.titanium.gc.name=Titanstreitflegel
+item.halberd.desh.name=Desh-Hellebarde
+item.halberd.heavy_duty.name=Schwere Hellebarde
+item.halberd.titanium.gc.name=Titanhellebarde
+item.katana.desh.name=Desh-Katana
+item.katana.heavy_duty.name=Schwerer Katana
+item.katana.titanium.gc.name=Titankatana
+item.knife.desh.name=Desh-Messer
+item.knife.heavy_duty.name=Schweres Messer
+item.knife.titanium.gc.name=Titanmesser
+item.musketbayonet.desh.name=Muskete mit Desh-Bajonett
+item.musketbayonet.heavy_duty.name=Muskete mit Schwerem Bajonett
+item.musketbayonet.titanium.gc.name=Muskete mit Titanbajonett
+item.spear.desh.name=Desh-Speer
+item.spear.heavy_duty.name=Schwerer Speer
+item.spear.titanium.gc.name=Titanspeer
+item.warhammer.desh.name=Desh-Kriegshammer
+item.warhammer.heavy_duty.name=Schwerer Kriegshammer
+item.warhammer.titanium.gc.name=Titankriegshammer
+
+# Immersive Engineering
+item.battleaxe.steel.ie.name=Stahlkampfaxt
+item.boomerang.steel.ie.name=Stahlbumerang
+item.flail.steel.ie.name=Stahlstreitflegel
+item.halberd.steel.ie.name=Stahlhellebarde
+item.katana.steel.ie.name=Stahlkatana
+item.knife.steel.ie.name=Stahlmesser
+item.musketbayonet.steel.ie.name=Muskete mit Stahlbajonett
+item.spear.steel.ie.name=Stahlspeer
+item.warhammer.steel.ie.name=Stahlkriegshammer
+
+# IndustrialCraft 2 Classic
+item.battleaxe.bronze.ic2c.name=Bronzekampfaxt
+item.boomerang.bronze.ic2c.name=Bronzebumerang
+item.flail.bronze.ic2c.name=Bronzestreitflegel
+item.halberd.bronze.ic2c.name=Bronzehellebarde
+item.katana.bronze.ic2c.name=Bronzekatana
+item.knife.bronze.ic2c.name=Bronzemesser
+item.musketbayonet.bronze.ic2c.name=Muskete mit Bronzebajonett
+item.spear.bronze.ic2c.name=Bronzespeer
+item.warhammer.bronze.ic2c.name=Bronzekriegshammer
+
+# IndustrialCraft 2 Experimental
+item.battleaxe.bronze.ic2e.name=Bronzekampfaxt
+item.boomerang.bronze.ic2e.name=Bronzebumerang
+item.flail.bronze.ic2e.name=Bronzestreitflegel
+item.halberd.bronze.ic2e.name=Bronzehellebarde
+item.katana.bronze.ic2e.name=Bronzekatana
+item.knife.bronze.ic2e.name=Bronzemesser
+item.musketbayonet.bronze.ic2e.name=Muskete mit Bronzebajonett
+item.spear.bronze.ic2e.name=Bronzespeer
+item.warhammer.bronze.ic2e.name=Bronzekriegshammer
+
+# Misty World
+item.battleaxe.niobium.mw.name=Niobiumkampfaxt
+item.boomerang.niobium.mw.name=Niobiumbumerang
+item.flail.niobium.mw.name=Niobiumstreitflegel
+item.halberd.niobium.mw.name=Niobiumhellebarde
+item.katana.niobium.mw.name=Niobiumkatana
+item.knife.niobium.mw.name=Niobiummesser
+item.musketbayonet.niobium.mw.name=Muskete mit Niobiumbajonett
+item.spear.niobium.mw.name=Niobiumspeer
+item.warhammer.niobium.mw.name=Niobiumkriegshammer
+
+# Mo' Creatures Extended
+item.battleaxe.ancient_silver.name=Antike Silberkampfaxt
+item.battleaxe.dark_scorpion.name=Dunkle Skorpionkampfaxt
+item.battleaxe.earth_scorpion.name=Erd-Skorpionkampfaxt
+item.battleaxe.fire_scorpion.name=Feuer-Skorpionkampfaxt
+item.battleaxe.frost_scorpion.name=Frost-Skorpionkampfaxt
+item.battleaxe.shark.name=Haikampfaxt
+item.battleaxe.undead_scorpion.name=Untote Skorpionkampfaxt
+item.boomerang.ancient_silver.name=Antiker Silberbumerang
+item.boomerang.dark_scorpion.name=Dunkler Skorpionbumerang
+item.boomerang.earth_scorpion.name=Erd-Skorpionbumerang
+item.boomerang.fire_scorpion.name=Feuer-Skorpionbumerang
+item.boomerang.frost_scorpion.name=Frost-Skorpionbumerang
+item.boomerang.shark.name=Haibumerang
+item.boomerang.undead_scorpion.name=Untoter Skorpionbumerang
+item.flail.ancient_silver.name=Antiker Silberstreitflegel
+item.flail.dark_scorpion.name=Dunkler Skorpionstreitflegel
+item.flail.earth_scorpion.name=Erd-Skorpionstreitflegel
+item.flail.fire_scorpion.name=Feuer-Skorpionstreitflegel
+item.flail.frost_scorpion.name=Frost-Skorpionstreitflegel
+item.flail.shark.name=Haistreitflegel
+item.flail.undead_scorpion.name=Untoter Skorpionstreitflegel
+item.halberd.ancient_silver.name=Antike Silberhellebarde
+item.halberd.dark_scorpion.name=Dunkle Skorpionhellebarde
+item.halberd.earth_scorpion.name=Erd-Skorpionhellebarde
+item.halberd.fire_scorpion.name=Feuer-Skorpionhellebarde
+item.halberd.frost_scorpion.name=Frost-Skorpionhellebarde
+item.halberd.shark.name=Haihellebarde
+item.halberd.undead_scorpion.name=Untote Skorpionhellebarde
+item.katana.ancient_silver.name=Antiker Silberkatana
+item.katana.dark_scorpion.name=Dunkler Skorpionkatana
+item.katana.earth_scorpion.name=Erd-Skorpionkatana
+item.katana.fire_scorpion.name=Feuer-Skorpionkatana
+item.katana.frost_scorpion.name=Frost-Skorpionkatana
+item.katana.shark.name=Haikatana
+item.katana.undead_scorpion.name=Untoter Skorpionkatana
+item.knife.ancient_silver.name=Antikes Silbermesser
+item.knife.dark_scorpion.name=Dunkles Skorpionmesser
+item.knife.earth_scorpion.name=Erd-Skorpionmesser
+item.knife.fire_scorpion.name=Feuer-Skorpionmesser
+item.knife.frost_scorpion.name=Frost-Skorpionmesser
+item.knife.shark.name=Haimesser
+item.knife.undead_scorpion.name=Untotes Skorpionmesser
+item.musketbayonet.ancient_silver.name=Muskete mit Antikem Silberbajonett
+item.musketbayonet.dark_scorpion.name=Muskete mit Dunklem Skorpionstachel
+item.musketbayonet.earth_scorpion.name=Muskete mit Erd-Skorpionstachel
+item.musketbayonet.fire_scorpion.name=Muskete mit Feuer-Skorpionstachel
+item.musketbayonet.frost_scorpion.name=Muskete mit Frost-Skorpionstachel
+item.musketbayonet.shark.name=Muskete mit Haizahn
+item.musketbayonet.undead_scorpion.name=Muskete mit Untotem Skorpionstachel
+item.spear.ancient_silver.name=Antiker Silberspeer
+item.spear.dark_scorpion.name=Dunkler Skorpionspeer
+item.spear.earth_scorpion.name=Erd-Skorpionspeer
+item.spear.fire_scorpion.name=Feuer-Skorpionspeer
+item.spear.frost_scorpion.name=Frost-Skorpionspeer
+item.spear.shark.name=Haispeer
+item.spear.undead_scorpion.name=Untoter Skorpionspeer
+item.warhammer.ancient_silver.name=Antiker Silberkriegshammer
+item.warhammer.dark_scorpion.name=Dunkler Skorpionkriegshammer
+item.warhammer.earth_scorpion.name=Erd-Skorpionkriegshammer
+item.warhammer.fire_scorpion.name=Feuer-Skorpionkriegshammer
+item.warhammer.frost_scorpion.name=Frost-Skorpionkriegshammer
+item.warhammer.shark.name=Haikriegshammer
+item.warhammer.undead_scorpion.name=Untoter Skorpionkriegshammer
+
+# Project Red
+item.battleaxe.peridot.pr.name=Olivinkampfaxt
+item.battleaxe.ruby.pr.name=Rubinkampfaxt
+item.battleaxe.sapphire.pr.name=Saphirkampfaxt
+item.boomerang.peridot.pr.name=Olivinbumerang
+item.boomerang.ruby.pr.name=Rubinbumerang
+item.boomerang.sapphire.pr.name=Saphirbumerang
+item.flail.peridot.pr.name=Olivinstreitflegel
+item.flail.ruby.pr.name=Rubinstreitflegel
+item.flail.sapphire.pr.name=Saphirstreitflegel
+item.halberd.peridot.pr.name=Olivinhellebarde
+item.halberd.ruby.pr.name=Rubinhellebarde
+item.halberd.sapphire.pr.name=Saphirhellebarde
+item.katana.peridot.pr.name=Olivinkatana
+item.katana.ruby.pr.name=Rubinkatana
+item.katana.sapphire.pr.name=Saphirkatana
+item.knife.peridot.pr.name=Olivinmesser
+item.knife.ruby.pr.name=Rubinmesser
+item.knife.sapphire.pr.name=Saphirmesser
+item.musketbayonet.peridot.pr.name=Muskete mit Olivinbajonett
+item.musketbayonet.ruby.pr.name=Muskete mit Rubinbajonett
+item.musketbayonet.sapphire.pr.name=Muskete mit Saphirbajonett
+item.spear.peridot.pr.name=Olivinspeer
+item.spear.ruby.pr.name=Rubinspeer
+item.spear.sapphire.pr.name=Saphirspeer
+item.warhammer.peridot.pr.name=Olivinkriegshammer
+item.warhammer.ruby.pr.name=Rubinkriegshammer
+item.warhammer.sapphire.pr.name=Saphirkriegshammer
+
+# Railcraft
+item.battleaxe.steel.rc.name=Stahlkampfaxt
+item.boomerang.steel.rc.name=Stahlbumerang
+item.flail.steel.rc.name=Stahlstreitflegel
+item.halberd.steel.rc.name=Stahlhellebarde
+item.katana.steel.rc.name=Stahlkatana
+item.knife.steel.rc.name=Stahlmesser
+item.musketbayonet.steel.rc.name=Muskete mit Stahlbajonett
+item.spear.steel.rc.name=Stahlspeer
+item.warhammer.steel.rc.name=Stahlkriegshammer
+
+# Thaumcraft
+item.battleaxe.thaumium.name=Thaumiumkampfaxt
+item.battleaxe.void.name=Leermetallkampfaxt
+item.boomerang.thaumium.name=Thaumiumbumerang
+item.boomerang.void.name=Leermetallbumerang
+item.flail.thaumium.name=Thaumiumstreitflegel
+item.flail.void.name=Leermetallstreitflegel
+item.halberd.thaumium.name=Thaumiumhellebarde
+item.halberd.void.name=Leermetallhellebarde
+item.katana.thaumium.name=Thaumiumkatana
+item.katana.void.name=Leermetallkatana
+item.knife.thaumium.name=Thaumiummesser
+item.knife.void.name=Leermetallmesser
+item.musketbayonet.thaumium.name=Muskete mit Thaumiumbajonett
+item.musketbayonet.void.name=Muskete mit Leermetallbajonett
+item.spear.thaumium.name=Thaumiumspeer
+item.spear.void.name=Leermetallspeer
+item.warhammer.thaumium.name=Thaumiumkriegshammer
+item.warhammer.void.name=Leermetallkriegshammer
