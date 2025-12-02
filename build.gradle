@@ -105,36 +105,54 @@ dependencies {
         implementation 'zone.rong:mixinbooter:9.1'
     }
 
+    // Had Enough Items
+    implementation rfg.deobf('curse.maven:had-enough-items-557549:7282920')
+
+    // Baubles
+    compileOnly 'curse.maven:baubles-227083:2518667'
+
+    // TODO: Mod integration dependencies should be optional when running
     // Applied Energistics 2
-    implementation rfg.deobf('curse.maven:ae2-extended-life-570458:5411078')
+    implementation rfg.deobf('curse.maven:ae2-extended-life-570458:6302098')
+
     // Balkon's WeaponMod Legacy
     implementation rfg.deobf('curse.maven:balkons-weaponmod-legacy-1033985:6332469')
+
     // Better With Mods
     implementation rfg.deobf('curse.maven:bwm-suite-246760:5702821')
+
     // Defiled Lands
     implementation rfg.deobf('curse.maven:defiled-lands-273502:2835318')
+
     // Galacticraft Legacy
     implementation rfg.deobf('curse.maven:galacticraft-legacy-564236:4671122')
+
     // IC2 Classic
     implementation rfg.deobf('curse.maven:ic2-classic-242942:5800761')
+
     // Immersive Engineering
     implementation rfg.deobf('curse.maven:immersive-engineering-231951:2974106')
+
     // Misty World
-    implementation rfg.deobf('curse.maven:misty-world-unveiled-1104150:6232515')
+    implementation rfg.deobf('curse.maven:misty-world-unveiled-1104150:6987174')
+
     // Mo' Creatures Extended
-    implementation rfg.deobf('curse.maven:mo-creatures-extended-867351:6327889')
+    implementation rfg.deobf('curse.maven:mo-creatures-extended-867351:6984289')
+
     // Patchouli
     implementation rfg.deobf('curse.maven:patchouli-rofl-edition-905159:6178311')
+
     // Project Red
     compileOnly 'curse.maven:codechickenlib-242818:2779848'
     compileOnly 'curse.maven:mrtjpcore-229002:2735197'
     compileOnly 'curse.maven:forgemultipartcbe-258426:2755790'
     compileOnly 'curse.maven:projectredbase-228702:2745545'
     compileOnly 'curse.maven:projectredworld-229049:2745551'
+
     // Railcraft
     implementation rfg.deobf('curse.maven:railcraft-51195:3853491')
+
     // Thaumcraft
-    compileOnly 'curse.maven:baubles-227083:2518667'
     compileOnly 'curse.maven:thaumcraft-223628:2629023'
 
     if (project.use_mixins.toBoolean()) {
