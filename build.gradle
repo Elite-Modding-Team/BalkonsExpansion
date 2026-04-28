@@ -108,15 +108,15 @@ dependencies {
     // Had Enough Items
     implementation rfg.deobf('curse.maven:had-enough-items-557549:7282920')
 
-    // Baubles
-    compileOnly 'curse.maven:baubles-227083:2518667'
-
     // TODO: Mod integration dependencies should be optional when running
     // Applied Energistics 2
     implementation rfg.deobf('curse.maven:ae2-extended-life-570458:6302098')
 
     // Balkon's WeaponMod Legacy
-    implementation rfg.deobf('curse.maven:balkons-weaponmod-legacy-1033985:6332469')
+    implementation rfg.deobf('curse.maven:balkons-weaponmod-legacy-1033985:7690474')
+
+    // Baubles
+    implementation rfg.deobf('curse.maven:baubles-227083:2518667')
 
     // Better With Mods
     implementation rfg.deobf('curse.maven:bwm-suite-246760:5702821')
