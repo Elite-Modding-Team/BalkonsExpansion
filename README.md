@@ -16,7 +16,7 @@ Assets specifically made for this mod are licensed as All Rights Reserved (see L
 
 **Translators:**
 
-- None yet! :)
+- German ~ HypaSpeeed
 ___
 ### **Supported Mods:** ###
 - **Applied Energistics 2:**
