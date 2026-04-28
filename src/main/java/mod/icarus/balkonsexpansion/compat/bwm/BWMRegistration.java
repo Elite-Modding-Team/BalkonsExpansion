@@ -36,7 +36,7 @@ public class BWMRegistration {
         if (BEConfig.bwm_settings.BWM_STEEL_MATERIAL) {
             registry.register(spearSteel = BEItemBuilder.createCustomSpear("spear.steel.bwm", BWMItems.SOULFORGED_STEEL, -0.1F, 2.0F));
             registry.register(halberdSteel = BEItemBuilder.createCustomHalberd("halberd.steel.bwm", BWMItems.SOULFORGED_STEEL, 0.6F, 2.0F));
-            //registry.register(battleaxeSteel = BEItemBuilder.createCustomBattleaxe("battleaxe.steel.bwm", BWMItems.SOULFORGED_STEEL, 0.45F, 1.0F));
+            registry.register(battleaxeSteel = BEItemBuilder.createCustomBattleaxe("battleaxe.steel.bwm", BWMItems.SOULFORGED_STEEL, 0.45F, 1.0F));
             registry.register(knifeSteel = BEItemBuilder.createCustomKnife("knife.steel.bwm", BWMItems.SOULFORGED_STEEL, -0.1F));
             registry.register(warhammerSteel = BEItemBuilder.createCustomWarhammer("warhammer.steel.bwm", BWMItems.SOULFORGED_STEEL, 0.7F));
             registry.register(flailSteel = BEItemBuilder.createCustomFlail("flail.steel.bwm", BWMItems.SOULFORGED_STEEL));
@@ -52,7 +52,7 @@ public class BWMRegistration {
 
         if (BEConfig.bwm_settings.BWM_STEEL_MATERIAL) {
             registry.register(BERecipes.registerBayonetRecipe(knifeSteel, bayonetSteel));
-
+            registry.register(BERecipes.registerConversionRecipe(new OreIngredient("leather"), BWMItems.STEEL_BATTLEAXE, battleaxeSteel));
             BERecipesBWM.registerSteelAnvilTool2("ingotSoulforgedSteel", new MiniBlockIngredient("moulding", new OreIngredient("plankWood")), boomerangSteel, "###X", "   #", "   #", "   #");
             BERecipesBWM.registerSteelAnvilTool3("ingotSoulforgedSteel", ItemMaterial.getMaterial(ItemMaterial.EnumMaterial.HAFT), "string", flailSteel, "   *", "  #*", " # *", "#  X");
             BERecipesBWM.registerSteelAnvilTool2("ingotSoulforgedSteel", ItemMaterial.getMaterial(ItemMaterial.EnumMaterial.HAFT), halberdSteel, "  XX", "  #X", " #  ", "#   ");
@@ -68,7 +68,7 @@ public class BWMRegistration {
     @SideOnly(Side.CLIENT)
     public static void registerRenderersItem() {
         if (BEConfig.bwm_settings.BWM_STEEL_MATERIAL) {
-            //BERegistry.registerWeaponItemModel(battleaxeSteel);
+            BERegistry.registerWeaponItemModel(battleaxeSteel);
             BERegistry.registerWeaponItemModel(boomerangSteel);
             BERegistry.registerWeaponItemModel(bayonetSteel);
             BERegistry.registerWeaponItemModel(flailSteel);

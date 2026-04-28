@@ -7,42 +7,48 @@ import net.minecraft.item.crafting.IRecipe;
 import net.minecraftforge.oredict.ShapedOreRecipe;
 import net.minecraftforge.oredict.ShapelessOreRecipe;
 
+import java.util.Objects;
+
 // Used to make registering recipes for weapons *way* less painful. Knives have two recipes.
 public class BERecipes {
     public static IRecipe registerBattleaxeRecipe(Object material, Object stick, Item result) {
-        return new ShapedOreRecipe(null, result, "XXX", "X#X", " # ", 'X', material, '#', stick).setRegistryName(BalkonsExpansion.MOD_ID, result.getRegistryName().getPath());
+        return new ShapedOreRecipe(null, result, "XXX", "X#X", " # ", 'X', material, '#', stick).setRegistryName(BalkonsExpansion.MOD_ID, Objects.requireNonNull(result.getRegistryName()).getPath());
     }
 
     public static IRecipe registerBayonetRecipe(Object knife, Item result) {
-        return new ShapelessOreRecipe(null, result, BalkonsWeaponMod.musket, knife).setRegistryName(BalkonsExpansion.MOD_ID, result.getRegistryName().getPath());
+        return new ShapelessOreRecipe(null, result, BalkonsWeaponMod.musket, knife).setRegistryName(BalkonsExpansion.MOD_ID, Objects.requireNonNull(result.getRegistryName()).getPath());
     }
 
     public static IRecipe registerBoomerangRecipe(Object material, Object wood, Item result) {
-        return new ShapedOreRecipe(null, result, "##X", "  #", "  #", 'X', material, '#', wood).setRegistryName(BalkonsExpansion.MOD_ID, result.getRegistryName().getPath());
+        return new ShapedOreRecipe(null, result, "##X", "  #", "  #", 'X', material, '#', wood).setRegistryName(BalkonsExpansion.MOD_ID, Objects.requireNonNull(result.getRegistryName()).getPath());
+    }
+
+    public static IRecipe registerConversionRecipe(Object item, Object weapon, Item result) {
+        return new ShapelessOreRecipe(null, result, weapon, item).setRegistryName(BalkonsExpansion.MOD_ID, Objects.requireNonNull(result.getRegistryName()).getPath());
     }
 
     public static IRecipe registerFlailRecipe(Object material, Object stick, Object string, Item result) {
-        return new ShapedOreRecipe(null, result, "  *", " #*", "# X", 'X', material, '#', stick, '*', string).setRegistryName(BalkonsExpansion.MOD_ID, result.getRegistryName().getPath());
+        return new ShapedOreRecipe(null, result, "  *", " #*", "# X", 'X', material, '#', stick, '*', string).setRegistryName(BalkonsExpansion.MOD_ID, Objects.requireNonNull(result.getRegistryName()).getPath());
     }
 
     public static IRecipe registerHalberdRecipe(Object material, Object stick, Item result) {
-        return new ShapedOreRecipe(null, result, " XX", " #X", "#  ", 'X', material, '#', stick).setRegistryName(BalkonsExpansion.MOD_ID, result.getRegistryName().getPath());
+        return new ShapedOreRecipe(null, result, " XX", " #X", "#  ", 'X', material, '#', stick).setRegistryName(BalkonsExpansion.MOD_ID, Objects.requireNonNull(result.getRegistryName()).getPath());
     }
 
     public static IRecipe registerKatanaRecipe(Object material, Object stick, Item result) {
-        return new ShapedOreRecipe(null, result, "  X", " X ", "#  ", 'X', material, '#', stick).setRegistryName(BalkonsExpansion.MOD_ID, result.getRegistryName().getPath());
+        return new ShapedOreRecipe(null, result, "  X", " X ", "#  ", 'X', material, '#', stick).setRegistryName(BalkonsExpansion.MOD_ID, Objects.requireNonNull(result.getRegistryName()).getPath());
     }
 
     public static IRecipe registerKnifeRecipe(Object material, Object stick, Item result) {
-        return new ShapedOreRecipe(null, result, "X", "#", 'X', material, '#', stick).setRegistryName(BalkonsExpansion.MOD_ID, result.getRegistryName().getPath());
+        return new ShapedOreRecipe(null, result, "X", "#", 'X', material, '#', stick).setRegistryName(BalkonsExpansion.MOD_ID, Objects.requireNonNull(result.getRegistryName()).getPath());
     }
 
     public static IRecipe registerKnifeAltRecipe(Object material, Object stick, Item result) {
-        return new ShapedOreRecipe(null, result, "X#", 'X', material, '#', stick).setRegistryName(BalkonsExpansion.MOD_ID, result.getRegistryName().getPath() + ".a");
+        return new ShapedOreRecipe(null, result, "X#", 'X', material, '#', stick).setRegistryName(BalkonsExpansion.MOD_ID, Objects.requireNonNull(result.getRegistryName()).getPath() + ".a");
     }
 
     public static IRecipe registerSpearRecipe(Object material, Object stick, Item result) {
-        return new ShapedOreRecipe(null, result, "  X", " # ", "#  ", 'X', material, '#', stick).setRegistryName(BalkonsExpansion.MOD_ID, result.getRegistryName().getPath());
+        return new ShapedOreRecipe(null, result, "  X", " # ", "#  ", 'X', material, '#', stick).setRegistryName(BalkonsExpansion.MOD_ID, Objects.requireNonNull(result.getRegistryName()).getPath());
     }
 
     public static IRecipe registerWarhammerRecipe(Object material, Object stick, Item result) {
