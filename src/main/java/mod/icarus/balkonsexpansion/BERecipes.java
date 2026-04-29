@@ -1,9 +1,9 @@
 package mod.icarus.balkonsexpansion;
 
 import ckathode.weaponmod.BalkonsWeaponMod;
-import mod.icarus.balkonsexpansion.BalkonsExpansion;
 import net.minecraft.item.Item;
 import net.minecraft.item.crafting.IRecipe;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.oredict.ShapedOreRecipe;
 import net.minecraftforge.oredict.ShapelessOreRecipe;
 
@@ -11,47 +11,47 @@ import java.util.Objects;
 
 // Used to make registering recipes for weapons *way* less painful. Knives have two recipes.
 public class BERecipes {
-    public static IRecipe registerBattleaxeRecipe(Object material, Object stick, Item result) {
+    public static IRecipe registerBattleaxeRecipe(ResourceLocation group, Object material, Object stick, Item result) {
         return new ShapedOreRecipe(null, result, "XXX", "X#X", " # ", 'X', material, '#', stick).setRegistryName(BalkonsExpansion.MOD_ID, Objects.requireNonNull(result.getRegistryName()).getPath());
     }
 
-    public static IRecipe registerBayonetRecipe(Object knife, Item result) {
+    public static IRecipe registerBayonetRecipe(ResourceLocation group, Object knife, Item result) {
         return new ShapelessOreRecipe(null, result, BalkonsWeaponMod.musket, knife).setRegistryName(BalkonsExpansion.MOD_ID, Objects.requireNonNull(result.getRegistryName()).getPath());
     }
 
-    public static IRecipe registerBoomerangRecipe(Object material, Object wood, Item result) {
+    public static IRecipe registerBoomerangRecipe(ResourceLocation group, Object material, Object wood, Item result) {
         return new ShapedOreRecipe(null, result, "##X", "  #", "  #", 'X', material, '#', wood).setRegistryName(BalkonsExpansion.MOD_ID, Objects.requireNonNull(result.getRegistryName()).getPath());
     }
 
-    public static IRecipe registerConversionRecipe(Object item, Object weapon, Item result) {
+    public static IRecipe registerConversionRecipe(ResourceLocation group, Object item, Object weapon, Item result) {
         return new ShapelessOreRecipe(null, result, weapon, item).setRegistryName(BalkonsExpansion.MOD_ID, Objects.requireNonNull(result.getRegistryName()).getPath());
     }
 
-    public static IRecipe registerFlailRecipe(Object material, Object stick, Object string, Item result) {
+    public static IRecipe registerFlailRecipe(ResourceLocation group, Object material, Object stick, Object string, Item result) {
         return new ShapedOreRecipe(null, result, "  *", " #*", "# X", 'X', material, '#', stick, '*', string).setRegistryName(BalkonsExpansion.MOD_ID, Objects.requireNonNull(result.getRegistryName()).getPath());
     }
 
-    public static IRecipe registerHalberdRecipe(Object material, Object stick, Item result) {
+    public static IRecipe registerHalberdRecipe(ResourceLocation group, Object material, Object stick, Item result) {
         return new ShapedOreRecipe(null, result, " XX", " #X", "#  ", 'X', material, '#', stick).setRegistryName(BalkonsExpansion.MOD_ID, Objects.requireNonNull(result.getRegistryName()).getPath());
     }
 
-    public static IRecipe registerKatanaRecipe(Object material, Object stick, Item result) {
+    public static IRecipe registerKatanaRecipe(ResourceLocation group, Object material, Object stick, Item result) {
         return new ShapedOreRecipe(null, result, "  X", " X ", "#  ", 'X', material, '#', stick).setRegistryName(BalkonsExpansion.MOD_ID, Objects.requireNonNull(result.getRegistryName()).getPath());
     }
 
-    public static IRecipe registerKnifeRecipe(Object material, Object stick, Item result) {
+    public static IRecipe registerKnifeRecipe(ResourceLocation group, Object material, Object stick, Item result) {
         return new ShapedOreRecipe(null, result, "X", "#", 'X', material, '#', stick).setRegistryName(BalkonsExpansion.MOD_ID, Objects.requireNonNull(result.getRegistryName()).getPath());
     }
 
-    public static IRecipe registerKnifeAltRecipe(Object material, Object stick, Item result) {
+    public static IRecipe registerKnifeAltRecipe(ResourceLocation group, Object material, Object stick, Item result) {
         return new ShapedOreRecipe(null, result, "X#", 'X', material, '#', stick).setRegistryName(BalkonsExpansion.MOD_ID, Objects.requireNonNull(result.getRegistryName()).getPath() + ".a");
     }
 
-    public static IRecipe registerSpearRecipe(Object material, Object stick, Item result) {
+    public static IRecipe registerSpearRecipe(ResourceLocation group, Object material, Object stick, Item result) {
         return new ShapedOreRecipe(null, result, "  X", " # ", "#  ", 'X', material, '#', stick).setRegistryName(BalkonsExpansion.MOD_ID, Objects.requireNonNull(result.getRegistryName()).getPath());
     }
 
-    public static IRecipe registerWarhammerRecipe(Object material, Object stick, Item result) {
+    public static IRecipe registerWarhammerRecipe(ResourceLocation group, Object material, Object stick, Item result) {
         return new ShapedOreRecipe(null, result, "X#X", "X#X", " # ", 'X', material, '#', stick).setRegistryName(BalkonsExpansion.MOD_ID, result.getRegistryName().getPath());
     }
 }

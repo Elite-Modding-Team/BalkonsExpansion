@@ -10,6 +10,7 @@ import mod.icarus.balkonsexpansion.item.BEItemMelee;
 import mod.icarus.balkonsexpansion.item.BEItemMusket;
 import net.minecraft.item.Item;
 import net.minecraft.item.crafting.IRecipe;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.relauncher.Side;
@@ -45,19 +46,20 @@ public class IERegistration {
 
     @SubscribeEvent
     public static void registerRecipes(RegistryEvent.Register<IRecipe> event) {
+        ResourceLocation defaultGroup = new ResourceLocation("");
         IForgeRegistry<IRecipe> registry = event.getRegistry();
 
         if (BEConfig.ie_settings.IE_STEEL_MATERIAL) {
-            registry.register(BERecipes.registerBattleaxeRecipe("ingotSteel", "stickTreatedWood", battleaxeSteel));
-            registry.register(BERecipes.registerBoomerangRecipe("ingotSteel", "plankTreatedWood", boomerangSteel));
-            registry.register(BERecipes.registerBayonetRecipe(knifeSteel, bayonetSteel));
-            registry.register(BERecipes.registerFlailRecipe("ingotSteel", "stickTreatedWood", "fiberHemp", flailSteel));
-            registry.register(BERecipes.registerHalberdRecipe("ingotSteel", "stickTreatedWood", halberdSteel));
-            registry.register(BERecipes.registerKatanaRecipe("ingotSteel", "stickTreatedWood", katanaSteel));
-            registry.register(BERecipes.registerKnifeRecipe("ingotSteel", "stickTreatedWood", knifeSteel));
-            registry.register(BERecipes.registerKnifeAltRecipe("ingotSteel", "stickTreatedWood", knifeSteel));
-            registry.register(BERecipes.registerSpearRecipe("ingotSteel", "stickTreatedWood", spearSteel));
-            registry.register(BERecipes.registerWarhammerRecipe("ingotSteel", "stickTreatedWood", warhammerSteel));
+            registry.register(BERecipes.registerBattleaxeRecipe(defaultGroup, "ingotSteel", "stickTreatedWood", battleaxeSteel));
+            registry.register(BERecipes.registerBoomerangRecipe(defaultGroup, "ingotSteel", "plankTreatedWood", boomerangSteel));
+            registry.register(BERecipes.registerBayonetRecipe(defaultGroup, knifeSteel, bayonetSteel));
+            registry.register(BERecipes.registerFlailRecipe(defaultGroup, "ingotSteel", "stickTreatedWood", "fiberHemp", flailSteel));
+            registry.register(BERecipes.registerHalberdRecipe(defaultGroup, "ingotSteel", "stickTreatedWood", halberdSteel));
+            registry.register(BERecipes.registerKatanaRecipe(defaultGroup, "ingotSteel", "stickTreatedWood", katanaSteel));
+            registry.register(BERecipes.registerKnifeRecipe(defaultGroup, "ingotSteel", "stickTreatedWood", knifeSteel));
+            registry.register(BERecipes.registerKnifeAltRecipe(defaultGroup, "ingotSteel", "stickTreatedWood", knifeSteel));
+            registry.register(BERecipes.registerSpearRecipe(defaultGroup, "ingotSteel", "stickTreatedWood", spearSteel));
+            registry.register(BERecipes.registerWarhammerRecipe(defaultGroup, "ingotSteel", "stickTreatedWood", warhammerSteel));
         }
 
         // Immersive Engineering tools have no smelting recipes so support isn't needed.

@@ -10,6 +10,7 @@ import mod.icarus.balkonsexpansion.item.BEItemMusket;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipe;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
@@ -49,19 +50,20 @@ public class MistyWorldRegistration {
 
     @SubscribeEvent
     public static void registerRecipes(RegistryEvent.Register<IRecipe> event) {
+        ResourceLocation defaultGroup = new ResourceLocation("");
         IForgeRegistry<IRecipe> registry = event.getRegistry();
 
         if (BEConfig.misty_world_settings.MW_NIOBIUM_MATERIAL) {
-            registry.register(BERecipes.registerBattleaxeRecipe(MistItems.NIOBIUM_INGOT, "stickWood", battleaxeNiobium));
-            registry.register(BERecipes.registerBoomerangRecipe(MistItems.NIOBIUM_INGOT, "plankWood", boomerangNiobium));
-            registry.register(BERecipes.registerBayonetRecipe(knifeNiobium, bayonetNiobium));
-            registry.register(BERecipes.registerFlailRecipe(MistItems.NIOBIUM_INGOT, "stickWood", "string", flailNiobium));
-            registry.register(BERecipes.registerHalberdRecipe(MistItems.NIOBIUM_INGOT, "stickWood", halberdNiobium));
-            registry.register(BERecipes.registerKatanaRecipe(MistItems.NIOBIUM_INGOT, "stickWood", katanaNiobium));
-            registry.register(BERecipes.registerKnifeRecipe(MistItems.NIOBIUM_INGOT, "stickWood", knifeNiobium));
-            registry.register(BERecipes.registerKnifeAltRecipe(MistItems.NIOBIUM_INGOT, "stickWood", knifeNiobium));
-            registry.register(BERecipes.registerSpearRecipe(MistItems.NIOBIUM_INGOT, "stickWood", spearNiobium));
-            registry.register(BERecipes.registerWarhammerRecipe(MistItems.NIOBIUM_INGOT, "stickWood", warhammerNiobium));
+            registry.register(BERecipes.registerBattleaxeRecipe(defaultGroup, MistItems.NIOBIUM_INGOT, "stickWood", battleaxeNiobium));
+            registry.register(BERecipes.registerBoomerangRecipe(defaultGroup, MistItems.NIOBIUM_INGOT, "plankWood", boomerangNiobium));
+            registry.register(BERecipes.registerBayonetRecipe(defaultGroup, knifeNiobium, bayonetNiobium));
+            registry.register(BERecipes.registerFlailRecipe(defaultGroup, MistItems.NIOBIUM_INGOT, "stickWood", "string", flailNiobium));
+            registry.register(BERecipes.registerHalberdRecipe(defaultGroup, MistItems.NIOBIUM_INGOT, "stickWood", halberdNiobium));
+            registry.register(BERecipes.registerKatanaRecipe(defaultGroup, MistItems.NIOBIUM_INGOT, "stickWood", katanaNiobium));
+            registry.register(BERecipes.registerKnifeRecipe(defaultGroup, MistItems.NIOBIUM_INGOT, "stickWood", knifeNiobium));
+            registry.register(BERecipes.registerKnifeAltRecipe(defaultGroup, MistItems.NIOBIUM_INGOT, "stickWood", knifeNiobium));
+            registry.register(BERecipes.registerSpearRecipe(defaultGroup, MistItems.NIOBIUM_INGOT, "stickWood", spearNiobium));
+            registry.register(BERecipes.registerWarhammerRecipe(defaultGroup, MistItems.NIOBIUM_INGOT, "stickWood", warhammerNiobium));
 
             GameRegistry.addSmelting(new ItemStack(battleaxeNiobium, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(MistItems.NIOBIUM_NUGGET), 0.1F);
             GameRegistry.addSmelting(new ItemStack(boomerangNiobium, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(MistItems.NIOBIUM_NUGGET), 0.1F);

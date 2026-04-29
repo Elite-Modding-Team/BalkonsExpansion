@@ -10,6 +10,7 @@ import mod.icarus.balkonsexpansion.item.BEItemMusket;
 import mrtjp.projectred.ProjectRedExploration;
 import net.minecraft.item.Item;
 import net.minecraft.item.crafting.IRecipe;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.relauncher.Side;
@@ -87,45 +88,46 @@ public class ProjectRedRegistration {
 
     @SubscribeEvent
     public static void registerRecipes(RegistryEvent.Register<IRecipe> event) {
+        ResourceLocation defaultGroup = new ResourceLocation("");
         IForgeRegistry<IRecipe> registry = event.getRegistry();
 
         if (BEConfig.project_red_settings.PR_PERIDOT_MATERIAL) {
-            registry.register(BERecipes.registerBattleaxeRecipe("gemPeridot", "stickWood", battleaxePeridot));
-            registry.register(BERecipes.registerBoomerangRecipe("gemPeridot", "plankWood", boomerangPeridot));
-            registry.register(BERecipes.registerBayonetRecipe(knifePeridot, bayonetPeridot));
-            registry.register(BERecipes.registerFlailRecipe("gemPeridot", "stickWood", "string", flailPeridot));
-            registry.register(BERecipes.registerHalberdRecipe("gemPeridot", "stickWood", halberdPeridot));
-            registry.register(BERecipes.registerKatanaRecipe("gemPeridot", "stickWood", katanaPeridot));
-            registry.register(BERecipes.registerKnifeRecipe("gemPeridot", "stickWood", knifePeridot));
-            registry.register(BERecipes.registerKnifeAltRecipe("gemPeridot", "stickWood", knifePeridot));
-            registry.register(BERecipes.registerSpearRecipe("gemPeridot", "stickWood", spearPeridot));
-            registry.register(BERecipes.registerWarhammerRecipe("gemPeridot", "stickWood", warhammerPeridot));
+            registry.register(BERecipes.registerBattleaxeRecipe(defaultGroup, "gemPeridot", "stickWood", battleaxePeridot));
+            registry.register(BERecipes.registerBoomerangRecipe(defaultGroup, "gemPeridot", "plankWood", boomerangPeridot));
+            registry.register(BERecipes.registerBayonetRecipe(defaultGroup, knifePeridot, bayonetPeridot));
+            registry.register(BERecipes.registerFlailRecipe(defaultGroup, "gemPeridot", "stickWood", "string", flailPeridot));
+            registry.register(BERecipes.registerHalberdRecipe(defaultGroup, "gemPeridot", "stickWood", halberdPeridot));
+            registry.register(BERecipes.registerKatanaRecipe(defaultGroup, "gemPeridot", "stickWood", katanaPeridot));
+            registry.register(BERecipes.registerKnifeRecipe(defaultGroup, "gemPeridot", "stickWood", knifePeridot));
+            registry.register(BERecipes.registerKnifeAltRecipe(defaultGroup, "gemPeridot", "stickWood", knifePeridot));
+            registry.register(BERecipes.registerSpearRecipe(defaultGroup, "gemPeridot", "stickWood", spearPeridot));
+            registry.register(BERecipes.registerWarhammerRecipe(defaultGroup, "gemPeridot", "stickWood", warhammerPeridot));
         }
 
         if (BEConfig.project_red_settings.PR_RUBY_MATERIAL) {
-            registry.register(BERecipes.registerBattleaxeRecipe("gemRuby", "stickWood", battleaxeRuby));
-            registry.register(BERecipes.registerBoomerangRecipe("gemRuby", "plankWood", boomerangRuby));
-            registry.register(BERecipes.registerBayonetRecipe(knifeRuby, bayonetRuby));
-            registry.register(BERecipes.registerFlailRecipe("gemRuby", "stickWood", "string", flailRuby));
-            registry.register(BERecipes.registerHalberdRecipe("gemRuby", "stickWood", halberdRuby));
-            registry.register(BERecipes.registerKatanaRecipe("gemRuby", "stickWood", katanaRuby));
-            registry.register(BERecipes.registerKnifeRecipe("gemRuby", "stickWood", knifeRuby));
-            registry.register(BERecipes.registerKnifeAltRecipe("gemRuby", "stickWood", knifeRuby));
-            registry.register(BERecipes.registerSpearRecipe("gemRuby", "stickWood", spearRuby));
-            registry.register(BERecipes.registerWarhammerRecipe("gemRuby", "stickWood", warhammerRuby));
+            registry.register(BERecipes.registerBattleaxeRecipe(defaultGroup, "gemRuby", "stickWood", battleaxeRuby));
+            registry.register(BERecipes.registerBoomerangRecipe(defaultGroup, "gemRuby", "plankWood", boomerangRuby));
+            registry.register(BERecipes.registerBayonetRecipe(defaultGroup, knifeRuby, bayonetRuby));
+            registry.register(BERecipes.registerFlailRecipe(defaultGroup, "gemRuby", "stickWood", "string", flailRuby));
+            registry.register(BERecipes.registerHalberdRecipe(defaultGroup, "gemRuby", "stickWood", halberdRuby));
+            registry.register(BERecipes.registerKatanaRecipe(defaultGroup, "gemRuby", "stickWood", katanaRuby));
+            registry.register(BERecipes.registerKnifeRecipe(defaultGroup, "gemRuby", "stickWood", knifeRuby));
+            registry.register(BERecipes.registerKnifeAltRecipe(defaultGroup, "gemRuby", "stickWood", knifeRuby));
+            registry.register(BERecipes.registerSpearRecipe(defaultGroup, "gemRuby", "stickWood", spearRuby));
+            registry.register(BERecipes.registerWarhammerRecipe(defaultGroup, "gemRuby", "stickWood", warhammerRuby));
         }
 
         if (BEConfig.project_red_settings.PR_SAPPHIRE_MATERIAL) {
-            registry.register(BERecipes.registerBattleaxeRecipe("gemSapphire", "stickWood", battleaxeSapphire));
-            registry.register(BERecipes.registerBoomerangRecipe("gemSapphire", "plankWood", boomerangSapphire));
-            registry.register(BERecipes.registerBayonetRecipe(knifeSapphire, bayonetSapphire));
-            registry.register(BERecipes.registerFlailRecipe("gemSapphire", "stickWood", "string", flailSapphire));
-            registry.register(BERecipes.registerHalberdRecipe("gemSapphire", "stickWood", halberdSapphire));
-            registry.register(BERecipes.registerKatanaRecipe("gemSapphire", "stickWood", katanaSapphire));
-            registry.register(BERecipes.registerKnifeRecipe("gemSapphire", "stickWood", knifeSapphire));
-            registry.register(BERecipes.registerKnifeAltRecipe("gemSapphire", "stickWood", knifeSapphire));
-            registry.register(BERecipes.registerSpearRecipe("gemSapphire", "stickWood", spearSapphire));
-            registry.register(BERecipes.registerWarhammerRecipe("gemSapphire", "stickWood", warhammerSapphire));
+            registry.register(BERecipes.registerBattleaxeRecipe(defaultGroup, "gemSapphire", "stickWood", battleaxeSapphire));
+            registry.register(BERecipes.registerBoomerangRecipe(defaultGroup, "gemSapphire", "plankWood", boomerangSapphire));
+            registry.register(BERecipes.registerBayonetRecipe(defaultGroup, knifeSapphire, bayonetSapphire));
+            registry.register(BERecipes.registerFlailRecipe(defaultGroup, "gemSapphire", "stickWood", "string", flailSapphire));
+            registry.register(BERecipes.registerHalberdRecipe(defaultGroup, "gemSapphire", "stickWood", halberdSapphire));
+            registry.register(BERecipes.registerKatanaRecipe(defaultGroup, "gemSapphire", "stickWood", katanaSapphire));
+            registry.register(BERecipes.registerKnifeRecipe(defaultGroup, "gemSapphire", "stickWood", knifeSapphire));
+            registry.register(BERecipes.registerKnifeAltRecipe(defaultGroup, "gemSapphire", "stickWood", knifeSapphire));
+            registry.register(BERecipes.registerSpearRecipe(defaultGroup, "gemSapphire", "stickWood", spearSapphire));
+            registry.register(BERecipes.registerWarhammerRecipe(defaultGroup, "gemSapphire", "stickWood", warhammerSapphire));
         }
     }
 

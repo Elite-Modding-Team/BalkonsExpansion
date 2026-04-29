@@ -1,5 +1,6 @@
 package mod.icarus.balkonsexpansion;
 
+import mod.icarus.balkonsexpansion.compat.CompatHandler;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
@@ -30,6 +31,7 @@ public class BalkonsExpansion {
     @Mod.EventHandler
     public void init(FMLInitializationEvent event) {
         LOGGER.info(NAME + " initialized");
+        CompatHandler.init();
     }
 
     @Mod.EventHandler

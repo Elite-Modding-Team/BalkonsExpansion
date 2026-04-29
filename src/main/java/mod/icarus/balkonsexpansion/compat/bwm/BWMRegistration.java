@@ -12,6 +12,7 @@ import mod.icarus.balkonsexpansion.item.BEItemMelee;
 import mod.icarus.balkonsexpansion.item.BEItemMusket;
 import net.minecraft.item.Item;
 import net.minecraft.item.crafting.IRecipe;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.relauncher.Side;
@@ -48,11 +49,12 @@ public class BWMRegistration {
 
     @SubscribeEvent
     public static void registerRecipes(RegistryEvent.Register<IRecipe> event) {
+        ResourceLocation defaultGroup = new ResourceLocation("");
         IForgeRegistry<IRecipe> registry = event.getRegistry();
 
         if (BEConfig.bwm_settings.BWM_STEEL_MATERIAL) {
-            registry.register(BERecipes.registerBayonetRecipe(knifeSteel, bayonetSteel));
-            registry.register(BERecipes.registerConversionRecipe(new OreIngredient("leather"), BWMItems.STEEL_BATTLEAXE, battleaxeSteel));
+            registry.register(BERecipes.registerBayonetRecipe(defaultGroup, knifeSteel, bayonetSteel));
+            registry.register(BERecipes.registerConversionRecipe(defaultGroup, new OreIngredient("leather"), BWMItems.STEEL_BATTLEAXE, battleaxeSteel));
             BERecipesBWM.registerSteelAnvilTool2("ingotSoulforgedSteel", new MiniBlockIngredient("moulding", new OreIngredient("plankWood")), boomerangSteel, "###X", "   #", "   #", "   #");
             BERecipesBWM.registerSteelAnvilTool3("ingotSoulforgedSteel", ItemMaterial.getMaterial(ItemMaterial.EnumMaterial.HAFT), "string", flailSteel, "   *", "  #*", " # *", "#  X");
             BERecipesBWM.registerSteelAnvilTool2("ingotSoulforgedSteel", ItemMaterial.getMaterial(ItemMaterial.EnumMaterial.HAFT), halberdSteel, "  XX", "  #X", " #  ", "#   ");

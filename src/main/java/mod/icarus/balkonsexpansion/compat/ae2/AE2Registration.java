@@ -12,6 +12,7 @@ import mod.icarus.balkonsexpansion.item.BEItemMusket;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.crafting.IRecipe;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.relauncher.Side;
@@ -69,32 +70,33 @@ public class AE2Registration {
 
     @SubscribeEvent
     public static void registerRecipes(RegistryEvent.Register<IRecipe> event) {
+        ResourceLocation defaultGroup = new ResourceLocation("");
         IForgeRegistry<IRecipe> registry = event.getRegistry();
 
         if (BEConfig.ae2_settings.AE2_CERTUS_QUARTZ_MATERIAL && AEConfig.instance().isFeatureEnabled(AEFeature.CERTUS_QUARTZ_TOOLS)) {
-            registry.register(BERecipes.registerBattleaxeRecipe("crystalCertusQuartz", "stickWood", battleaxeCertusQuartz));
-            registry.register(BERecipes.registerBoomerangRecipe("crystalCertusQuartz", "plankWood", boomerangCertusQuartz));
-            registry.register(BERecipes.registerBayonetRecipe(knifeCertusQuartz, bayonetCertusQuartz));
-            registry.register(BERecipes.registerFlailRecipe("crystalCertusQuartz", "stickWood", "string", flailCertusQuartz));
-            registry.register(BERecipes.registerHalberdRecipe("crystalCertusQuartz", "stickWood", halberdCertusQuartz));
-            registry.register(BERecipes.registerKatanaRecipe("crystalCertusQuartz", "stickWood", katanaCertusQuartz));
-            registry.register(BERecipes.registerKnifeRecipe("crystalCertusQuartz", "stickWood", knifeCertusQuartz));
-            registry.register(BERecipes.registerKnifeAltRecipe("crystalCertusQuartz", "stickWood", knifeCertusQuartz));
-            registry.register(BERecipes.registerSpearRecipe("crystalCertusQuartz", "stickWood", spearCertusQuartz));
-            registry.register(BERecipes.registerWarhammerRecipe("crystalCertusQuartz", "stickWood", warhammerCertusQuartz));
+            registry.register(BERecipes.registerBattleaxeRecipe(defaultGroup, "crystalCertusQuartz", "stickWood", battleaxeCertusQuartz));
+            registry.register(BERecipes.registerBoomerangRecipe(defaultGroup, "crystalCertusQuartz", "plankWood", boomerangCertusQuartz));
+            registry.register(BERecipes.registerBayonetRecipe(defaultGroup, knifeCertusQuartz, bayonetCertusQuartz));
+            registry.register(BERecipes.registerFlailRecipe(defaultGroup, "crystalCertusQuartz", "stickWood", "string", flailCertusQuartz));
+            registry.register(BERecipes.registerHalberdRecipe(defaultGroup, "crystalCertusQuartz", "stickWood", halberdCertusQuartz));
+            registry.register(BERecipes.registerKatanaRecipe(defaultGroup, "crystalCertusQuartz", "stickWood", katanaCertusQuartz));
+            registry.register(BERecipes.registerKnifeRecipe(defaultGroup, "crystalCertusQuartz", "stickWood", knifeCertusQuartz));
+            registry.register(BERecipes.registerKnifeAltRecipe(defaultGroup, "crystalCertusQuartz", "stickWood", knifeCertusQuartz));
+            registry.register(BERecipes.registerSpearRecipe(defaultGroup, "crystalCertusQuartz", "stickWood", spearCertusQuartz));
+            registry.register(BERecipes.registerWarhammerRecipe(defaultGroup, "crystalCertusQuartz", "stickWood", warhammerCertusQuartz));
         }
 
         if (BEConfig.ae2_settings.AE2_NETHER_QUARTZ_MATERIAL && AEConfig.instance().isFeatureEnabled(AEFeature.NETHER_QUARTZ_TOOLS)) {
-            registry.register(BERecipes.registerBattleaxeRecipe("gemQuartz", "stickWood", battleaxeNetherQuartz));
-            registry.register(BERecipes.registerBoomerangRecipe("gemQuartz", "plankWood", boomerangNetherQuartz));
-            registry.register(BERecipes.registerBayonetRecipe(knifeNetherQuartz, bayonetNetherQuartz));
-            registry.register(BERecipes.registerFlailRecipe("gemQuartz", "stickWood", "string", flailNetherQuartz));
-            registry.register(BERecipes.registerHalberdRecipe("gemQuartz", "stickWood", halberdNetherQuartz));
-            registry.register(BERecipes.registerKatanaRecipe("gemQuartz", "stickWood", katanaNetherQuartz));
-            registry.register(BERecipes.registerKnifeRecipe("gemQuartz", "stickWood", knifeNetherQuartz));
-            registry.register(BERecipes.registerKnifeAltRecipe("gemQuartz", "stickWood", knifeNetherQuartz));
-            registry.register(BERecipes.registerSpearRecipe("gemQuartz", "stickWood", spearNetherQuartz));
-            registry.register(BERecipes.registerWarhammerRecipe("gemQuartz", "stickWood", warhammerNetherQuartz));
+            registry.register(BERecipes.registerBattleaxeRecipe(defaultGroup, "gemQuartz", "stickWood", battleaxeNetherQuartz));
+            registry.register(BERecipes.registerBoomerangRecipe(defaultGroup, "gemQuartz", "plankWood", boomerangNetherQuartz));
+            registry.register(BERecipes.registerBayonetRecipe(defaultGroup, knifeNetherQuartz, bayonetNetherQuartz));
+            registry.register(BERecipes.registerFlailRecipe(defaultGroup, "gemQuartz", "stickWood", "string", flailNetherQuartz));
+            registry.register(BERecipes.registerHalberdRecipe(defaultGroup, "gemQuartz", "stickWood", halberdNetherQuartz));
+            registry.register(BERecipes.registerKatanaRecipe(defaultGroup, "gemQuartz", "stickWood", katanaNetherQuartz));
+            registry.register(BERecipes.registerKnifeRecipe(defaultGroup, "gemQuartz", "stickWood", knifeNetherQuartz));
+            registry.register(BERecipes.registerKnifeAltRecipe(defaultGroup, "gemQuartz", "stickWood", knifeNetherQuartz));
+            registry.register(BERecipes.registerSpearRecipe(defaultGroup, "gemQuartz", "stickWood", spearNetherQuartz));
+            registry.register(BERecipes.registerWarhammerRecipe(defaultGroup, "gemQuartz", "stickWood", warhammerNetherQuartz));
         }
     }
 

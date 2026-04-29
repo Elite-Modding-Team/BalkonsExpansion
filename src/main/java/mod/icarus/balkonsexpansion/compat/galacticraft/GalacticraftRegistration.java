@@ -13,6 +13,7 @@ import mod.icarus.balkonsexpansion.item.BEItemMusket;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipe;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.relauncher.Side;
@@ -90,46 +91,47 @@ public class GalacticraftRegistration {
 
     @SubscribeEvent
     public static void registerRecipes(RegistryEvent.Register<IRecipe> event) {
+        ResourceLocation defaultGroup = new ResourceLocation("");
         IForgeRegistry<IRecipe> registry = event.getRegistry();
 
         // Metadata sucks.
         if (BEConfig.galacticraft_settings.GC_DESH_MATERIAL) {
-            registry.register(BERecipes.registerBattleaxeRecipe(new ItemStack(MarsItems.marsItemBasic, 1, 2), new ItemStack(MarsItems.marsItemBasic, 1, 1), battleaxeDesh));
-            registry.register(BERecipes.registerBoomerangRecipe(new ItemStack(MarsItems.marsItemBasic, 1, 2), "ingotIron", boomerangDesh));
-            registry.register(BERecipes.registerBayonetRecipe(knifeDesh, bayonetDesh));
-            registry.register(BERecipes.registerFlailRecipe(new ItemStack(MarsItems.marsItemBasic, 1, 2), new ItemStack(MarsItems.marsItemBasic, 1, 1), "string", flailDesh));
-            registry.register(BERecipes.registerHalberdRecipe(new ItemStack(MarsItems.marsItemBasic, 1, 2), new ItemStack(MarsItems.marsItemBasic, 1, 1), halberdDesh));
-            registry.register(BERecipes.registerKatanaRecipe(new ItemStack(MarsItems.marsItemBasic, 1, 2), new ItemStack(MarsItems.marsItemBasic, 1, 1), katanaDesh));
-            registry.register(BERecipes.registerKnifeRecipe(new ItemStack(MarsItems.marsItemBasic, 1, 2), new ItemStack(MarsItems.marsItemBasic, 1, 1), knifeDesh));
-            registry.register(BERecipes.registerKnifeAltRecipe(new ItemStack(MarsItems.marsItemBasic, 1, 2), new ItemStack(MarsItems.marsItemBasic, 1, 1), knifeDesh));
-            registry.register(BERecipes.registerSpearRecipe(new ItemStack(MarsItems.marsItemBasic, 1, 2), new ItemStack(MarsItems.marsItemBasic, 1, 1), spearDesh));
-            registry.register(BERecipes.registerWarhammerRecipe(new ItemStack(MarsItems.marsItemBasic, 1, 2), new ItemStack(MarsItems.marsItemBasic, 1, 1), warhammerDesh));
+            registry.register(BERecipes.registerBattleaxeRecipe(defaultGroup, new ItemStack(MarsItems.marsItemBasic, 1, 2), new ItemStack(MarsItems.marsItemBasic, 1, 1), battleaxeDesh));
+            registry.register(BERecipes.registerBoomerangRecipe(defaultGroup, new ItemStack(MarsItems.marsItemBasic, 1, 2), "ingotIron", boomerangDesh));
+            registry.register(BERecipes.registerBayonetRecipe(defaultGroup, knifeDesh, bayonetDesh));
+            registry.register(BERecipes.registerFlailRecipe(defaultGroup, new ItemStack(MarsItems.marsItemBasic, 1, 2), new ItemStack(MarsItems.marsItemBasic, 1, 1), "string", flailDesh));
+            registry.register(BERecipes.registerHalberdRecipe(defaultGroup, new ItemStack(MarsItems.marsItemBasic, 1, 2), new ItemStack(MarsItems.marsItemBasic, 1, 1), halberdDesh));
+            registry.register(BERecipes.registerKatanaRecipe(defaultGroup, new ItemStack(MarsItems.marsItemBasic, 1, 2), new ItemStack(MarsItems.marsItemBasic, 1, 1), katanaDesh));
+            registry.register(BERecipes.registerKnifeRecipe(defaultGroup, new ItemStack(MarsItems.marsItemBasic, 1, 2), new ItemStack(MarsItems.marsItemBasic, 1, 1), knifeDesh));
+            registry.register(BERecipes.registerKnifeAltRecipe(defaultGroup, new ItemStack(MarsItems.marsItemBasic, 1, 2), new ItemStack(MarsItems.marsItemBasic, 1, 1), knifeDesh));
+            registry.register(BERecipes.registerSpearRecipe(defaultGroup, new ItemStack(MarsItems.marsItemBasic, 1, 2), new ItemStack(MarsItems.marsItemBasic, 1, 1), spearDesh));
+            registry.register(BERecipes.registerWarhammerRecipe(defaultGroup, new ItemStack(MarsItems.marsItemBasic, 1, 2), new ItemStack(MarsItems.marsItemBasic, 1, 1), warhammerDesh));
         }
 
         if (BEConfig.galacticraft_settings.GC_HEAVY_DUTY_MATERIAL) {
-            registry.register(BERecipes.registerBattleaxeRecipe("compressedSteel", "stickWood", battleaxeHeavyDuty));
-            registry.register(BERecipes.registerBoomerangRecipe("compressedSteel", "plankWood", boomerangHeavyDuty));
-            registry.register(BERecipes.registerBayonetRecipe(knifeHeavyDuty, bayonetHeavyDuty));
-            registry.register(BERecipes.registerFlailRecipe("compressedSteel", "stickWood", "string", flailHeavyDuty));
-            registry.register(BERecipes.registerHalberdRecipe("compressedSteel", "stickWood", halberdHeavyDuty));
-            registry.register(BERecipes.registerKatanaRecipe("compressedSteel", "stickWood", katanaHeavyDuty));
-            registry.register(BERecipes.registerKnifeRecipe("compressedSteel", "stickWood", knifeHeavyDuty));
-            registry.register(BERecipes.registerKnifeAltRecipe("compressedSteel", "stickWood", knifeHeavyDuty));
-            registry.register(BERecipes.registerSpearRecipe("compressedSteel", "stickWood", spearHeavyDuty));
-            registry.register(BERecipes.registerWarhammerRecipe("compressedSteel", "stickWood", warhammerHeavyDuty));
+            registry.register(BERecipes.registerBattleaxeRecipe(defaultGroup, "compressedSteel", "stickWood", battleaxeHeavyDuty));
+            registry.register(BERecipes.registerBoomerangRecipe(defaultGroup, "compressedSteel", "plankWood", boomerangHeavyDuty));
+            registry.register(BERecipes.registerBayonetRecipe(defaultGroup, knifeHeavyDuty, bayonetHeavyDuty));
+            registry.register(BERecipes.registerFlailRecipe(defaultGroup, "compressedSteel", "stickWood", "string", flailHeavyDuty));
+            registry.register(BERecipes.registerHalberdRecipe(defaultGroup, "compressedSteel", "stickWood", halberdHeavyDuty));
+            registry.register(BERecipes.registerKatanaRecipe(defaultGroup, "compressedSteel", "stickWood", katanaHeavyDuty));
+            registry.register(BERecipes.registerKnifeRecipe(defaultGroup, "compressedSteel", "stickWood", knifeHeavyDuty));
+            registry.register(BERecipes.registerKnifeAltRecipe(defaultGroup, "compressedSteel", "stickWood", knifeHeavyDuty));
+            registry.register(BERecipes.registerSpearRecipe(defaultGroup, "compressedSteel", "stickWood", spearHeavyDuty));
+            registry.register(BERecipes.registerWarhammerRecipe(defaultGroup, "compressedSteel", "stickWood", warhammerHeavyDuty));
         }
 
         if (BEConfig.galacticraft_settings.GC_TITANIUM_MATERIAL) {
-            registry.register(BERecipes.registerBattleaxeRecipe(new ItemStack(AsteroidsItems.basicItem, 1, 6), "ingotIron", battleaxeTitanium));
-            registry.register(BERecipes.registerBoomerangRecipe(new ItemStack(AsteroidsItems.basicItem, 1, 6), "ingotIron", boomerangTitanium));
-            registry.register(BERecipes.registerBayonetRecipe(knifeTitanium, bayonetTitanium));
-            registry.register(BERecipes.registerFlailRecipe(new ItemStack(AsteroidsItems.basicItem, 1, 6), "ingotIron", "string", flailTitanium));
-            registry.register(BERecipes.registerHalberdRecipe(new ItemStack(AsteroidsItems.basicItem, 1, 6), "ingotIron", halberdTitanium));
-            registry.register(BERecipes.registerKatanaRecipe(new ItemStack(AsteroidsItems.basicItem, 1, 6), "ingotIron", katanaTitanium));
-            registry.register(BERecipes.registerKnifeRecipe(new ItemStack(AsteroidsItems.basicItem, 1, 6), "ingotIron", knifeTitanium));
-            registry.register(BERecipes.registerKnifeAltRecipe(new ItemStack(AsteroidsItems.basicItem, 1, 6), "ingotIron", knifeTitanium));
-            registry.register(BERecipes.registerSpearRecipe(new ItemStack(AsteroidsItems.basicItem, 1, 6), "ingotIron", spearTitanium));
-            registry.register(BERecipes.registerWarhammerRecipe(new ItemStack(AsteroidsItems.basicItem, 1, 6), "ingotIron", warhammerTitanium));
+            registry.register(BERecipes.registerBattleaxeRecipe(defaultGroup, new ItemStack(AsteroidsItems.basicItem, 1, 6), "ingotIron", battleaxeTitanium));
+            registry.register(BERecipes.registerBoomerangRecipe(defaultGroup, new ItemStack(AsteroidsItems.basicItem, 1, 6), "ingotIron", boomerangTitanium));
+            registry.register(BERecipes.registerBayonetRecipe(defaultGroup, knifeTitanium, bayonetTitanium));
+            registry.register(BERecipes.registerFlailRecipe(defaultGroup, new ItemStack(AsteroidsItems.basicItem, 1, 6), "ingotIron", "string", flailTitanium));
+            registry.register(BERecipes.registerHalberdRecipe(defaultGroup, new ItemStack(AsteroidsItems.basicItem, 1, 6), "ingotIron", halberdTitanium));
+            registry.register(BERecipes.registerKatanaRecipe(defaultGroup, new ItemStack(AsteroidsItems.basicItem, 1, 6), "ingotIron", katanaTitanium));
+            registry.register(BERecipes.registerKnifeRecipe(defaultGroup, new ItemStack(AsteroidsItems.basicItem, 1, 6), "ingotIron", knifeTitanium));
+            registry.register(BERecipes.registerKnifeAltRecipe(defaultGroup, new ItemStack(AsteroidsItems.basicItem, 1, 6), "ingotIron", knifeTitanium));
+            registry.register(BERecipes.registerSpearRecipe(defaultGroup, new ItemStack(AsteroidsItems.basicItem, 1, 6), "ingotIron", spearTitanium));
+            registry.register(BERecipes.registerWarhammerRecipe(defaultGroup, new ItemStack(AsteroidsItems.basicItem, 1, 6), "ingotIron", warhammerTitanium));
         }
 
         // Galacticraft tools have no smelting recipes so support isn't needed.

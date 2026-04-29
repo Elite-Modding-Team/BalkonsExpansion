@@ -10,6 +10,7 @@ import mod.icarus.balkonsexpansion.item.BEItemMusket;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.crafting.IRecipe;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.relauncher.Side;
@@ -45,19 +46,20 @@ public class IC2ExperimentalRegistration {
 
     @SubscribeEvent
     public static void registerRecipes(RegistryEvent.Register<IRecipe> event) {
+        ResourceLocation defaultGroup = new ResourceLocation("");
         IForgeRegistry<IRecipe> registry = event.getRegistry();
 
         if (BEConfig.ic2_settings.IC2_BRONZE_MATERIAL) {
-            registry.register(BERecipes.registerBattleaxeRecipe("ingotBronze", "stickWood", battleaxeBronze));
-            registry.register(BERecipes.registerBoomerangRecipe("ingotBronze", "plankWood", boomerangBronze));
-            registry.register(BERecipes.registerBayonetRecipe(knifeBronze, bayonetBronze));
-            registry.register(BERecipes.registerFlailRecipe("ingotBronze", "stickWood", "string", flailBronze));
-            registry.register(BERecipes.registerHalberdRecipe("ingotBronze", "stickWood", halberdBronze));
-            registry.register(BERecipes.registerKatanaRecipe("ingotBronze", "stickWood", katanaBronze));
-            registry.register(BERecipes.registerKnifeRecipe("ingotBronze", "stickWood", knifeBronze));
-            registry.register(BERecipes.registerKnifeAltRecipe("ingotBronze", "stickWood", knifeBronze));
-            registry.register(BERecipes.registerSpearRecipe("ingotBronze", "stickWood", spearBronze));
-            registry.register(BERecipes.registerWarhammerRecipe("ingotBronze", "stickWood", warhammerBronze));
+            registry.register(BERecipes.registerBattleaxeRecipe(defaultGroup, "ingotBronze", "stickWood", battleaxeBronze));
+            registry.register(BERecipes.registerBoomerangRecipe(defaultGroup, "ingotBronze", "plankWood", boomerangBronze));
+            registry.register(BERecipes.registerBayonetRecipe(defaultGroup, knifeBronze, bayonetBronze));
+            registry.register(BERecipes.registerFlailRecipe(defaultGroup, "ingotBronze", "stickWood", "string", flailBronze));
+            registry.register(BERecipes.registerHalberdRecipe(defaultGroup, "ingotBronze", "stickWood", halberdBronze));
+            registry.register(BERecipes.registerKatanaRecipe(defaultGroup, "ingotBronze", "stickWood", katanaBronze));
+            registry.register(BERecipes.registerKnifeRecipe(defaultGroup, "ingotBronze", "stickWood", knifeBronze));
+            registry.register(BERecipes.registerKnifeAltRecipe(defaultGroup, "ingotBronze", "stickWood", knifeBronze));
+            registry.register(BERecipes.registerSpearRecipe(defaultGroup, "ingotBronze", "stickWood", spearBronze));
+            registry.register(BERecipes.registerWarhammerRecipe(defaultGroup, "ingotBronze", "stickWood", warhammerBronze));
         }
 
         // IC2 tools have no smelting recipes so support isn't needed.
