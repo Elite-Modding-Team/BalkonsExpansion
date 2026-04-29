@@ -44,4 +44,4 @@ ___
 	- Steel
 - **Thaumcraft:**
 	- Thaumium
-	- Void - Regenerates durability.
+	- Void - Regenerates durability and applies Weakness (Lesser Sapping).
