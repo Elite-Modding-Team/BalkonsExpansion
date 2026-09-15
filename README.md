@@ -19,29 +19,31 @@ Assets specifically made for this mod are licensed as All Rights Reserved (see L
 - German ~ HypaSpeeed
 ___
 ### **Supported Mods:** ###
-- **Applied Energistics 2:**
+- **Applied Energistics 2**
 	- Certus Quartz
 	- Nether Quartz
-- **Better With Mods:**
+- **Better With Mods**
 	- Soulforged Steel (Refined)
-- **Defiled Lands:**
+- **Defiled Lands**
 	- Umbrium
-- **Galacticraft Legacy:**
+- **Galacticraft Legacy**
 	- Desh
 	- Heavy Duty
 	- Titanium
+- **Ice and Fire / Ice and Fire: RotN Edition**
+	- Silver
 - **Immersive Engineering:**
 	- Steel
-- **IndustrialCraft 2 (Classic and Experimental):**
+- **IndustrialCraft 2 (Classic and Experimental)**
 	- Bronze
-- **Misty World:**
+- **Misty World**
 	- Niobium
-- **Project Red Exploration:**
+- **Project Red Exploration**
 	- Peridot
 	- Ruby
 	- Sapphire
-- **Railcraft:**
+- **Railcraft**
 	- Steel
-- **Thaumcraft:**
+- **Thaumcraft**
 	- Thaumium
 	- Void - Regenerates durability and applies Weakness (Lesser Sapping).
