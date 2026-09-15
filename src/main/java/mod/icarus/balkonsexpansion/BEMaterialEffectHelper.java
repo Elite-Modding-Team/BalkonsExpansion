@@ -30,13 +30,16 @@ public class BEMaterialEffectHelper {
         private final boolean invertCreatureAttribute;
         private final Class<?> targetClass;
         private final PotionEffect potionEffect;
+        private final int fireSeconds;
 
-        public MaterialEffect(float extraDamage, EnumCreatureAttribute creatureAttribute, boolean invertCreatureAttribute, Class<?> targetClass, PotionEffect potionEffect) {
+        public MaterialEffect(float extraDamage, EnumCreatureAttribute creatureAttribute, boolean invertCreatureAttribute, Class<?> targetClass,
+                              PotionEffect potionEffect, int fireSeconds) {
             this.extraDamage = extraDamage;
             this.creatureAttribute = creatureAttribute;
             this.invertCreatureAttribute = invertCreatureAttribute;
             this.targetClass = targetClass;
             this.potionEffect = potionEffect;
+            this.fireSeconds = fireSeconds;
         }
 
         public boolean appliesTo(EntityLivingBase target) {
@@ -50,40 +53,49 @@ public class BEMaterialEffectHelper {
         }
 
         public void apply(LivingHurtEvent event) {
+            EntityLivingBase target = event.getEntityLiving();
+
             if (extraDamage != 0.0F) {
                 event.setAmount(event.getAmount() + extraDamage);
             }
 
             if (potionEffect != null) {
-                EntityLivingBase target = event.getEntityLiving();
                 target.addPotionEffect(new PotionEffect(potionEffect.getPotion(), potionEffect.getDuration(), potionEffect.getAmplifier()));
+            }
+
+            if (fireSeconds > 0) {
+                target.setFire(fireSeconds);
             }
         }
     }
 
-    public static void registerMaterialEffect(Item.ToolMaterial material, float extraDamage, EnumCreatureAttribute creatureAttribute, boolean invertCreatureAttribute, Class<?> targetClass, PotionEffect potionEffect) {
+    public static void registerMaterialEffect(Item.ToolMaterial material, float extraDamage, EnumCreatureAttribute creatureAttribute, boolean invertCreatureAttribute, Class<?> targetClass, PotionEffect potionEffect, int fireSeconds) {
         if (material == null) {
             return;
         }
 
-        if (extraDamage == 0.0F && potionEffect == null) {
+        if (extraDamage == 0.0F && potionEffect == null && fireSeconds <= 0) {
             return;
         }
 
         List<MaterialEffect> effects = REGISTRY.computeIfAbsent(material, k -> new ArrayList<>());
-        effects.add(new MaterialEffect(extraDamage, creatureAttribute, invertCreatureAttribute, targetClass, potionEffect));
+        effects.add(new MaterialEffect(extraDamage, creatureAttribute, invertCreatureAttribute, targetClass, potionEffect, fireSeconds));
     }
 
     public static void registerMaterialEffect(Item.ToolMaterial material, float extraDamage, EnumCreatureAttribute creatureAttribute) {
-        registerMaterialEffect(material, extraDamage, creatureAttribute, false, null, null);
+        registerMaterialEffect(material, extraDamage, creatureAttribute, false, null, null, 0);
     }
 
     public static void registerMaterialEffect(Item.ToolMaterial material, float extraDamage, Class<?> targetClass) {
-        registerMaterialEffect(material, extraDamage, null, false, targetClass, null);
+        registerMaterialEffect(material, extraDamage, null, false, targetClass, null, 0);
     }
 
     public static void registerMaterialEffect(Item.ToolMaterial material, PotionEffect potionEffect) {
-        registerMaterialEffect(material, 0.0F, null, false, null, potionEffect);
+        registerMaterialEffect(material, 0.0F, null, false, null, potionEffect, 0);
+    }
+
+    public static void registerMaterialEffect(Item.ToolMaterial material, int fireSeconds) {
+        registerMaterialEffect(material, 0.0F, null, false, null, null, fireSeconds);
     }
 
 
