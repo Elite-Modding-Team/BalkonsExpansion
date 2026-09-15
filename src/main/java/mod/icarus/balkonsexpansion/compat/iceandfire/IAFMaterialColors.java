@@ -1,4 +1,4 @@
-package mod.icarus.balkonsexpansion.compat.ic2experimental;
+package mod.icarus.balkonsexpansion.compat.iceandfire;
 
 import ckathode.weaponmod.entity.projectile.ICustomProjectileMaterials;
 import ckathode.weaponmod.entity.projectile.MaterialRegistry;
@@ -7,14 +7,14 @@ import mod.icarus.balkonsexpansion.BEMaterialHelper;
 import net.minecraft.item.ItemStack;
 
 // Some entities of BWM: Legacy such as flails can change their color, which is what this is used for.
-public class IC2ExperimentalMaterialColors {
-    public static final int MATERIAL_BRONZE = BEMaterialHelper.ic2ExperimentalBronzeMaterial().ordinal();
+public class IAFMaterialColors {
+    public static final int MATERIAL_SILVER = BEMaterialHelper.iafSilverMaterial().ordinal();
 
     public static void registerMaterialColors() {
         MaterialRegistry.registerCustomProjectileMaterial(new ICustomProjectileMaterials() {
             @Override
             public int[] getAllMaterialIDs() {
-                return new int[]{MATERIAL_BRONZE};
+                return new int[]{MATERIAL_SILVER};
             }
 
             @Override
@@ -23,8 +23,8 @@ public class IC2ExperimentalMaterialColors {
                     IItemWeapon weapon = ((IItemWeapon) itemStack.getItem());
 
                     if (weapon.getMeleeComponent() != null) {
-                        if (weapon.getMeleeComponent().weaponMaterial == BEMaterialHelper.ic2ExperimentalBronzeMaterial())
-                            return MATERIAL_BRONZE;
+                        if (weapon.getMeleeComponent().weaponMaterial == BEMaterialHelper.iafSilverMaterial())
+                            return MATERIAL_SILVER;
                     }
                 }
 
@@ -35,7 +35,7 @@ public class IC2ExperimentalMaterialColors {
             public float[] getColorFromMaterialID(int i) {
                 // The color for the given item tier must be returned as
                 // {R,G,B}, where each value is between 0 and 1.
-                if (i == MATERIAL_BRONZE) return new float[]{0.78F, 0.345F, 0.173F};
+                if (i == MATERIAL_SILVER) return new float[]{0.992F, 0.992F, 0.992F};
 
                 return null;
             }

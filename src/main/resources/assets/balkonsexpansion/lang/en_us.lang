@@ -69,6 +69,17 @@ item.warhammer.desh.name=Desh Warhammer
 item.warhammer.heavy_duty.name=Heavy Duty Warhammer
 item.warhammer.titanium.gc.name=Titanium Warhammer
 
+# Ice and Fire
+item.battleaxe.silver.iaf.name=Silver Battleaxe
+item.boomerang.silver.iaf.name=Silver Boomerang
+item.flail.silver.iaf.name=Silver Flail
+item.halberd.silver.iaf.name=Silver Halberd
+item.katana.silver.iaf.name=Silver Katana
+item.knife.silver.iaf.name=Silver Knife
+item.musketbayonet.silver.iaf.name=Musket with Silver Bayonet
+item.spear.silver.iaf.name=Silver Spear
+item.warhammer.silver.iaf.name=Silver Warhammer
+
 # Immersive Engineering
 item.battleaxe.steel.ie.name=Steel Battleaxe
 item.boomerang.steel.ie.name=Steel Boomerang

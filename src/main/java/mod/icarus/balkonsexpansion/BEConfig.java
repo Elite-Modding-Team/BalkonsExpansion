@@ -26,6 +26,9 @@ public class BEConfig {
     @Config.Comment("Galacticraft Legacy")
     public static GalacticraftSettings galacticraft_settings = new GalacticraftSettings();
 
+    @Config.Comment("Ice and Fire")
+    public static IAFSettings iaf_settings = new IAFSettings();
+
     @Config.Comment("Immersive Engineering")
     public static ImmersiveEngineeringSettings ie_settings = new ImmersiveEngineeringSettings();
 
@@ -71,6 +74,11 @@ public class BEConfig {
         @Config.Comment("Enables Galacticraft Legacy integration [default: true]")
         @Config.RequiresMcRestart
         public boolean GALACTICRAFT_INTEGRATION = true;
+
+        @Config.Name("Ice and Fire")
+        @Config.Comment({"Enables Ice and Fire and Ice and Fire: RotN Edition integration [default: true]","NOTE: RLCraft Edition is unsupported and the integration will not load if it is installed!"})
+        @Config.RequiresMcRestart
+        public boolean IAF_INTEGRATION = true;
 
         @Config.Name("IndustrialCraft 2")
         @Config.Comment("Enables IndustrialCraft 2 Classic and IndustrialCraft 2 Experimental integration [default: true]")
@@ -144,6 +152,13 @@ public class BEConfig {
         @Config.Comment("Enables support for the Titanium material from Galacticraft Legacy [default: true]")
         @Config.RequiresWorldRestart
         public boolean GC_TITANIUM_MATERIAL = true;
+    }
+
+    public static class IAFSettings {
+        @Config.Name("Material: Silver (Ice and Fire)")
+        @Config.Comment("Enables support for the Silver material from Ice and Fire [default: true]")
+        @Config.RequiresWorldRestart
+        public boolean IAF_SILVER_MATERIAL = true;
     }
 
     public static class IC2Settings {

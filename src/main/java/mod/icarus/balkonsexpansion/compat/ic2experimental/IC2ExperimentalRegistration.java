@@ -1,14 +1,10 @@
 package mod.icarus.balkonsexpansion.compat.ic2experimental;
 
-import mod.icarus.balkonsexpansion.BEConfig;
-import mod.icarus.balkonsexpansion.BEItemBuilder;
-import mod.icarus.balkonsexpansion.BERecipes;
-import mod.icarus.balkonsexpansion.BERegistry;
+import mod.icarus.balkonsexpansion.*;
 import mod.icarus.balkonsexpansion.item.BEItemFlail;
 import mod.icarus.balkonsexpansion.item.BEItemMelee;
 import mod.icarus.balkonsexpansion.item.BEItemMusket;
 import net.minecraft.item.Item;
-import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.event.RegistryEvent;
@@ -32,15 +28,15 @@ public class IC2ExperimentalRegistration {
         IForgeRegistry<Item> registry = event.getRegistry();
 
         if (BEConfig.ic2_settings.IC2_BRONZE_MATERIAL) {
-            registry.register(spearBronze = BEItemBuilder.createCustomSpear("spear.bronze.ic2e", ToolMaterial.valueOf("IC2_BRONZE"), -0.15F, 1.0F));
-            registry.register(halberdBronze = BEItemBuilder.createCustomHalberd("halberd.bronze.ic2e", ToolMaterial.valueOf("IC2_BRONZE"), 0.4F, 1.0F));
-            registry.register(battleaxeBronze = BEItemBuilder.createCustomBattleaxe("battleaxe.bronze.ic2e", ToolMaterial.valueOf("IC2_BRONZE"), 0.25F, 1.0F));
-            registry.register(knifeBronze = BEItemBuilder.createCustomKnife("knife.bronze.ic2e", ToolMaterial.valueOf("IC2_BRONZE"), -0.15F));
-            registry.register(warhammerBronze = BEItemBuilder.createCustomWarhammer("warhammer.bronze.ic2e", ToolMaterial.valueOf("IC2_BRONZE"), 0.55F));
-            registry.register(flailBronze = BEItemBuilder.createCustomFlail("flail.bronze.ic2e", ToolMaterial.valueOf("IC2_BRONZE")));
-            registry.register(katanaBronze = BEItemBuilder.createCustomKatana("katana.bronze.ic2e", ToolMaterial.valueOf("IC2_BRONZE")));
-            registry.register(boomerangBronze = BEItemBuilder.createCustomBoomerang("boomerang.bronze.ic2e", ToolMaterial.valueOf("IC2_BRONZE"), 0.1F));
-            registry.register(bayonetBronze = BEItemBuilder.createCustomMusketBayonet("musketbayonet.bronze.ic2e", ToolMaterial.valueOf("IC2_BRONZE"), knifeBronze, -0.15F));
+            registry.register(spearBronze = BEItemBuilder.createCustomSpear("spear.bronze.ic2e", BEMaterialHelper.ic2ExperimentalBronzeMaterial(), -0.15F, 1.0F));
+            registry.register(halberdBronze = BEItemBuilder.createCustomHalberd("halberd.bronze.ic2e", BEMaterialHelper.ic2ExperimentalBronzeMaterial(), 0.4F, 1.0F));
+            registry.register(battleaxeBronze = BEItemBuilder.createCustomBattleaxe("battleaxe.bronze.ic2e", BEMaterialHelper.ic2ExperimentalBronzeMaterial(), 0.25F, 1.0F));
+            registry.register(knifeBronze = BEItemBuilder.createCustomKnife("knife.bronze.ic2e", BEMaterialHelper.ic2ExperimentalBronzeMaterial(), -0.15F));
+            registry.register(warhammerBronze = BEItemBuilder.createCustomWarhammer("warhammer.bronze.ic2e", BEMaterialHelper.ic2ExperimentalBronzeMaterial(), 0.55F));
+            registry.register(flailBronze = BEItemBuilder.createCustomFlail("flail.bronze.ic2e", BEMaterialHelper.ic2ExperimentalBronzeMaterial()));
+            registry.register(katanaBronze = BEItemBuilder.createCustomKatana("katana.bronze.ic2e", BEMaterialHelper.ic2ExperimentalBronzeMaterial()));
+            registry.register(boomerangBronze = BEItemBuilder.createCustomBoomerang("boomerang.bronze.ic2e", BEMaterialHelper.ic2ExperimentalBronzeMaterial(), 0.1F));
+            registry.register(bayonetBronze = BEItemBuilder.createCustomMusketBayonet("musketbayonet.bronze.ic2e", BEMaterialHelper.ic2ExperimentalBronzeMaterial(), knifeBronze, -0.15F));
         }
     }
 

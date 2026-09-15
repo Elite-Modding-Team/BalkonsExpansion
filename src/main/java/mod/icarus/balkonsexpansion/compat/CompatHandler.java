@@ -1,6 +1,7 @@
 package mod.icarus.balkonsexpansion.compat;
 
 import mod.icarus.balkonsexpansion.BEConfig;
+import mod.icarus.balkonsexpansion.BEForkChecker;
 import mod.icarus.balkonsexpansion.BalkonsExpansion;
 import mod.icarus.balkonsexpansion.compat.ae2.*;
 import mod.icarus.balkonsexpansion.compat.bwm.*;
@@ -8,6 +9,8 @@ import mod.icarus.balkonsexpansion.compat.defiledlands.*;
 import mod.icarus.balkonsexpansion.compat.galacticraft.*;
 import mod.icarus.balkonsexpansion.compat.ic2classic.*;
 import mod.icarus.balkonsexpansion.compat.ic2experimental.*;
+import mod.icarus.balkonsexpansion.compat.iceandfire.IAFMaterialColors;
+import mod.icarus.balkonsexpansion.compat.iceandfire.IAFRegistration;
 import mod.icarus.balkonsexpansion.compat.immersiveengineering.*;
 import mod.icarus.balkonsexpansion.compat.mistyworld.*;
 import mod.icarus.balkonsexpansion.compat.projectred.*;
@@ -45,6 +48,12 @@ public class CompatHandler {
         // Galacticraft Legacy
         if (Loader.isModLoaded("galacticraftcore") && (Loader.isModLoaded("galacticraftplanets") && BEConfig.mod_integration_settings.GALACTICRAFT_INTEGRATION)) {
             GalacticraftMaterialColors.registerMaterialColors();
+        }
+
+        // Ice and Fire
+        // RLCraft fork is ignored as that version has too much differences
+        if (Loader.isModLoaded("iceandfire") && !BEForkChecker.isIAFRLCraftEdition() && BEConfig.mod_integration_settings.IAF_INTEGRATION) {
+            IAFMaterialColors.registerMaterialColors();
         }
 
         // Immersive Engineering
@@ -122,6 +131,16 @@ public class CompatHandler {
 
             if (FMLLaunchHandler.side().isClient()) {
                 GalacticraftRegistration.registerRenderersItem();
+            }
+        }
+
+        // Ice and Fire
+        // RLCraft fork is ignored as that version has too much differences
+        if (Loader.isModLoaded("iceandfire") && !BEForkChecker.isIAFRLCraftEdition() && BEConfig.mod_integration_settings.IAF_INTEGRATION) {
+            IAFRegistration.registerItems(event);
+
+            if (FMLLaunchHandler.side().isClient()) {
+                IAFRegistration.registerRenderersItem();
             }
         }
 
@@ -203,6 +222,10 @@ public class CompatHandler {
         // Galacticraft Legacy
         if (Loader.isModLoaded("galacticraftcore") && (Loader.isModLoaded("galacticraftplanets") && BEConfig.mod_integration_settings.GALACTICRAFT_INTEGRATION))
             GalacticraftRegistration.registerRecipes(event);
+        // Ice and Fire
+        // RLCraft fork is ignored as that version has too much differences
+        if (Loader.isModLoaded("iceandfire") && !BEForkChecker.isIAFRLCraftEdition() && BEConfig.mod_integration_settings.IAF_INTEGRATION)
+            IAFRegistration.registerRecipes(event);
         // Immersive Engineering
         if (Loader.isModLoaded("immersiveengineering") && BEConfig.mod_integration_settings.IE_INTEGRATION)
             IERegistration.registerRecipes(event);
