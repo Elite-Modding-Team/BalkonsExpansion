@@ -10,6 +10,8 @@ import mod.icarus.balkonsexpansion.compat.galacticraft.*;
 import mod.icarus.balkonsexpansion.compat.ic2classic.*;
 import mod.icarus.balkonsexpansion.compat.ic2experimental.*;
 import mod.icarus.balkonsexpansion.compat.iceandfire.IAFMaterialColors;
+import mod.icarus.balkonsexpansion.compat.iceandfire.IAFMaterialEffects;
+import mod.icarus.balkonsexpansion.compat.iceandfire.IAFMaterialTooltips;
 import mod.icarus.balkonsexpansion.compat.iceandfire.IAFRegistration;
 import mod.icarus.balkonsexpansion.compat.immersiveengineering.*;
 import mod.icarus.balkonsexpansion.compat.mistyworld.*;
@@ -54,6 +56,8 @@ public class CompatHandler {
         // RLCraft fork is ignored as that version has too much differences
         if (Loader.isModLoaded("iceandfire") && !BEForkChecker.isIAFRLCraftEdition() && BEConfig.mod_integration_settings.IAF_INTEGRATION) {
             IAFMaterialColors.registerMaterialColors();
+            IAFMaterialEffects.registerMaterialEffects();
+            IAFMaterialTooltips.registerMaterialTooltips();
         }
 
         // Immersive Engineering
@@ -89,7 +93,7 @@ public class CompatHandler {
         // Thaumcraft
         if (Loader.isModLoaded("thaumcraft") && BEConfig.mod_integration_settings.THAUMCRAFT_INTEGRATION) {
             ThaumcraftMaterialColors.registerMaterialColors();
-            ThaumcraftPotionMaterials.registerPotionMaterials();
+            ThaumcraftMaterialEffects.registerMaterialEffects();
         }
     }
 

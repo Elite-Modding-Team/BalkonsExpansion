@@ -1,14 +1,15 @@
 package mod.icarus.balkonsexpansion.compat.thaumcraft;
 
-import mod.icarus.balkonsexpansion.BEPotionMaterial;
+import mod.icarus.balkonsexpansion.BEMaterialEffectHelper;
 import net.minecraft.init.MobEffects;
 import net.minecraft.potion.PotionEffect;
 import thaumcraft.api.ThaumcraftMaterials;
 
-public class ThaumcraftPotionMaterials {
-    public static void registerPotionMaterials() {
+public class ThaumcraftMaterialEffects {
+    public static void registerMaterialEffects() {
+        // Void - 4 seconds of Weakness
         if (ThaumcraftMaterials.TOOLMAT_VOID != null) {
-            BEPotionMaterial.registerMaterialEffect(ThaumcraftMaterials.TOOLMAT_VOID,
+            BEMaterialEffectHelper.registerMaterialEffect(ThaumcraftMaterials.TOOLMAT_VOID,
                     new PotionEffect(MobEffects.WEAKNESS, 4 * 20, 0)
             );
         }

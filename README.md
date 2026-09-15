@@ -31,7 +31,7 @@ ___
 	- Heavy Duty
 	- Titanium
 - **Ice and Fire / Ice and Fire: RotN Edition**
-	- Silver
+	- Silver - +2 damage against undead.
 - **Immersive Engineering:**
 	- Steel
 - **IndustrialCraft 2 Classic / IndustrialCraft 2 Experimental**
@@ -46,4 +46,4 @@ ___
 	- Steel
 - **Thaumcraft**
 	- Thaumium
-	- Void - Regenerates durability and applies Weakness (Lesser Sapping).
+	- Void - Regenerates durability and applies Weakness (Lesser Sapping) for 4 seconds.
