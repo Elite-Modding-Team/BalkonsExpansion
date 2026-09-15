@@ -27,19 +27,24 @@ public class BEMaterialEffectHelper {
     public static class MaterialEffect {
         private final float extraDamage;
         private final EnumCreatureAttribute creatureAttribute;
+        private final boolean invertCreatureAttribute;
         private final Class<?> targetClass;
         private final PotionEffect potionEffect;
 
-        public MaterialEffect(float extraDamage, EnumCreatureAttribute creatureAttribute, Class<?> targetClass, PotionEffect potionEffect) {
+        public MaterialEffect(float extraDamage, EnumCreatureAttribute creatureAttribute, boolean invertCreatureAttribute, Class<?> targetClass, PotionEffect potionEffect) {
             this.extraDamage = extraDamage;
             this.creatureAttribute = creatureAttribute;
+            this.invertCreatureAttribute = invertCreatureAttribute;
             this.targetClass = targetClass;
             this.potionEffect = potionEffect;
         }
 
         public boolean appliesTo(EntityLivingBase target) {
-            if (creatureAttribute != null && target.getCreatureAttribute() != creatureAttribute) {
-                return false;
+            if (creatureAttribute != null) {
+                boolean matches = target.getCreatureAttribute() == creatureAttribute;
+                if (invertCreatureAttribute == matches) {
+                    return false;
+                }
             }
             return targetClass == null || targetClass.isInstance(target);
         }
@@ -56,7 +61,7 @@ public class BEMaterialEffectHelper {
         }
     }
 
-    public static void registerMaterialEffect(Item.ToolMaterial material, float extraDamage, EnumCreatureAttribute creatureAttribute, Class<?> targetClass, PotionEffect potionEffect) {
+    public static void registerMaterialEffect(Item.ToolMaterial material, float extraDamage, EnumCreatureAttribute creatureAttribute, boolean invertCreatureAttribute, Class<?> targetClass, PotionEffect potionEffect) {
         if (material == null) {
             return;
         }
@@ -66,19 +71,19 @@ public class BEMaterialEffectHelper {
         }
 
         List<MaterialEffect> effects = REGISTRY.computeIfAbsent(material, k -> new ArrayList<>());
-        effects.add(new MaterialEffect(extraDamage, creatureAttribute, targetClass, potionEffect));
+        effects.add(new MaterialEffect(extraDamage, creatureAttribute, invertCreatureAttribute, targetClass, potionEffect));
     }
 
     public static void registerMaterialEffect(Item.ToolMaterial material, float extraDamage, EnumCreatureAttribute creatureAttribute) {
-        registerMaterialEffect(material, extraDamage, creatureAttribute, null, null);
+        registerMaterialEffect(material, extraDamage, creatureAttribute, false, null, null);
     }
 
     public static void registerMaterialEffect(Item.ToolMaterial material, float extraDamage, Class<?> targetClass) {
-        registerMaterialEffect(material, extraDamage, null, targetClass, null);
+        registerMaterialEffect(material, extraDamage, null, false, targetClass, null);
     }
 
     public static void registerMaterialEffect(Item.ToolMaterial material, PotionEffect potionEffect) {
-        registerMaterialEffect(material, 0.0F, null, null, potionEffect);
+        registerMaterialEffect(material, 0.0F, null, false, null, potionEffect);
     }
 
 
