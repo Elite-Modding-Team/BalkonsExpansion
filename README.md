@@ -34,7 +34,7 @@ ___
 	- Silver
 - **Immersive Engineering:**
 	- Steel
-- **IndustrialCraft 2 (Classic and Experimental)**
+- **IndustrialCraft 2 Classic / IndustrialCraft 2 Experimental**
 	- Bronze
 - **Misty World**
 	- Niobium
