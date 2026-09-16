@@ -11,6 +11,7 @@ Assets specifically made for this mod are licensed as All Rights Reserved (see L
 **Special Thanks:**
 
 - The wonderful Balkon's WeaponMod port to 1.12.2 and providing support for addons like this one ~ HypaSpeeed
+- Helping out with some textures ~ Ichipie1125
 - Setting up the mod's infrastructure, answering questions, and helping out with the mod in general ~ ACGaming
 - Creating and maintaining Tekkit 2 and Tekkit SMP, both of which inspired this project to be made ~ xJon
 
@@ -31,6 +32,7 @@ ___
 	- Heavy Duty
 	- Titanium
 - **Ice and Fire / Ice and Fire: RotN Edition**
+	- Copper
 	- Silver - +2 damage against undead.
 - **Immersive Engineering:**
 	- Steel

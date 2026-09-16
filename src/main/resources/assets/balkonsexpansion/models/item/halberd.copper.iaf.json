@@ -1,19 +1,19 @@
 {
-  "parent": "weaponmod:item/handheld_short",
+  "parent": "item/handheld",
   "textures": {
-    "layer0": "balkonsexpansion:iceandfire/items/spear.silver"
+    "layer0": "balkonsexpansion:iceandfire/items/halberd.copper"
   },
   "display": {
     "thirdperson_righthand": {
       "rotation": [
-        0,
-        90,
-        35
+        20,
+        -90,
+        55
       ],
       "translation": [
         0,
         3.0,
-        1
+        2.0
       ],
       "scale": [
         1.7,
@@ -23,14 +23,14 @@
     },
     "thirdperson_lefthand": {
       "rotation": [
-        0,
-        -90,
-        -35
+        20,
+        90,
+        -55
       ],
       "translation": [
         0,
         3.0,
-        1
+        2.0
       ],
       "scale": [
         1.7,
@@ -40,13 +40,13 @@
     },
     "firstperson_righthand": {
       "rotation": [
-        -30,
+        0,
         -90,
         25
       ],
       "translation": [
         1.13,
-        0.0,
+        3.2,
         1.13
       ],
       "scale": [
@@ -57,13 +57,13 @@
     },
     "firstperson_lefthand": {
       "rotation": [
-        -30,
+        0,
         90,
         -25
       ],
       "translation": [
         1.13,
-        0.0,
+        3.2,
         1.13
       ],
       "scale": [
@@ -72,5 +72,13 @@
         1.25
       ]
     }
-  }
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "weaponmod:state": 1
+      },
+      "model": "balkonsexpansion:item/halberd.copper.iaf_state"
+    }
+  ]
 }

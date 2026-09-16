@@ -155,6 +155,11 @@ public class BEConfig {
     }
 
     public static class IAFSettings {
+        @Config.Name("Material: Copper (Ice and Fire)")
+        @Config.Comment({"Enables support for the Copper material from Ice and Fire [default: true]","Requires Ice and Fire: RotN Edition"})
+        @Config.RequiresWorldRestart
+        public boolean IAF_COPPER_MATERIAL = true;
+
         @Config.Name("Material: Silver (Ice and Fire)")
         @Config.Comment("Enables support for the Silver material from Ice and Fire [default: true]")
         @Config.RequiresWorldRestart

@@ -16,14 +16,23 @@ import net.minecraftforge.registries.IForgeRegistry;
 // TODO: Add hit effects to Ice and Fire materials, RotN Edition hit effects might also be different
 // Copper, Lightning Dragonbone, and Lightning Dragonsteel are exclusive to the RotN fork
 public class IAFRegistration {
+    public static BEItemMelee battleaxeCopper;
     public static BEItemMelee battleaxeSilver;
+    public static BEItemMelee boomerangCopper;
     public static BEItemMelee boomerangSilver;
+    public static BEItemMusket bayonetCopper;
     public static BEItemMusket bayonetSilver;
+    public static BEItemFlail flailCopper;
     public static BEItemFlail flailSilver;
+    public static BEItemMelee halberdCopper;
     public static BEItemMelee halberdSilver;
+    public static BEItemMelee katanaCopper;
     public static BEItemMelee katanaSilver;
+    public static BEItemMelee knifeCopper;
     public static BEItemMelee knifeSilver;
+    public static BEItemMelee spearCopper;
     public static BEItemMelee spearSilver;
+    public static BEItemMelee warhammerCopper;
     public static BEItemMelee warhammerSilver;
 
     public static void registerItems(RegistryEvent.Register<Item> event) {
@@ -39,6 +48,18 @@ public class IAFRegistration {
             registry.register(katanaSilver = BEItemBuilder.createCustomKatana("katana.silver.iaf", BEMaterialHelper.iafSilverMaterial()));
             registry.register(boomerangSilver = BEItemBuilder.createCustomBoomerang("boomerang.silver.iaf", BEMaterialHelper.iafSilverMaterial(), 0.15F));
             registry.register(bayonetSilver = BEItemBuilder.createCustomMusketBayonet("musketbayonet.silver.iaf", BEMaterialHelper.iafSilverMaterial(), knifeSilver, -0.1F));
+        }
+
+        if (BEConfig.iaf_settings.IAF_COPPER_MATERIAL && BEForkChecker.isIAFRotNEdition()) {
+            registry.register(spearCopper = BEItemBuilder.createCustomSpear("spear.copper.iaf", BEMaterialHelper.iafCopperMaterial(), -0.2F, 1.0F));
+            registry.register(halberdCopper = BEItemBuilder.createCustomHalberd("halberd.copper.iaf", BEMaterialHelper.iafCopperMaterial(), 0.2F, 1.0F));
+            registry.register(battleaxeCopper = BEItemBuilder.createCustomBattleaxe("battleaxe.copper.iaf", BEMaterialHelper.iafCopperMaterial(), 0.1F, 1.0F));
+            registry.register(knifeCopper = BEItemBuilder.createCustomKnife("knife.copper.iaf", BEMaterialHelper.iafCopperMaterial(), -0.2F));
+            registry.register(warhammerCopper = BEItemBuilder.createCustomWarhammer("warhammer.copper.iaf", BEMaterialHelper.iafCopperMaterial(), 0.3F));
+            registry.register(flailCopper = BEItemBuilder.createCustomFlail("flail.copper.iaf", BEMaterialHelper.iafCopperMaterial()));
+            registry.register(katanaCopper = BEItemBuilder.createCustomKatana("katana.copper.iaf", BEMaterialHelper.iafCopperMaterial()));
+            registry.register(boomerangCopper = BEItemBuilder.createCustomBoomerang("boomerang.copper.iaf", BEMaterialHelper.iafCopperMaterial(), 0.0F));
+            registry.register(bayonetCopper = BEItemBuilder.createCustomMusketBayonet("musketbayonet.copper.iaf", BEMaterialHelper.iafCopperMaterial(), knifeCopper, -0.2F));
         }
     }
 
@@ -60,6 +81,19 @@ public class IAFRegistration {
             registry.register(BERecipes.registerWarhammerRecipe(defaultGroup, "ingotSilver", "stickWood", warhammerSilver));
         }
 
+        if (BEConfig.iaf_settings.IAF_COPPER_MATERIAL && BEForkChecker.isIAFRotNEdition()) {
+            registry.register(BERecipes.registerBattleaxeRecipe(defaultGroup, "ingotCopper", "stickWood", battleaxeCopper));
+            registry.register(BERecipes.registerBoomerangRecipe(defaultGroup, "ingotCopper", "plankWood", boomerangCopper));
+            registry.register(BERecipes.registerBayonetRecipe(defaultGroup, knifeCopper, bayonetCopper));
+            registry.register(BERecipes.registerFlailRecipe(defaultGroup, "ingotCopper", "stickWood", "string", flailCopper));
+            registry.register(BERecipes.registerHalberdRecipe(defaultGroup, "ingotCopper", "stickWood", halberdCopper));
+            registry.register(BERecipes.registerKatanaRecipe(defaultGroup, "ingotCopper", "stickWood", katanaCopper));
+            registry.register(BERecipes.registerKnifeRecipe(defaultGroup, "ingotCopper", "stickWood", knifeCopper));
+            registry.register(BERecipes.registerKnifeAltRecipe(defaultGroup, "ingotCopper", "stickWood", knifeCopper));
+            registry.register(BERecipes.registerSpearRecipe(defaultGroup, "ingotCopper", "stickWood", spearCopper));
+            registry.register(BERecipes.registerWarhammerRecipe(defaultGroup, "ingotCopper", "stickWood", warhammerCopper));
+        }
+
         // Ice and Fire tools have no smelting recipes so support isn't needed.
     }
 
@@ -75,6 +109,18 @@ public class IAFRegistration {
             BERegistry.registerWeaponItemModel(knifeSilver);
             BERegistry.registerWeaponItemModel(spearSilver);
             BERegistry.registerWeaponItemModel(warhammerSilver);
+        }
+
+        if (BEConfig.iaf_settings.IAF_COPPER_MATERIAL && BEForkChecker.isIAFRotNEdition()) {
+            BERegistry.registerWeaponItemModel(battleaxeCopper);
+            BERegistry.registerWeaponItemModel(boomerangCopper);
+            BERegistry.registerWeaponItemModel(bayonetCopper);
+            BERegistry.registerWeaponItemModel(flailCopper);
+            BERegistry.registerWeaponItemModel(halberdCopper);
+            BERegistry.registerWeaponItemModel(katanaCopper);
+            BERegistry.registerWeaponItemModel(knifeCopper);
+            BERegistry.registerWeaponItemModel(spearCopper);
+            BERegistry.registerWeaponItemModel(warhammerCopper);
         }
     }
 }

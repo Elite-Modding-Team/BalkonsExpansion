@@ -8,6 +8,6 @@ public class BEForkChecker {
     }
 
     public static boolean isIAFRotNEdition() {
-        return Loader.instance().getIndexedModList().get("iceandfire").getName().equals("Ice And Fire: RotN Edition");
+        return Loader.instance().getIndexedModList().get("iceandfire").getMetadata().getAuthorList().contains("democat3457");
     }
 }

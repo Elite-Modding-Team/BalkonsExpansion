@@ -9,10 +9,7 @@ import mod.icarus.balkonsexpansion.compat.defiledlands.*;
 import mod.icarus.balkonsexpansion.compat.galacticraft.*;
 import mod.icarus.balkonsexpansion.compat.ic2classic.*;
 import mod.icarus.balkonsexpansion.compat.ic2experimental.*;
-import mod.icarus.balkonsexpansion.compat.iceandfire.IAFMaterialColors;
-import mod.icarus.balkonsexpansion.compat.iceandfire.IAFMaterialEffects;
-import mod.icarus.balkonsexpansion.compat.iceandfire.IAFMaterialTooltips;
-import mod.icarus.balkonsexpansion.compat.iceandfire.IAFRegistration;
+import mod.icarus.balkonsexpansion.compat.iceandfire.*;
 import mod.icarus.balkonsexpansion.compat.immersiveengineering.*;
 import mod.icarus.balkonsexpansion.compat.mistyworld.*;
 import mod.icarus.balkonsexpansion.compat.projectred.*;
@@ -58,6 +55,9 @@ public class CompatHandler {
             IAFMaterialColors.registerMaterialColors();
             IAFMaterialEffects.registerMaterialEffects();
             IAFMaterialTooltips.registerMaterialTooltips();
+            if (BEForkChecker.isIAFRotNEdition()) {
+                IAFForkMaterialColors.registerMaterialColors();
+            }
         }
 
         // Immersive Engineering

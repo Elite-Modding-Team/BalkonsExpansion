@@ -70,14 +70,23 @@ item.warhammer.heavy_duty.name=Heavy Duty Warhammer
 item.warhammer.titanium.gc.name=Titanium Warhammer
 
 # Ice and Fire
+item.battleaxe.copper.iaf.name=Copper Battleaxe
 item.battleaxe.silver.iaf.name=Silver Battleaxe
+item.boomerang.copper.iaf.name=Copper Boomerang
 item.boomerang.silver.iaf.name=Silver Boomerang
+item.flail.copper.iaf.name=Copper Flail
 item.flail.silver.iaf.name=Silver Flail
+item.halberd.copper.iaf.name=Copper Halberd
 item.halberd.silver.iaf.name=Silver Halberd
+item.katana.copper.iaf.name=Copper Katana
 item.katana.silver.iaf.name=Silver Katana
+item.knife.copper.iaf.name=Copper Knife
 item.knife.silver.iaf.name=Silver Knife
+item.musketbayonet.copper.iaf.name=Musket with Copper Bayonet
 item.musketbayonet.silver.iaf.name=Musket with Silver Bayonet
+item.spear.copper.iaf.name=Copper Spear
 item.spear.silver.iaf.name=Silver Spear
+item.warhammer.copper.iaf.name=Copper Warhammer
 item.warhammer.silver.iaf.name=Silver Warhammer
 
 # Immersive Engineering
