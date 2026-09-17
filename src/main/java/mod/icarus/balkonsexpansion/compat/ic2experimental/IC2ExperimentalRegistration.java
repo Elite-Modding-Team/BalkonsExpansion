@@ -29,10 +29,10 @@ public class IC2ExperimentalRegistration {
 
         if (BEConfig.ic2_settings.IC2_BRONZE_MATERIAL) {
             registry.register(spearBronze = BEItemBuilder.createCustomSpear("spear.bronze.ic2e", BEMaterialHelper.ic2ExperimentalBronzeMaterial(), -0.15F, 1.0F));
-            registry.register(halberdBronze = BEItemBuilder.createCustomHalberd("halberd.bronze.ic2e", BEMaterialHelper.ic2ExperimentalBronzeMaterial(), 0.4F, 1.0F));
-            registry.register(battleaxeBronze = BEItemBuilder.createCustomBattleaxe("battleaxe.bronze.ic2e", BEMaterialHelper.ic2ExperimentalBronzeMaterial(), 0.25F, 1.0F));
+            registry.register(halberdBronze = BEItemBuilder.createCustomHalberd("halberd.bronze.ic2e", BEMaterialHelper.ic2ExperimentalBronzeMaterial(), 0.3F, 1.0F));
+            registry.register(battleaxeBronze = BEItemBuilder.createCustomBattleaxe("battleaxe.bronze.ic2e", BEMaterialHelper.ic2ExperimentalBronzeMaterial(), 0.2F, 1.0F));
             registry.register(knifeBronze = BEItemBuilder.createCustomKnife("knife.bronze.ic2e", BEMaterialHelper.ic2ExperimentalBronzeMaterial(), -0.15F));
-            registry.register(warhammerBronze = BEItemBuilder.createCustomWarhammer("warhammer.bronze.ic2e", BEMaterialHelper.ic2ExperimentalBronzeMaterial(), 0.55F));
+            registry.register(warhammerBronze = BEItemBuilder.createCustomWarhammer("warhammer.bronze.ic2e", BEMaterialHelper.ic2ExperimentalBronzeMaterial(), 0.4F));
             registry.register(flailBronze = BEItemBuilder.createCustomFlail("flail.bronze.ic2e", BEMaterialHelper.ic2ExperimentalBronzeMaterial()));
             registry.register(katanaBronze = BEItemBuilder.createCustomKatana("katana.bronze.ic2e", BEMaterialHelper.ic2ExperimentalBronzeMaterial()));
             registry.register(boomerangBronze = BEItemBuilder.createCustomBoomerang("boomerang.bronze.ic2e", BEMaterialHelper.ic2ExperimentalBronzeMaterial(), 0.1F));

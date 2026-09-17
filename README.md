@@ -33,6 +33,7 @@ ___
 	- Titanium
 - **Ice and Fire / Ice and Fire: RotN Edition**
 	- Copper
+    - Dragon Bone
 	- Silver - +2 damage against undead.
 - **Immersive Engineering:**
 	- Steel

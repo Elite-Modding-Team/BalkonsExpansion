@@ -8,6 +8,10 @@ public class BEMaterialHelper {
         return Item.ToolMaterial.valueOf("Copper");
     }
 
+    public static Item.ToolMaterial iafDragonboneMaterial() {
+        return Item.ToolMaterial.valueOf("Dragonbone");
+    }
+
     public static Item.ToolMaterial iafSilverMaterial() {
         return Item.ToolMaterial.valueOf("Silver");
     }

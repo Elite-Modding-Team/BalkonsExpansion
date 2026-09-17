@@ -17,22 +17,31 @@ import net.minecraftforge.registries.IForgeRegistry;
 // Copper, Lightning Dragonbone, and Lightning Dragonsteel are exclusive to the RotN fork
 public class IAFRegistration {
     public static BEItemMelee battleaxeCopper;
+    public static BEItemMelee battleaxeDragonbone;
     public static BEItemMelee battleaxeSilver;
     public static BEItemMelee boomerangCopper;
+    public static BEItemMelee boomerangDragonbone;
     public static BEItemMelee boomerangSilver;
     public static BEItemMusket bayonetCopper;
+    public static BEItemMusket bayonetDragonbone;
     public static BEItemMusket bayonetSilver;
     public static BEItemFlail flailCopper;
+    public static BEItemFlail flailDragonbone;
     public static BEItemFlail flailSilver;
     public static BEItemMelee halberdCopper;
+    public static BEItemMelee halberdDragonbone;
     public static BEItemMelee halberdSilver;
     public static BEItemMelee katanaCopper;
+    public static BEItemMelee katanaDragonbone;
     public static BEItemMelee katanaSilver;
     public static BEItemMelee knifeCopper;
+    public static BEItemMelee knifeDragonbone;
     public static BEItemMelee knifeSilver;
     public static BEItemMelee spearCopper;
+    public static BEItemMelee spearDragonbone;
     public static BEItemMelee spearSilver;
     public static BEItemMelee warhammerCopper;
+    public static BEItemMelee warhammerDragonbone;
     public static BEItemMelee warhammerSilver;
 
     public static void registerItems(RegistryEvent.Register<Item> event) {
@@ -48,6 +57,18 @@ public class IAFRegistration {
             registry.register(katanaSilver = BEItemBuilder.createCustomKatana("katana.silver.iaf", BEMaterialHelper.iafSilverMaterial()));
             registry.register(boomerangSilver = BEItemBuilder.createCustomBoomerang("boomerang.silver.iaf", BEMaterialHelper.iafSilverMaterial(), 0.15F));
             registry.register(bayonetSilver = BEItemBuilder.createCustomMusketBayonet("musketbayonet.silver.iaf", BEMaterialHelper.iafSilverMaterial(), knifeSilver, -0.1F));
+        }
+
+        if (BEConfig.iaf_settings.IAF_DRAGONBONE_MATERIAL) {
+            registry.register(spearDragonbone = BEItemBuilder.createCustomSpear("spear.dragonbone", BEMaterialHelper.iafDragonboneMaterial(), -0.2F, 1.0F));
+            registry.register(halberdDragonbone = BEItemBuilder.createCustomHalberd("halberd.dragonbone", BEMaterialHelper.iafDragonboneMaterial(), 0.2F, 1.0F));
+            registry.register(battleaxeDragonbone = BEItemBuilder.createCustomBattleaxe("battleaxe.dragonbone", BEMaterialHelper.iafDragonboneMaterial(), 0.1F, 1.0F));
+            registry.register(knifeDragonbone = BEItemBuilder.createCustomKnife("knife.dragonbone", BEMaterialHelper.iafDragonboneMaterial(), -0.1F));
+            registry.register(warhammerDragonbone = BEItemBuilder.createCustomWarhammer("warhammer.dragonbone", BEMaterialHelper.iafDragonboneMaterial(), 0.3F));
+            registry.register(flailDragonbone = BEItemBuilder.createCustomFlail("flail.dragonbone", BEMaterialHelper.iafDragonboneMaterial()));
+            registry.register(katanaDragonbone = BEItemBuilder.createCustomKatana("katana.dragonbone", BEMaterialHelper.iafDragonboneMaterial()));
+            registry.register(boomerangDragonbone = BEItemBuilder.createCustomBoomerang("boomerang.dragonbone", BEMaterialHelper.iafDragonboneMaterial(), 0.0F));
+            registry.register(bayonetDragonbone = BEItemBuilder.createCustomMusketBayonet("musketbayonet.dragonbone", BEMaterialHelper.iafDragonboneMaterial(), knifeDragonbone, -0.2F));
         }
 
         if (BEConfig.iaf_settings.IAF_COPPER_MATERIAL && BEForkChecker.isIAFRotNEdition()) {
@@ -81,6 +102,19 @@ public class IAFRegistration {
             registry.register(BERecipes.registerWarhammerRecipe(defaultGroup, "ingotSilver", "stickWood", warhammerSilver));
         }
 
+        if (BEConfig.iaf_settings.IAF_DRAGONBONE_MATERIAL) {
+            registry.register(BERecipes.registerBattleaxeRecipe(defaultGroup, "boneDragon", "boneWither", battleaxeDragonbone));
+            registry.register(BERecipes.registerBoomerangRecipe(defaultGroup, "boneDragon", "boneWither", boomerangDragonbone));
+            registry.register(BERecipes.registerBayonetRecipe(defaultGroup, knifeDragonbone, bayonetDragonbone));
+            registry.register(BERecipes.registerFlailRecipe(defaultGroup, "boneDragon", "boneWither", "nuggetIron", flailDragonbone));
+            registry.register(BERecipes.registerHalberdRecipe(defaultGroup, "boneDragon", "boneWither", halberdDragonbone));
+            registry.register(BERecipes.registerKatanaRecipe(defaultGroup, "boneDragon", "boneWither", katanaDragonbone));
+            registry.register(BERecipes.registerKnifeRecipe(defaultGroup, "boneDragon", "boneWither", knifeDragonbone));
+            registry.register(BERecipes.registerKnifeAltRecipe(defaultGroup, "boneDragon", "boneWither", knifeDragonbone));
+            registry.register(BERecipes.registerSpearRecipe(defaultGroup, "boneDragon", "boneWither", spearDragonbone));
+            registry.register(BERecipes.registerWarhammerRecipe(defaultGroup, "boneDragon", "boneWither", warhammerDragonbone));
+        }
+
         if (BEConfig.iaf_settings.IAF_COPPER_MATERIAL && BEForkChecker.isIAFRotNEdition()) {
             registry.register(BERecipes.registerBattleaxeRecipe(defaultGroup, "ingotCopper", "stickWood", battleaxeCopper));
             registry.register(BERecipes.registerBoomerangRecipe(defaultGroup, "ingotCopper", "plankWood", boomerangCopper));
@@ -109,6 +143,18 @@ public class IAFRegistration {
             BERegistry.registerWeaponItemModel(knifeSilver);
             BERegistry.registerWeaponItemModel(spearSilver);
             BERegistry.registerWeaponItemModel(warhammerSilver);
+        }
+
+        if (BEConfig.iaf_settings.IAF_DRAGONBONE_MATERIAL) {
+            BERegistry.registerWeaponItemModel(battleaxeDragonbone);
+            BERegistry.registerWeaponItemModel(boomerangDragonbone);
+            BERegistry.registerWeaponItemModel(bayonetDragonbone);
+            BERegistry.registerWeaponItemModel(flailDragonbone);
+            BERegistry.registerWeaponItemModel(halberdDragonbone);
+            BERegistry.registerWeaponItemModel(katanaDragonbone);
+            BERegistry.registerWeaponItemModel(knifeDragonbone);
+            BERegistry.registerWeaponItemModel(spearDragonbone);
+            BERegistry.registerWeaponItemModel(warhammerDragonbone);
         }
 
         if (BEConfig.iaf_settings.IAF_COPPER_MATERIAL && BEForkChecker.isIAFRotNEdition()) {

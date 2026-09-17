@@ -71,22 +71,31 @@ item.warhammer.titanium.gc.name=Titanium Warhammer
 
 # Ice and Fire
 item.battleaxe.copper.iaf.name=Copper Battleaxe
+item.battleaxe.dragonbone.name=Dragon Bone Battleaxe
 item.battleaxe.silver.iaf.name=Silver Battleaxe
 item.boomerang.copper.iaf.name=Copper Boomerang
+item.boomerang.dragonbone.name=Dragon Bone Boomerang
 item.boomerang.silver.iaf.name=Silver Boomerang
 item.flail.copper.iaf.name=Copper Flail
+item.flail.dragonbone.name=Dragon Bone Flail
 item.flail.silver.iaf.name=Silver Flail
 item.halberd.copper.iaf.name=Copper Halberd
+item.halberd.dragonbone.name=Dragon Bone Halberd
 item.halberd.silver.iaf.name=Silver Halberd
 item.katana.copper.iaf.name=Copper Katana
+item.katana.dragonbone.name=Dragon Bone Katana
 item.katana.silver.iaf.name=Silver Katana
 item.knife.copper.iaf.name=Copper Knife
+item.knife.dragonbone.name=Dragon Bone Knife
 item.knife.silver.iaf.name=Silver Knife
 item.musketbayonet.copper.iaf.name=Musket with Copper Bayonet
+item.musketbayonet.dragonbone.name=Musket with Dragon Bone Bayonet
 item.musketbayonet.silver.iaf.name=Musket with Silver Bayonet
 item.spear.copper.iaf.name=Copper Spear
+item.spear.dragonbone.name=Dragon Bone Spear
 item.spear.silver.iaf.name=Silver Spear
 item.warhammer.copper.iaf.name=Copper Warhammer
+item.warhammer.dragonbone.name=Dragon Bone Warhammer
 item.warhammer.silver.iaf.name=Silver Warhammer
 
 # Immersive Engineering

@@ -1,0 +1,6 @@
+{
+  "parent": "balkonsexpansion:item/flail.dragonbone",
+  "textures": {
+    "layer0": "balkonsexpansion:iceandfire/items/flail.witherbone-thrown"
+  }
+}
