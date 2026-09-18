@@ -1,0 +1,14 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "balkonsexpansion:iceandfire/items/katana.dragonbone.fire"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "weaponmod:block": 1
+      },
+      "model": "balkonsexpansion:item/katana.dragonbone.fire.block"
+    }
+  ]
+}

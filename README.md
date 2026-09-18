@@ -34,6 +34,7 @@ ___
 - **Ice and Fire / Ice and Fire: RotN Edition**
 	- Copper
     - Dragon Bone
+    - Flamed Dragon Bone - +8 damage against ice dragons, ignites targets, and knocks back targets.
 	- Silver - +2 damage against undead.
 - **Immersive Engineering:**
 	- Steel
