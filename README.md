@@ -18,7 +18,9 @@ Assets specifically made for this mod are licensed as All Rights Reserved (see L
 **Translators:**
 
 - German ~ HypaSpeeed
-___
+
+---
+
 ### **Supported Mods:** ###
 - **Applied Energistics 2**
 	- Certus Quartz
@@ -51,3 +53,11 @@ ___
 - **Thaumcraft**
 	- Thaumium
 	- Void - Regenerates durability and applies Weakness (Lesser Sapping) for 4 seconds.
+
+---
+
+## Licensing
+
+All code and assets specifically made for this mod are licensed as All Rights Reserved. All other assets, including those derived from Minecraft or third-party sources, remain the property of their respective owners.
+
+You may not upload a fork or utilize the assets without permission. You are however free to include this mod in any modpacks of yours, make addons with the mod as a dependency, learn from the code, or modify it privately.
