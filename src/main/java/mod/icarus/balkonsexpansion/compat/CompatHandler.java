@@ -10,6 +10,7 @@ import mod.icarus.balkonsexpansion.compat.galacticraft.*;
 import mod.icarus.balkonsexpansion.compat.ic2classic.*;
 import mod.icarus.balkonsexpansion.compat.ic2experimental.*;
 import mod.icarus.balkonsexpansion.compat.iceandfire.*;
+import mod.icarus.balkonsexpansion.compat.iceandfire.events.EventIAFLightningWeapon;
 import mod.icarus.balkonsexpansion.compat.immersiveengineering.*;
 import mod.icarus.balkonsexpansion.compat.mistyworld.*;
 import mod.icarus.balkonsexpansion.compat.projectred.*;
@@ -17,6 +18,7 @@ import mod.icarus.balkonsexpansion.compat.railcraft.*;
 import mod.icarus.balkonsexpansion.compat.thaumcraft.*;
 import net.minecraft.item.Item;
 import net.minecraft.item.crafting.IRecipe;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
@@ -145,6 +147,10 @@ public class CompatHandler {
 
             if (FMLLaunchHandler.side().isClient()) {
                 IAFRegistration.registerRenderersItem();
+            }
+
+            if (BEForkChecker.isIAFRotNEdition()) {
+                MinecraftForge.EVENT_BUS.register(new EventIAFLightningWeapon());
             }
         }
 
