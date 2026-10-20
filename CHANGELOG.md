@@ -8,6 +8,8 @@ The new mod support is compatible with both the original Ice and Fire and the Ro
   - Dragon Bone
   - Flamed Dragon Bone  - +8 damage against ice dragons, ignites targets, and knocks back targets
   - Silver - +2 damage against undead
+### Changed
+- The minimum version of Balkon's WeaponMod: Legacy required to run the addon is now 1.25.2
 ### Fixed
 - Fixed fired muskets with effects (it was none before this update) causing a crash
 ## 1.2.0
