@@ -101,6 +101,10 @@ public class BEMaterialEffectHelper {
 
     @SubscribeEvent
     public static void onLivingHurt(LivingHurtEvent event) {
+        if (event == null || event.getEntityLiving() == null) {
+            return;
+        }
+
         DamageSource source = event.getSource();
         if (source == null) {
             return;
@@ -111,29 +115,46 @@ public class BEMaterialEffectHelper {
         ItemStack stack = ItemStack.EMPTY;
 
         if (immediate instanceof EntityProjectile) {
-            stack = ((EntityProjectile) immediate).getPickupItem();
-        } else if (trueSource instanceof EntityLivingBase) {
-            stack = ((EntityLivingBase) trueSource).getHeldItemMainhand();
+            ItemStack projectileStack = ((EntityProjectile) immediate).getPickupItem();
+            if (projectileStack != null && !projectileStack.isEmpty()) {
+                stack = projectileStack;
+            }
         }
 
-        if (stack.isEmpty() || !(stack.getItem() instanceof IItemWeapon)) {
+        if (stack.isEmpty() && trueSource instanceof EntityLivingBase) {
+            ItemStack heldStack = ((EntityLivingBase) trueSource).getHeldItemMainhand();
+            if (heldStack != null && !heldStack.isEmpty()) {
+                stack = heldStack;
+            }
+        }
+
+        if (stack.isEmpty()) {
             return;
         }
 
-        IItemWeapon weapon = (IItemWeapon) stack.getItem();
-        if (weapon.getMeleeComponent() == null || weapon.getMeleeComponent().weaponMaterial == null) {
+        Item item = stack.getItem();
+        if (!(item instanceof IItemWeapon)) {
+            return;
+        }
+
+        IItemWeapon weapon = (IItemWeapon) item;
+        if (weapon.getMeleeComponent() == null) {
             return;
         }
 
         Item.ToolMaterial material = weapon.getMeleeComponent().weaponMaterial;
+        if (material == null) {
+            return;
+        }
+
         List<MaterialEffect> effects = REGISTRY.get(material);
-        if (effects == null) {
+        if (effects == null || effects.isEmpty()) {
             return;
         }
 
         EntityLivingBase target = event.getEntityLiving();
         for (MaterialEffect effect : effects) {
-            if (effect.appliesTo(target)) {
+            if (effect != null && effect.appliesTo(target)) {
                 effect.apply(event);
             }
         }
