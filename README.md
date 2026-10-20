@@ -1,24 +1,5 @@
 ### An addon for Balkon's WeaponMod: Legacy in 1.12.2 that supports various other mods
 
-Code from this mod is licensed under CC BY-NC-SA 4.0 (see LICENSE.txt).
-
-Assets specifically made for this mod are licensed as All Rights Reserved (see LICENSE-ASSETS.txt).
-
-**Developers:**
-
-* Main Developer & Texture Artist ~ IcarussOne
-
-**Special Thanks:**
-
-- The wonderful Balkon's WeaponMod port to 1.12.2 and providing support for addons like this one ~ HypaSpeeed
-- Helping out with some textures ~ Ichipie1125
-- Setting up the mod's infrastructure, answering questions, and helping out with the mod in general ~ ACGaming
-- Creating and maintaining Tekkit 2 and Tekkit SMP, both of which inspired this project to be made ~ xJon
-
-**Translators:**
-
-- German ~ HypaSpeeed
-
 ---
 
 ### **Supported Mods:** ###
@@ -53,6 +34,23 @@ Assets specifically made for this mod are licensed as All Rights Reserved (see L
 - **Thaumcraft**
 	- Thaumium
 	- Void - Regenerates durability and applies Weakness (Lesser Sapping) for 4 seconds.
+
+---
+
+**Developers:**
+
+* Main Developer & Texture Artist ~ IcarussOne
+
+**Special Thanks:**
+
+- The wonderful Balkon's WeaponMod port to 1.12.2 and providing support for addons like this one ~ HypaSpeeed
+- Helping out with some textures ~ Ichipie1125
+- Setting up the mod's infrastructure, answering questions, and helping out with the mod in general ~ ACGaming
+- Creating and maintaining Tekkit 2 and Tekkit SMP, both of which inspired this project to be made ~ xJon
+
+**Translators:**
+
+- German ~ HypaSpeeed
 
 ---
 
