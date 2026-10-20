@@ -1,0 +1,14 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "balkonsexpansion:iceandfire/items/boomerang.dragonsteel.fire"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "weaponmod:ready-to-throw": 1
+      },
+      "model": "balkonsexpansion:item/boomerang.dragonsteel.fire_ready"
+    }
+  ]
+}

@@ -16,6 +16,18 @@ public class BEMaterialHelper {
         return Item.ToolMaterial.valueOf("FireDragonbone");
     }
 
+    public static Item.ToolMaterial iafFireDragonsteelMaterial() {
+        return Item.ToolMaterial.valueOf("DragonsteelFire");
+    }
+
+    public static Item.ToolMaterial iafIceDragonboneMaterial() {
+        return Item.ToolMaterial.valueOf("IceDragonbone");
+    }
+
+    public static Item.ToolMaterial iafIceDragonsteelMaterial() {
+        return Item.ToolMaterial.valueOf("DragonsteelIce");
+    }
+
     public static Item.ToolMaterial iafLightningDragonboneMaterial() {
         return Item.ToolMaterial.valueOf("LightningDragonbone");
     }

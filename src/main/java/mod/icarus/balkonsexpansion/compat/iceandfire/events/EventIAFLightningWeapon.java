@@ -35,7 +35,7 @@ public class EventIAFLightningWeapon {
         }
 
         Item.ToolMaterial material = weapon.getMeleeComponent().weaponMaterial;
-        if (material == BEMaterialHelper.iafFireDragonboneMaterial()) {
+        if (material == BEMaterialHelper.iafLightningDragonboneMaterial() || material == BEMaterialHelper.iafLightningDragonsteelMaterial()) {
             if (attacker.swingProgress < 0.2F) {
                 target.world.spawnEntity(new EntityDragonLightningBolt(target.world, target.posX, target.posY, target.posZ, attacker, target));
                 if (!IsImmune.toDragonLightning(target)) {

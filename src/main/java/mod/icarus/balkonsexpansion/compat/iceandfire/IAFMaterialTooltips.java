@@ -16,5 +16,10 @@ public class IAFMaterialTooltips {
             BEMaterialTooltipHelper.registerTooltip(BEMaterialHelper.iafFireDragonboneMaterial(), TextFormatting.GREEN + I18n.format("dragon_sword_fire.hurt1"));
             BEMaterialTooltipHelper.registerTooltip(BEMaterialHelper.iafFireDragonboneMaterial(), TextFormatting.DARK_RED + I18n.format("dragon_sword_fire.hurt2"));
         }
+
+        // Fire Dragonsteel - Ignites targets for 15 seconds
+        if (BEMaterialHelper.iafFireDragonsteelMaterial() != null) {
+            BEMaterialTooltipHelper.registerTooltip(BEMaterialHelper.iafFireDragonsteelMaterial(), TextFormatting.DARK_RED + I18n.format("dragon_sword_fire.hurt2"));
+        }
     }
 }

@@ -6,7 +6,8 @@ The new mod support is compatible with both the original Ice and Fire and the Ro
 - Added Ice and Fire / Ice and Fire: RotN Edition support
   - Copper (RotN Edition only)
   - Dragon Bone
-  - Flamed Dragon Bone  - +8 damage against ice dragons, ignites targets, and knocks back targets
+  - Fire Dragonsteel - Ignites targets for 15 seconds and knocks back targets
+  - Flamed Dragon Bone  - +8 damage against ice dragons, ignites targets for 5 seconds, and knocks back targets
   - Silver - +2 damage against undead
 ### Changed
 - The minimum version of Balkon's WeaponMod: Legacy required to run the addon is now 1.25.2

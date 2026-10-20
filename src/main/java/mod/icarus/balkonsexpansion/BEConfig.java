@@ -170,6 +170,11 @@ public class BEConfig {
         @Config.RequiresWorldRestart
         public boolean IAF_FIRE_DRAGONBONE_MATERIAL = true;
 
+        @Config.Name("Material: Fire Dragonsteel")
+        @Config.Comment("Enables support for the Fire Dragonsteel material from Ice and Fire [default: true]")
+        @Config.RequiresWorldRestart
+        public boolean IAF_FIRE_DRAGONSTEEL_MATERIAL = true;
+
         @Config.Name("Material: Silver (Ice and Fire)")
         @Config.Comment("Enables support for the Silver material from Ice and Fire [default: true]")
         @Config.RequiresWorldRestart
