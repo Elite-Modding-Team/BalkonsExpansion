@@ -52,7 +52,7 @@ public class IAFMaterialColors {
                 // The color for the given item tier must be returned as
                 // {R,G,B}, where each value is between 0 and 1.
                 if (i == MATERIAL_DRAGONBONE) return new float[]{0.77F, 0.75F, 0.65F};
-                if (i == MATERIAL_FIRE_DRAGONBONE) return new float[]{1.0F, 0.77F, 0.11F};
+                if (i == MATERIAL_FIRE_DRAGONBONE) return new float[]{0.784F, 0.243F, 0.031F};
                 if (i == MATERIAL_FIRE_DRAGONSTEEL) return new float[]{0.36F, 0.149F, 0.145F};
                 if (i == MATERIAL_ICE_DRAGONBONE) return new float[]{0.64F, 0.925F, 0.91F};
                 if (i == MATERIAL_ICE_DRAGONSTEEL) return new float[]{0.31F, 0.4F, 0.44F};

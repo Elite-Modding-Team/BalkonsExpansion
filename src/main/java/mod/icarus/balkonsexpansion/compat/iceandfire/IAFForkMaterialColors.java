@@ -42,7 +42,7 @@ public class IAFForkMaterialColors {
                 // The color for the given item tier must be returned as
                 // {R,G,B}, where each value is between 0 and 1.
                 if (i == MATERIAL_COPPER) return new float[]{0.72F, 0.475F, 0.34F};
-                if (i == MATERIAL_LIGHTNING_DRAGONBONE) return new float[]{0.92F, 0.79F, 0.9F};
+                if (i == MATERIAL_LIGHTNING_DRAGONBONE) return new float[]{0.718F, 0.114F, 0.84F};
                 if (i == MATERIAL_LIGHTNING_DRAGONSTEEL) return new float[]{0.2F, 0.11F, 0.54F};
                 return null;
             }

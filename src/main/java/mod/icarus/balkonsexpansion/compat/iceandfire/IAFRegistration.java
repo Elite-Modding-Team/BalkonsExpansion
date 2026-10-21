@@ -172,6 +172,18 @@ public class IAFRegistration {
             registry.register(boomerangCopper = BEItemBuilder.createCustomBoomerang("boomerang.copper.iaf", BEMaterialHelper.iafCopperMaterial(), 0.0F));
             registry.register(bayonetCopper = BEItemBuilder.createCustomMusketBayonet("musketbayonet.copper.iaf", BEMaterialHelper.iafCopperMaterial(), knifeCopper, -0.2F));
         }
+
+        if (BEConfig.iaf_settings.IAF_LIGHTNING_DRAGONBONE_MATERIAL && BEForkChecker.isIAFRotNEdition()) {
+            registry.register(spearLightningDragonbone = BEItemBuilder.createCustomSpear("spear.dragonbone.lightning", BEMaterialHelper.iafLightningDragonboneMaterial(), -0.2F, 1.0F));
+            registry.register(halberdLightningDragonbone = BEItemBuilder.createCustomHalberd("halberd.dragonbone.lightning", BEMaterialHelper.iafLightningDragonboneMaterial(), 0.2F, 1.0F));
+            registry.register(battleaxeLightningDragonbone = BEItemBuilder.createCustomBattleaxe("battleaxe.dragonbone.lightning", BEMaterialHelper.iafLightningDragonboneMaterial(), 0.1F, 1.0F));
+            registry.register(knifeLightningDragonbone = BEItemBuilder.createCustomKnife("knife.dragonbone.lightning", BEMaterialHelper.iafLightningDragonboneMaterial(), -0.1F));
+            registry.register(warhammerLightningDragonbone = BEItemBuilder.createCustomWarhammer("warhammer.dragonbone.lightning", BEMaterialHelper.iafLightningDragonboneMaterial(), 0.3F));
+            registry.register(flailLightningDragonbone = BEItemBuilder.createCustomFlail("flail.dragonbone.lightning", BEMaterialHelper.iafLightningDragonboneMaterial()));
+            registry.register(katanaLightningDragonbone = BEItemBuilder.createCustomKatana("katana.dragonbone.lightning", BEMaterialHelper.iafLightningDragonboneMaterial()));
+            registry.register(boomerangLightningDragonbone = BEItemBuilder.createCustomBoomerang("boomerang.dragonbone.lightning", BEMaterialHelper.iafLightningDragonboneMaterial(), 0.0F));
+            registry.register(bayonetLightningDragonbone = BEItemBuilder.createCustomMusketBayonet("musketbayonet.dragonbone.lightning", BEMaterialHelper.iafLightningDragonboneMaterial(), knifeLightningDragonbone, -0.2F));
+        }
     }
 
     @SubscribeEvent
@@ -255,6 +267,18 @@ public class IAFRegistration {
             registry.register(BERecipes.registerWarhammerRecipe(defaultGroup, "ingotCopper", "stickWood", warhammerCopper));
         }
 
+        if (BEConfig.iaf_settings.IAF_LIGHTNING_DRAGONBONE_MATERIAL && BEForkChecker.isIAFRotNEdition()) {
+            registry.register(BERecipes.registerConversionRecipe(defaultGroup, battleaxeDragonbone, Item.getByNameOrId("iceandfire:lightning_dragon_blood"), battleaxeLightningDragonbone));
+            registry.register(BERecipes.registerConversionRecipe(defaultGroup, boomerangDragonbone, Item.getByNameOrId("iceandfire:lightning_dragon_blood"), boomerangLightningDragonbone));
+            registry.register(BERecipes.registerBayonetRecipe(defaultGroup, knifeLightningDragonbone, bayonetLightningDragonbone));
+            registry.register(BERecipes.registerConversionRecipe(defaultGroup, flailDragonbone, Item.getByNameOrId("iceandfire:lightning_dragon_blood"), flailLightningDragonbone));
+            registry.register(BERecipes.registerConversionRecipe(defaultGroup, halberdDragonbone, Item.getByNameOrId("iceandfire:lightning_dragon_blood"), halberdLightningDragonbone));
+            registry.register(BERecipes.registerConversionRecipe(defaultGroup, katanaDragonbone, Item.getByNameOrId("iceandfire:lightning_dragon_blood"), katanaLightningDragonbone));
+            registry.register(BERecipes.registerConversionRecipe(defaultGroup, knifeDragonbone, Item.getByNameOrId("iceandfire:lightning_dragon_blood"), knifeLightningDragonbone));
+            registry.register(BERecipes.registerConversionRecipe(defaultGroup, spearDragonbone, Item.getByNameOrId("iceandfire:lightning_dragon_blood"), spearLightningDragonbone));
+            registry.register(BERecipes.registerConversionRecipe(defaultGroup, warhammerDragonbone, Item.getByNameOrId("iceandfire:lightning_dragon_blood"), warhammerLightningDragonbone));
+        }
+
         // Ice and Fire tools have no smelting recipes so support isn't needed.
     }
 
@@ -330,6 +354,18 @@ public class IAFRegistration {
             BERegistry.registerWeaponItemModel(knifeCopper);
             BERegistry.registerWeaponItemModel(spearCopper);
             BERegistry.registerWeaponItemModel(warhammerCopper);
+        }
+
+        if (BEConfig.iaf_settings.IAF_LIGHTNING_DRAGONBONE_MATERIAL && BEForkChecker.isIAFRotNEdition()) {
+            BERegistry.registerWeaponItemModel(battleaxeLightningDragonbone);
+            BERegistry.registerWeaponItemModel(boomerangLightningDragonbone);
+            BERegistry.registerWeaponItemModel(bayonetLightningDragonbone);
+            BERegistry.registerWeaponItemModel(flailLightningDragonbone);
+            BERegistry.registerWeaponItemModel(halberdLightningDragonbone);
+            BERegistry.registerWeaponItemModel(katanaLightningDragonbone);
+            BERegistry.registerWeaponItemModel(knifeLightningDragonbone);
+            BERegistry.registerWeaponItemModel(spearLightningDragonbone);
+            BERegistry.registerWeaponItemModel(warhammerLightningDragonbone);
         }
     }
 }
