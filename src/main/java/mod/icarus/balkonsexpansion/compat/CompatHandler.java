@@ -10,6 +10,7 @@ import mod.icarus.balkonsexpansion.compat.galacticraft.*;
 import mod.icarus.balkonsexpansion.compat.ic2classic.*;
 import mod.icarus.balkonsexpansion.compat.ic2experimental.*;
 import mod.icarus.balkonsexpansion.compat.iceandfire.*;
+import mod.icarus.balkonsexpansion.compat.iceandfire.events.EventIAFIceWeapon;
 import mod.icarus.balkonsexpansion.compat.iceandfire.events.EventIAFLightningWeapon;
 import mod.icarus.balkonsexpansion.compat.immersiveengineering.*;
 import mod.icarus.balkonsexpansion.compat.mistyworld.*;
@@ -148,6 +149,8 @@ public class CompatHandler {
             if (FMLLaunchHandler.side().isClient()) {
                 IAFRegistration.registerRenderersItem();
             }
+
+            MinecraftForge.EVENT_BUS.register(new EventIAFIceWeapon());
 
             if (BEForkChecker.isIAFRotNEdition()) {
                 MinecraftForge.EVENT_BUS.register(new EventIAFLightningWeapon());
