@@ -9,7 +9,7 @@ The new mod support is compatible with both the original Ice and Fire and the Ic
   - Fire Dragonsteel - Ignites targets for 15 seconds and knocks back targets.
   - Flamed Dragon Bone - +8 damage against Ice Dragons, ignites targets for 5 seconds, and knocks back targets.
   - Iced Dragon Bone - +8 damage against Fire Dragons, applies Mining Fatigue III and Slowness III for 5 seconds. Also knocks back targets.
-  - Lightning Dragon Bone - +4 damage against Fire Dragons and Ice Dragons, strikes targets with lightning. Also knocks back targets.
+  - Lightning Dragon Bone (RotN Edition only) - +4 damage against Fire Dragons and Ice Dragons, strikes targets with lightning. Also knocks back targets.
   - Silver - +2 damage against undead.
 ### Changed
 - The minimum version of Balkon's WeaponMod: Legacy required to run the addon is now 1.25.2
