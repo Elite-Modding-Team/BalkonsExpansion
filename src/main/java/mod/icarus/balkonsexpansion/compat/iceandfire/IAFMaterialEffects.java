@@ -39,14 +39,14 @@ public class IAFMaterialEffects {
         }
 
         // Lightning Dragon Bone - +4 damage against Fire Dragons and Ice Dragons, strikes targets with lightning
-        if (BEMaterialHelper.iafLightningDragonboneMaterial() != null) {
+        /*if (BEMaterialHelper.iafLightningDragonboneMaterial() != null) {
             BEMaterialEffectHelper.registerMaterialEffect(BEMaterialHelper.iafLightningDragonboneMaterial(),
                     4.0F, EntityFireDragon.class
             );
             BEMaterialEffectHelper.registerMaterialEffect(BEMaterialHelper.iafLightningDragonboneMaterial(),
                     4.0F, EntityIceDragon.class
             );
-        }
+        }*/
 
         // Silver - +2 damage against undead
         if (BEMaterialHelper.iafSilverMaterial() != null) {

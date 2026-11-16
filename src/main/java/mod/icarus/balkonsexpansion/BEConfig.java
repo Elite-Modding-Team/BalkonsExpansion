@@ -76,7 +76,7 @@ public class BEConfig {
         public boolean GALACTICRAFT_INTEGRATION = true;
 
         @Config.Name("Ice and Fire")
-        @Config.Comment({"Enables Ice and Fire and Ice and Fire: RotN Edition integration [default: true]","NOTE: RLCraft Edition is unsupported and the integration will not load if it is installed!"})
+        @Config.Comment({"Enables Ice and Fire integration [default: true]","NOTE: RLCraft Edition and RotN Edition are unsupported and the integration will not load if either of them are installed!"})
         @Config.RequiresMcRestart
         public boolean IAF_INTEGRATION = true;
 

@@ -11,7 +11,6 @@ import mod.icarus.balkonsexpansion.compat.ic2classic.*;
 import mod.icarus.balkonsexpansion.compat.ic2experimental.*;
 import mod.icarus.balkonsexpansion.compat.iceandfire.*;
 import mod.icarus.balkonsexpansion.compat.iceandfire.events.EventIAFIceWeapon;
-import mod.icarus.balkonsexpansion.compat.iceandfire.events.EventIAFLightningWeapon;
 import mod.icarus.balkonsexpansion.compat.immersiveengineering.*;
 import mod.icarus.balkonsexpansion.compat.mistyworld.*;
 import mod.icarus.balkonsexpansion.compat.projectred.*;
@@ -53,14 +52,11 @@ public class CompatHandler {
         }
 
         // Ice and Fire
-        // RLCraft fork is ignored as that version has too much differences
-        if (Loader.isModLoaded("iceandfire") && !BEForkChecker.isIAFRLCraftEdition() && BEConfig.mod_integration_settings.IAF_INTEGRATION) {
+        // Forks are ignored as they have too much differences and require separate compatibility
+        if (Loader.isModLoaded("iceandfire") && !BEForkChecker.isIAFRLCraftEdition() && !BEForkChecker.isIAFRotNEdition() && BEConfig.mod_integration_settings.IAF_INTEGRATION) {
             IAFMaterialColors.registerMaterialColors();
             IAFMaterialEffects.registerMaterialEffects();
             IAFMaterialTooltips.registerMaterialTooltips();
-            if (BEForkChecker.isIAFRotNEdition()) {
-                IAFForkMaterialColors.registerMaterialColors();
-            }
         }
 
         // Immersive Engineering
@@ -142,8 +138,8 @@ public class CompatHandler {
         }
 
         // Ice and Fire
-        // RLCraft fork is ignored as that version has too much differences
-        if (Loader.isModLoaded("iceandfire") && !BEForkChecker.isIAFRLCraftEdition() && BEConfig.mod_integration_settings.IAF_INTEGRATION) {
+        // Forks are ignored as they have too much differences and require separate compatibility
+        if (Loader.isModLoaded("iceandfire") && !BEForkChecker.isIAFRLCraftEdition() && !BEForkChecker.isIAFRotNEdition() && BEConfig.mod_integration_settings.IAF_INTEGRATION) {
             IAFRegistration.registerItems(event);
 
             if (FMLLaunchHandler.side().isClient()) {
@@ -151,10 +147,6 @@ public class CompatHandler {
             }
 
             MinecraftForge.EVENT_BUS.register(new EventIAFIceWeapon());
-
-            if (BEForkChecker.isIAFRotNEdition()) {
-                MinecraftForge.EVENT_BUS.register(new EventIAFLightningWeapon());
-            }
         }
 
         // Immersive Engineering
@@ -236,8 +228,8 @@ public class CompatHandler {
         if (Loader.isModLoaded("galacticraftcore") && (Loader.isModLoaded("galacticraftplanets") && BEConfig.mod_integration_settings.GALACTICRAFT_INTEGRATION))
             GalacticraftRegistration.registerRecipes(event);
         // Ice and Fire
-        // RLCraft fork is ignored as that version has too much differences
-        if (Loader.isModLoaded("iceandfire") && !BEForkChecker.isIAFRLCraftEdition() && BEConfig.mod_integration_settings.IAF_INTEGRATION)
+        // Forks are ignored as they have too much differences and require separate compatibility
+        if (Loader.isModLoaded("iceandfire") && !BEForkChecker.isIAFRLCraftEdition() && !BEForkChecker.isIAFRotNEdition() && BEConfig.mod_integration_settings.IAF_INTEGRATION)
             IAFRegistration.registerRecipes(event);
         // Immersive Engineering
         if (Loader.isModLoaded("immersiveengineering") && BEConfig.mod_integration_settings.IE_INTEGRATION)

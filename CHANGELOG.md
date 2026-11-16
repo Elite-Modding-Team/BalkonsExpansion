@@ -1,15 +1,13 @@
 # Balkon's Expansion Changelog
 ## 1.3.0
 ### Update Notes
-The new mod support is compatible with both the original Ice and Fire and the Ice and Fire: RotN Edition fork. The I&F: RLCraft Edition fork will currently not have support due to significant differences compared to the other two.
+The new mod support is mainly only compatible with the original Ice and Fire mod. The forks are currently not supported due to significant differences that require separate compatibility.
 ### Added
-- Added Ice and Fire / Ice and Fire: RotN Edition support
-  - Copper (RotN Edition only)
+- Added Ice and Fire
   - Dragon Bone
   - Fire Dragonsteel - Ignites targets for 15 seconds and knocks back targets.
   - Flamed Dragon Bone - +8 damage against Ice Dragons, ignites targets for 5 seconds, and knocks back targets.
   - Iced Dragon Bone - +8 damage against Fire Dragons, applies Mining Fatigue III and Slowness III for 5 seconds. Also knocks back targets.
-  - Lightning Dragon Bone (RotN Edition only) - +4 damage against Fire Dragons and Ice Dragons, strikes targets with lightning. Also knocks back targets.
   - Silver - +2 damage against undead.
 ### Changed
 - The minimum version of Balkon's WeaponMod: Legacy required to run the addon is now 1.25.2

@@ -13,8 +13,6 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import net.minecraftforge.registries.IForgeRegistry;
 
-// TODO: Add hit effects to Ice and Fire materials, RotN Edition hit effects might also be different
-// Copper, Lightning Dragonbone, and Lightning Dragonsteel are exclusive to the RotN fork
 public class IAFRegistration {
     public static BEItemMelee battleaxeCopper;
     public static BEItemMelee battleaxeDragonbone;
@@ -161,7 +159,7 @@ public class IAFRegistration {
             registry.register(bayonetFireDragonsteel = BEItemBuilder.createCustomMusketBayonet("musketbayonet.dragonsteel.fire", BEMaterialHelper.iafFireDragonsteelMaterial(), knifeFireDragonsteel, -0.1F));
         }
 
-        if (BEConfig.iaf_settings.IAF_COPPER_MATERIAL && BEForkChecker.isIAFRotNEdition()) {
+        /*if (BEConfig.iaf_settings.IAF_COPPER_MATERIAL && BEForkChecker.isIAFRotNEdition()) {
             registry.register(spearCopper = BEItemBuilder.createCustomSpear("spear.copper.iaf", BEMaterialHelper.iafCopperMaterial(), -0.2F, 1.0F));
             registry.register(halberdCopper = BEItemBuilder.createCustomHalberd("halberd.copper.iaf", BEMaterialHelper.iafCopperMaterial(), 0.2F, 1.0F));
             registry.register(battleaxeCopper = BEItemBuilder.createCustomBattleaxe("battleaxe.copper.iaf", BEMaterialHelper.iafCopperMaterial(), 0.1F, 1.0F));
@@ -183,7 +181,7 @@ public class IAFRegistration {
             registry.register(katanaLightningDragonbone = BEItemBuilder.createCustomKatana("katana.dragonbone.lightning", BEMaterialHelper.iafLightningDragonboneMaterial()));
             registry.register(boomerangLightningDragonbone = BEItemBuilder.createCustomBoomerang("boomerang.dragonbone.lightning", BEMaterialHelper.iafLightningDragonboneMaterial(), 0.0F));
             registry.register(bayonetLightningDragonbone = BEItemBuilder.createCustomMusketBayonet("musketbayonet.dragonbone.lightning", BEMaterialHelper.iafLightningDragonboneMaterial(), knifeLightningDragonbone, -0.2F));
-        }
+        }*/
     }
 
     @SubscribeEvent
@@ -254,7 +252,7 @@ public class IAFRegistration {
             registry.register(BERecipes.registerWarhammerRecipe(defaultGroup, "ingotFireDragonsteel", "boneWither", warhammerFireDragonsteel));
         }
 
-        if (BEConfig.iaf_settings.IAF_COPPER_MATERIAL && BEForkChecker.isIAFRotNEdition()) {
+        /*if (BEConfig.iaf_settings.IAF_COPPER_MATERIAL && BEForkChecker.isIAFRotNEdition()) {
             registry.register(BERecipes.registerBattleaxeRecipe(defaultGroup, "ingotCopper", "stickWood", battleaxeCopper));
             registry.register(BERecipes.registerBoomerangRecipe(defaultGroup, "ingotCopper", "plankWood", boomerangCopper));
             registry.register(BERecipes.registerBayonetRecipe(defaultGroup, knifeCopper, bayonetCopper));
@@ -277,7 +275,7 @@ public class IAFRegistration {
             registry.register(BERecipes.registerConversionRecipe(defaultGroup, knifeDragonbone, Item.getByNameOrId("iceandfire:lightning_dragon_blood"), knifeLightningDragonbone));
             registry.register(BERecipes.registerConversionRecipe(defaultGroup, spearDragonbone, Item.getByNameOrId("iceandfire:lightning_dragon_blood"), spearLightningDragonbone));
             registry.register(BERecipes.registerConversionRecipe(defaultGroup, warhammerDragonbone, Item.getByNameOrId("iceandfire:lightning_dragon_blood"), warhammerLightningDragonbone));
-        }
+        }*/
 
         // Ice and Fire tools have no smelting recipes so support isn't needed.
     }
@@ -344,7 +342,7 @@ public class IAFRegistration {
             BERegistry.registerWeaponItemModel(warhammerFireDragonsteel);
         }
 
-        if (BEConfig.iaf_settings.IAF_COPPER_MATERIAL && BEForkChecker.isIAFRotNEdition()) {
+        /*if (BEConfig.iaf_settings.IAF_COPPER_MATERIAL && BEForkChecker.isIAFRotNEdition()) {
             BERegistry.registerWeaponItemModel(battleaxeCopper);
             BERegistry.registerWeaponItemModel(boomerangCopper);
             BERegistry.registerWeaponItemModel(bayonetCopper);
@@ -366,6 +364,6 @@ public class IAFRegistration {
             BERegistry.registerWeaponItemModel(knifeLightningDragonbone);
             BERegistry.registerWeaponItemModel(spearLightningDragonbone);
             BERegistry.registerWeaponItemModel(warhammerLightningDragonbone);
-        }
+        }*/
     }
 }

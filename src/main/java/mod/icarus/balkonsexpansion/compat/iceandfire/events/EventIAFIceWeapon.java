@@ -3,7 +3,6 @@ package mod.icarus.balkonsexpansion.compat.iceandfire.events;
 import ckathode.weaponmod.entity.projectile.EntityProjectile;
 import ckathode.weaponmod.item.IItemWeapon;
 import com.github.alexthe666.iceandfire.entity.FrozenEntityProperties;
-import com.github.alexthe666.iceandfire.util.IsImmune;
 import mod.icarus.balkonsexpansion.BEMaterialHelper;
 import net.ilexiconn.llibrary.server.entity.EntityPropertiesHandler;
 import net.minecraft.entity.Entity;
@@ -71,18 +70,14 @@ public class EventIAFIceWeapon {
 
             // Iced Dragon Bone
             if (material == BEMaterialHelper.iafIceDragonboneMaterial()) {
-                if (!IsImmune.toDragonIce(target)) {
-                    FrozenEntityProperties frozenProps = EntityPropertiesHandler.INSTANCE.getProperties(target, FrozenEntityProperties.class);
-                    if (frozenProps != null) frozenProps.setFrozenFor(50);
-                }
+                FrozenEntityProperties frozenProps = EntityPropertiesHandler.INSTANCE.getProperties(target, FrozenEntityProperties.class);
+                if (frozenProps != null) frozenProps.setFrozenFor(50);
             }
 
             // Ice Dragonsteel
             if (material == BEMaterialHelper.iafIceDragonsteelMaterial()) {
-                if (!IsImmune.toDragonIce(target)) {
-                    FrozenEntityProperties frozenProps = EntityPropertiesHandler.INSTANCE.getProperties(target, FrozenEntityProperties.class);
-                    if (frozenProps != null) frozenProps.setFrozenFor(80);
-                }
+                FrozenEntityProperties frozenProps = EntityPropertiesHandler.INSTANCE.getProperties(target, FrozenEntityProperties.class);
+                if (frozenProps != null) frozenProps.setFrozenFor(80);
             }
         }
     }

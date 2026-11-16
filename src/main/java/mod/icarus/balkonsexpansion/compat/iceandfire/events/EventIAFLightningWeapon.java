@@ -1,10 +1,9 @@
-package mod.icarus.balkonsexpansion.compat.iceandfire.events;
+/*package mod.icarus.balkonsexpansion.compat.iceandfire.events;
 
 import ckathode.weaponmod.entity.projectile.EntityProjectile;
 import ckathode.weaponmod.item.IItemWeapon;
 import com.github.alexthe666.iceandfire.IceAndFire;
 import com.github.alexthe666.iceandfire.entity.EntityDragonLightningBolt;
-import com.github.alexthe666.iceandfire.util.IsImmune;
 import mod.icarus.balkonsexpansion.BEMaterialHelper;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
@@ -80,4 +79,4 @@ public class EventIAFLightningWeapon {
             }
         }
     }
-}
+}*/

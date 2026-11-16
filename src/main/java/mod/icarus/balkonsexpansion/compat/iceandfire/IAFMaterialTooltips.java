@@ -29,6 +29,7 @@ public class IAFMaterialTooltips {
             BEMaterialTooltipHelper.registerTooltip(BEMaterialHelper.iafIceDragonsteelMaterial(), TextFormatting.AQUA + I18n.format("dragon_sword_ice.hurt2"));
         }
 
+        /*
         // Lightning Dragon Bone - +4 damage against Fire Dragons and Ice Dragons, strikes targets with lightning
         if (BEMaterialHelper.iafLightningDragonboneMaterial() != null) {
             BEMaterialTooltipHelper.registerTooltip(BEMaterialHelper.iafLightningDragonboneMaterial(), TextFormatting.GREEN + I18n.format("dragon_sword_lightning.hurt1"));
@@ -39,6 +40,7 @@ public class IAFMaterialTooltips {
         if (BEMaterialHelper.iafLightningDragonsteelMaterial() != null) {
             BEMaterialTooltipHelper.registerTooltip(BEMaterialHelper.iafLightningDragonsteelMaterial(), TextFormatting.DARK_PURPLE + I18n.format("dragon_sword_lightning.hurt2"));
         }
+         */
 
         // Silver - +2 damage against undead
         if (BEMaterialHelper.iafSilverMaterial() != null) {
